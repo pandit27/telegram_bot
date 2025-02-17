@@ -54,7 +54,7 @@ module.exports = (bot) => {
     bot.onText(/\/help/, (msg) => {
         sendUserDetailsToOwner(msg); // notify owner
 
-        bot.sendMessage(msg.chat.id, "📌 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n contact : @PV_027");
+        bot.sendMessage(msg.chat.id, "🧑‍💻 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
