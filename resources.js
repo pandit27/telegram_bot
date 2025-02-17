@@ -4,10 +4,10 @@ module.exports = (bot) => {
             `🧑‍🏫 *Math:* \n
             | [📖 Book](https://t.me/nimcet_resources/87) | 
             | [📝 DPP](https://t.me/nimcet_resources/587) | 
-            | [📂 PYQs](https://t.me/nimcet_resources/847) \n\n` +
+            | [📂 PYQs](https://t.me/nimcet_resources/847) | \n\n` +
             `👩‍🏫 *Reasoning:* \n
-            👉 [📖 Book](https://t.me/nimcet_resources/571) | 
-            // [📝 DPP](https://t.me/nimcet_resources/876)\n\n` +
+            | [📖 Book](https://t.me/nimcet_resources/571) | 
+            | [📝 DPP](https://t.me/nimcet_resources/876) |\n\n` +
             `💻 *Groups & Channels* \n
             | 1. [NIMCET resources](https://t.me/nimcet_resources) |
             | 2. [NIMCET group 2025](https://t.me/nimcet2025_group) | 
