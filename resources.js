@@ -15,7 +15,7 @@ module.exports = (bot) => {
             4. [NIMCET daily quiz](https://t.me/nimcet_quiz)
             5. [Super Nimcet Group](https://t.me/supernimcetgroup) 
             6. [NIMCET Discussion Group](https://t.me/nimcet2025group) 
-            7. [NIMCET Quizzes](https://t.me/nimcet2025_group)`;
+            7. [NIMCET Quizzes](https://t.me/nimcet_quizzes)`;
 
         bot.sendMessage(msg.chat.id, message, { parse_mode: "Markdown", disable_web_page_preview: true });
     });
