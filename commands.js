@@ -9,7 +9,7 @@ module.exports = (bot) => {
     });
     
     bot.onText(/\/help/, (msg) => {
-        bot.sendMessage(msg.chat.id, "📌 commands: \n/start : to start the bot. \n/exam : to get CUET PG exam countdown. \n//nimcet	to get NIMCET exam countdown. \n contact : @PV_027");
+        bot.sendMessage(msg.chat.id, "📌 commands: \n/start : to start the bot. \n/exam : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
