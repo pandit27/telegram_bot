@@ -82,6 +82,7 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 | `/help`  | Get a list of available commands. |
 | `/exam`  | Get the number of days left until the CUET PG exam. |
 | `/nimcet`  | Get the number of days left until the NIMCET exam. |
+| `/resources`  | Get the resources for NIMCET 2025. |
 
 ---
 
