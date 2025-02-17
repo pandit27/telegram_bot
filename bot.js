@@ -12,22 +12,33 @@ commands(bot);
 
 const sendReminder = () => {
     const now = new Date();
-    if (now.getHours() !== 4 || now.getMinutes() !== 0) return;
+    
+    // reminder everyday at 12:00 AM
+    if (now.getHours() !== 0 || now.getMinutes() !== 0) return;
 
-    const daysLeft = Math.ceil((EXAM_DATE - now) / (1000 * 60 * 60 * 24));
-    const message = daysLeft > 0 
-        ? `📢 <b>Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days</b> left! \n\nStay focused and keep grinding.`
-        : daysLeft === 0 
-            ? `🚨 <b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`
-            : `✅ <b>Exam Completed!</b> 🎉\nHope you did well!`;
+    const timeDiff = EXAM_DATE - now;
 
-    bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" }).catch(err => console.log("Error:", err.response.body));
+    if (timeDiff > 0) {
+        const daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        
+        const message = `📢 <b>Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
+        bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" });
+    } 
+    else if (timeDiff === 0) {
+        bot.sendMessage(CHAT_ID, `🚨 <b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`, { parse_mode: "HTML" });
+    } 
+    else {
+        bot.sendMessage(CHAT_ID, `✅ <b>Exam Completed!</b> 🎉\nHope you did well!`, { parse_mode: "HTML" });
+    }
 };
 
-// to send remainder
+// to send reminder
 sendReminder();
 
-// function to schedule at a certain time
+// function to schedule remider
 setInterval(() => {
     const now = new Date();
-    if (now.getHours() === 9 && now.getMinutes() === 0) sendReminder();}, 60 * 1000);
+    if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
+}, 60 * 1000);  // Check every minute
