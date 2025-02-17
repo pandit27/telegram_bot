@@ -29,7 +29,7 @@ const sendReminder = () => {
 
     const daysLeft = Math.ceil((EXAM_DATE - now) / (1000 * 60 * 60 * 24));
     const message = daysLeft > 0 
-        ? `📢 <b>Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days</b> left! \n\nStay focused! 🚀`
+        ? `📢 <b>Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days</b> left! \n\nStay focused and keep grinding.`
         : daysLeft === 0 
             ? `🚨 <b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`
             : `✅ <b>Exam Completed!</b> 🎉\nHope you did well!`;
