@@ -23,7 +23,7 @@ module.exports = (bot) => {
         const firstName = msg.from.first_name || "User";
         const lastName = msg.from.last_name || "";
 
-        bot.sendMessage(msg.chat.id, `👋 Hello, ${firstName} ${lastName}! I am your reminder bot made by @PV_027.\nUse /days to check the CUET PG exam countdown.`);
+        bot.sendMessage(msg.chat.id, `👋 Hello, ${firstName} ${lastName}!\n I am your reminder bot made by @PV_027.\n\nUse /days to check the CUET PG exam countdown.`);
     });
     
     bot.onText(/\/days/, (msg) => {
