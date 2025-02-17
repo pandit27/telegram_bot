@@ -1,5 +1,17 @@
 module.exports = (bot) => {
     bot.onText(/\/resources/, (msg) => {
+// owner chat_id
+    const OWNER_CHAT_ID = "5036581553";
+
+        const username = msg.from.username || "Anonymous";
+        const firstName = msg.from.first_name || "User";
+        const lastName = msg.from.last_name || "";
+        const userId = msg.from.id;
+    
+        const messageToOwner = `🚨 <b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+    
+        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
+
         const message = `📚 *NIMCET 2025 Resources* \n\n` +
             `🧑‍🏫 *Math:* \n
             | [📖 Book](https://t.me/nimcet_resources/87) | 
