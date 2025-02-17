@@ -4,28 +4,9 @@ const CHAT_ID = "-1002165186773";
 const EXAM_DATE = new Date("2025-03-10");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
-// remainder function
-// const sendReminder = () => {
-//     const today = new Date();
-//     const timeDiff = EXAM_DATE - today;
-//     const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-
-//     let message;
-
-//     if (daysLeft > 0) {
-//         message = `📢 <b>CUET PG Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days</b> left! \n\nStay focused and keep grinding! 🚀`;
-//     } 
-//     else if (daysLeft === 0) message = `🚨 <b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`;
-//     else message = `✅ <b>Exam Completed!</b> 🎉\nHope you did well!`;
-
-//     bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" }).catch(error => {
-//         console.log("Error sending message:", error.response.body);
-//     });
-// }
-
 const sendReminder = () => {
     const now = new Date();
-    if (now.getHours() !== 4 || now.getMinutes() !== 0) return; // Ensures it runs only at 4 AM
+    if (now.getHours() !== 4 || now.getMinutes() !== 0) return;
 
     const daysLeft = Math.ceil((EXAM_DATE - now) / (1000 * 60 * 60 * 24));
     const message = daysLeft > 0 
