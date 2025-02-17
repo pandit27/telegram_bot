@@ -13,7 +13,7 @@ module.exports = (bot) => {
             const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 
             const message = `⌛ <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left until the CUET PG exam! \n\n Keep grinding.`;
-            bot.sendMessage(msg.chat.id, message);
+            bot.sendMessage(msg.chat.id, message, { parse_mode: "HTML" });
         } else if (timeDiff === 0) {
             bot.sendMessage(msg.chat.id, "🚨 Today is the CUET PG exam! Best of luck!");
         } else {
