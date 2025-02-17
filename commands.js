@@ -6,9 +6,22 @@ module.exports = (bot) => {
     bot.onText(/\/days/, (msg) => {
         const EXAM_DATE = new Date("2025-03-10");
         const now = new Date();
-        const daysLeft = Math.ceil((EXAM_DATE - now) / (1000 * 60 * 60 * 24));
-        bot.sendMessage(msg.chat.id, `📆 ${daysLeft} days left until the CUET PG exam! Keep grinding.`);
-        console.log(daysLeft);
+        const timeDiff = EXAM_DATE - now;
+        if (timeDiff > 0) {
+            const daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+            const message = `📆 ${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes left until the CUET PG exam! Keep grinding.`;
+            bot.sendMessage(msg.chat.id, message);
+        } else if (timeDiff === 0) {
+            bot.sendMessage(msg.chat.id, "🚨 Today is the CUET PG exam! Best of luck!");
+        } else {
+            bot.sendMessage(msg.chat.id, "The CUET PG exam has passed!");
+        }
+
+        // print in console for testing...
+        console.log(`Current date: ${now}, Exam date: ${EXAM_DATE}, Time difference: ${timeDiff}`);
     });
     
     bot.onText(/\/help/, (msg) => {
