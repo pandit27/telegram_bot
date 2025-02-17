@@ -4,6 +4,12 @@ const CHAT_ID = "-1002165186773";
 const EXAM_DATE = new Date("2025-03-10");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
+// import commands.js file
+const commands = require('./commands');
+
+// loading commands in index.js
+commands(bot);
+
 const sendReminder = () => {
     const now = new Date();
     if (now.getHours() !== 4 || now.getMinutes() !== 0) return;
@@ -27,15 +33,15 @@ setInterval(() => {
     if (now.getHours() === 9 && now.getMinutes() === 0) sendReminder();}, 60 * 1000);
 
 // some commands
-bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, "👋 Hello! I am your reminder bot made by @PV_027.\nUse /days to check the exam countdown.");
-});
+// bot.onText(/\/start/, (msg) => {
+//     bot.sendMessage(msg.chat.id, "👋 Hello! I am your reminder bot made by @PV_027.\nUse /days to check the exam countdown.");
+// });
 
-bot.onText(/\/days/, (msg) => {
-    const daysLeft = Math.ceil((EXAM_DATE - new Date()) / (1000 * 60 * 60 * 24));
-    bot.sendMessage(msg.chat.id, `📆 ${daysLeft} days left until the CUET PG exam! Keep grinding.`);
-});
+// bot.onText(/\/days/, (msg) => {
+//     const daysLeft = Math.ceil((EXAM_DATE - new Date()) / (1000 * 60 * 60 * 24));
+//     bot.sendMessage(msg.chat.id, `📆 ${daysLeft} days left until the CUET PG exam! Keep grinding.`);
+// });
 
-bot.onText(/\/help/, (msg) => {
-    bot.sendMessage(msg.chat.id, "📌 contact: @PV_027");
-});
+// bot.onText(/\/help/, (msg) => {
+//     bot.sendMessage(msg.chat.id, "📌 contact: @PV_027");
+// });
