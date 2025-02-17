@@ -56,5 +56,5 @@ bot.onText(/\/days/, (msg) => {
 });
 
 bot.onText(/\/help/, (msg) => {
-    bot.sendMessage(msg.chat.id, "📌 Commands:\n/start - Welcome Message\n/days - Check Exam Countdown\n/help - List Commands");
+    bot.sendMessage(msg.chat.id, "📌 contact: @PV_027");
 });
