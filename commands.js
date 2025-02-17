@@ -1,3 +1,6 @@
+// Import the quiz questions
+const qs = require('./dsa_quiz');
+
 module.exports = (bot) => {
     bot.onText(/\/start/, (msg) => {
         bot.sendMessage(msg.chat.id, "👋 Hello! I am your reminder bot made by @PV_027.\nUse /days to check the CUET PG exam countdown.");
@@ -9,7 +12,7 @@ module.exports = (bot) => {
     });
     
     bot.onText(/\/help/, (msg) => {
-        bot.sendMessage(msg.chat.id, "📌 commands: \n/start : to start the bot. \n/exam : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n contact : @PV_027");
+        bot.sendMessage(msg.chat.id, "📌 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
