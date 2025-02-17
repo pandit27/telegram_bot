@@ -14,6 +14,10 @@ module.exports = (bot) => {
         bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
     };    
 
+    // resources command
+    const resources = require('./resources');
+    resources(bot);
+
     /* 
         commands 
     */
