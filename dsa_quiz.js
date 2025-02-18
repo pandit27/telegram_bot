@@ -266,54 +266,54 @@ module.exports = (bot) => {
 
 
     
-    // send details to myself 
     const sendUserDetailsToOwner = (msg) => {
         const username = msg.from.username || "Anonymous";
         const firstName = msg.from.first_name || "User";
         const lastName = msg.from.last_name || "";
         const userId = msg.from.id;
-
-        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
-
-        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
-    };    
     
-
-
-
+        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+    
+        // Debugging: Log the message type to verify
+        console.log("Message received from chat type:", msg.chat.type);
+    
+        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
+    };
+    
     // send poll
     bot.onText(/\/quiz/, (msg) => {
         const chatId = msg.chat.id;
-        const text = msg.text.toLowerCase();
         const userId = msg.from.id;
-
+    
+        // Debugging: Log the chat type
+        console.log("Chat type:", msg.chat.type);
+    
         if (msg.chat.type === "private") {
             sendUserDetailsToOwner(msg); // notify owner
-            
+    
             // randomly select a question
             const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
-
+    
             // send the poll as telegram quiz (with correct answer)
             bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
                 is_anonymous: false,
                 type: 'quiz',
                 correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
             });
-
-        } 
-        else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
+    
+        } else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
             if (String(userId) === String(ownerChatId)) {
                 const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
-
+    
                 bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
                     is_anonymous: false,
                     type: 'quiz',
                     correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
                 });
-            } 
-            else {
+            } else {
                 bot.sendMessage(chatId, "You are not authorized, use in private chat @pvnimcet2025_bot.");
             }
         }
     });
+    
 };
