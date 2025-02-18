@@ -17,7 +17,8 @@ module.exports = (bot) => {
     // resources command
     const resources = require('./resources');
     resources(bot);
-
+    const aiTexts = require('./aiTexts') // import aiTexts.js
+aiTexts(bot); // load in bot.js
     /* 
         commands 
     */
