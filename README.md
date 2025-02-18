@@ -1,10 +1,10 @@
 # 📢 Telegram Exam Reminder Bot
 
-A **simple** Telegram bot that sends daily reminders for upcoming exams and provides interactive commands for users. The bot is written in **JavaScript** using the `node-telegram-bot-api` library and runs **automatically at 12 AM** every day.
+A **simple** Telegram bot that sends daily reminders for upcoming exams and provides interactive commands for users. The bot is written in **JavaScript** using the `node-telegram-bot-api` library and runs **automatically at 05:30 AM** every day.
 
 ## 🚀 Features
 
-✅ **Daily Exam Reminder** – Sends a countdown message every day at **12 AM**.  
+✅ **Daily Exam Reminder** – Sends a countdown message every day at **05:30 AM**.  
 ✅ **Interactive Commands** – Users can interact with the bot using commands.  
 ✅ **Modular Code** – Commands are managed separately in `commands.js` for better readability.  
 ✅ **Free Hosting Support** – Can be hosted for free on platforms like **Railway, Render, or Replit**.  
@@ -95,10 +95,11 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 
 ---
 
-## 🧑‍💻 Updates (version 1.01)
+## 🧑‍💻 Updates (version 1.02)
 
 🔹 "/days" & "/resources" commands can only be used in private chats. <br>
-🔹 Data of users interacting with this bot will be stored.
+🔹 Data of users interacting with this bot will be stored. <br>
+🔹 Added some pre-texts responses using natural package.
 
 ---
 
