@@ -24,7 +24,7 @@ module.exports = (bot) => {
         const words = tokenizer.tokenize(text);
 
         // find suitable response for user's query
-        let reply = "Sorry, I'm still in developement mode. \n\n For information contact @PV_027.";
+        let reply = "Sorry, I'm still in the development phase. \n\n For more information contact @PV_027.";
         for (let i of responses) {
             if (i.keywords.some((word) => words.includes(word))) {
                 reply = i.response;
