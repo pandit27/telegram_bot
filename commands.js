@@ -18,8 +18,10 @@ module.exports = (bot) => {
     */
     const resources = require('./resources');
     resources(bot);
-    const aiTexts = require('./aiTexts') // import aiTexts.js
-    aiTexts(bot); // load in bot.js
+    const aiTexts = require('./aiTexts');
+    aiTexts(bot);
+    const dsa_quiz = require('./dsa_quiz');
+    dsa_quiz(bot);
 
     /* 
         commands 
