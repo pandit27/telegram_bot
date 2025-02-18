@@ -4,11 +4,13 @@ const CHAT_ID = "-1002165186773";
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
-// import commands.js file
-const commands = require('./commands');
-
-// loading commands in index.js
-commands(bot);
+/*  
+    importing commands 
+*/
+const commands = require('./commands'); // import commands.js
+commands(bot); // load in bot.js
+const aiTexts = require('./aiTexts') // import aiTexts.js
+aiTexts(bot); // load in bot.js
 
 const sendReminder = () => {
     const now = new Date();
