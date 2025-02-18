@@ -13,7 +13,7 @@ commands(bot); // load in bot.js
 const sendReminder = () => {
     const now = new Date();
     
-    // reminder everyday at 12:00 AM
+    // reminder everyday at 05:30 AM (Indian time)
     if (now.getHours() !== 0 || now.getMinutes() !== 0) return;
 
     const timeDiff = EXAM_DATE - now;

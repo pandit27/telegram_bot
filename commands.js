@@ -1,6 +1,5 @@
 module.exports = (bot) => {
-    // owner chat_id
-    const OWNER_CHAT_ID = "5036581553";
+    const OWNER_CHAT_ID = "5036581553"; // owner chat_id
 
     // send details to myself 
     const sendUserDetailsToOwner = (msg) => {
@@ -14,11 +13,14 @@ module.exports = (bot) => {
         bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
     };    
 
-    // resources command
+    /* 
+        importing & loading files
+    */
     const resources = require('./resources');
     resources(bot);
     const aiTexts = require('./aiTexts') // import aiTexts.js
-aiTexts(bot); // load in bot.js
+    aiTexts(bot); // load in bot.js
+
     /* 
         commands 
     */
@@ -38,8 +40,6 @@ aiTexts(bot); // load in bot.js
             return;
         }
 
-        // sendUserDetailsToOwner(msg); // notify owner
-
         const EXAM_DATE = new Date("2025-03-15");
         const now = new Date();
         const timeDiff = EXAM_DATE - now;
@@ -54,19 +54,14 @@ aiTexts(bot); // load in bot.js
         else if (timeDiff === 0) bot.sendMessage(msg.chat.id, "🚨 Today is the CUET PG exam! Best of luck!");
         else bot.sendMessage(msg.chat.id, "The CUET PG exam has passed!");
 
-        // print in console for testing...
         console.log(`Current date: ${now}, Exam date: ${EXAM_DATE}, Time difference: ${timeDiff}`);
     });
     
     bot.onText(/\/help/, (msg) => {
-        // sendUserDetailsToOwner(msg); // notify owner
-
         bot.sendMessage(msg.chat.id, "🧑‍💻 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
-        // sendUserDetailsToOwner(msg); // notify owner
-
         bot.sendMessage(msg.chat.id, "NIMCET exam date is yet to be announced.");
     });
 }
