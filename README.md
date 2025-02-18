@@ -98,7 +98,7 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 ## 🧑‍💻 Updates (version 1.01)
 
 🔹 "/days" & "/resources" commands can only be used in private chats. <br>
-🔹 Data of users interacting with this both will be stored.
+🔹 Data of users interacting with this bot will be stored.
 
 ---
 
