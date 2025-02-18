@@ -262,6 +262,21 @@ module.exports = (bot) => {
 
     // owner chat_id
     const ownerChatId = '5036581553';
+
+
+
+    
+    // send details to myself 
+    const sendUserDetailsToOwner = (msg) => {
+        const username = msg.from.username || "Anonymous";
+        const firstName = msg.from.first_name || "User";
+        const lastName = msg.from.last_name || "";
+        const userId = msg.from.id;
+
+        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+
+        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
+    };    
     
 
 
@@ -273,6 +288,8 @@ module.exports = (bot) => {
         const userId = msg.from.id;
 
         if (msg.chat.type === "private") {
+            sendUserDetailsToOwner(msg); // notify owner
+            
             // randomly select a question
             const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
 
@@ -295,7 +312,7 @@ module.exports = (bot) => {
                 });
             } 
             else {
-                bot.sendMessage(chatId, "You are not authorized to use this command in public groups.");
+                bot.sendMessage(chatId, "You are not authorized, use in private chat @pvnimcet2025_bot.");
             }
         }
     });
