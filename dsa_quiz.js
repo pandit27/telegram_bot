@@ -265,20 +265,20 @@ module.exports = (bot) => {
 
 
 
+    // send details to myself
+    // const sendUserDetailsToOwner = (msg) => {
+    //     const username = msg.from.username || "Anonymous";
+    //     const firstName = msg.from.first_name || "User";
+    //     const lastName = msg.from.last_name || "";
+    //     const userId = msg.from.id;
     
-    const sendUserDetailsToOwner = (msg) => {
-        const username = msg.from.username || "Anonymous";
-        const firstName = msg.from.first_name || "User";
-        const lastName = msg.from.last_name || "";
-        const userId = msg.from.id;
+    //     const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
     
-        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+    //     // Debugging: Log the message type to verify
+    //     console.log("Message received from chat type:", msg.chat.type);
     
-        // Debugging: Log the message type to verify
-        console.log("Message received from chat type:", msg.chat.type);
-    
-        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
-    };
+    //     bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
+    // };
     
     // send poll
     bot.onText(/\/quiz/, (msg) => {

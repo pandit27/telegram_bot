@@ -2,16 +2,16 @@ module.exports = (bot) => {
     const OWNER_CHAT_ID = "5036581553"; // owner chat_id
 
     // send details to myself 
-    // const sendUserDetailsToOwner = (msg) => {
-    //     const username = msg.from.username || "Anonymous";
-    //     const firstName = msg.from.first_name || "User";
-    //     const lastName = msg.from.last_name || "";
-    //     const userId = msg.from.id;
+    const sendUserDetailsToOwner = (msg) => {
+        const username = msg.from.username || "Anonymous";
+        const firstName = msg.from.first_name || "User";
+        const lastName = msg.from.last_name || "";
+        const userId = msg.from.id;
     
-    //     const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
     
-    //     bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
-    // };    
+        bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
+    };    
 
     /* 
         importing & loading files
