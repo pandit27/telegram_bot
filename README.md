@@ -95,12 +95,10 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 
 ---
 
-## 🔮 Future Enhancements
+## 🧑‍💻 Updates (version 1.01)
 
-🔹 Add support for multiple exams.  
-🔹 Customizable reminder time.  
-🔹 Dynamic question-answer chatbot integration.  
-🔹 UI improvements for better interaction.
+🔹 "/days" & "/resources" commands can only be used in private chats. 
+🔹 Data of users interacting with this both will be stored.
 
 ---
 

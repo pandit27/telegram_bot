@@ -1,14 +1,20 @@
 module.exports = (bot) => {
     bot.onText(/\/resources/, (msg) => {
-// owner chat_id
-    const OWNER_CHAT_ID = "5036581553";
+        // to make sure that /days command is to be used only in private chats
+        if (msg.chat.type !== "private") {
+            bot.sendMessage(msg.chat.id, "This command can only be used in private chat. \nClick on @pvnimcet2025_bot to continue.");
+            return;
+        }
+
+        // owner chat_id
+        const OWNER_CHAT_ID = "5036581553";
 
         const username = msg.from.username || "Anonymous";
         const firstName = msg.from.first_name || "User";
         const lastName = msg.from.last_name || "";
         const userId = msg.from.id;
     
-        const messageToOwner = `🚨 <b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
+        const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
     
         bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
 

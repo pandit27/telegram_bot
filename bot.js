@@ -1,7 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = "-1002165186773";
-const EXAM_DATE = new Date("2025-03-10");
+const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 // import commands.js file
@@ -23,7 +23,7 @@ const sendReminder = () => {
         const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         
-        const message = `📢 <b>Exam Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
+        const message = `📢 <b>CUET PG 2025 Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
         bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" });
     } 
     else if (timeDiff === 0) {
@@ -41,4 +41,4 @@ sendReminder();
 setInterval(() => {
     const now = new Date();
     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
-}, 60 * 1000);  // Check every minute
+}, 60 * 1000);
