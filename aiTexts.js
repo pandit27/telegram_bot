@@ -23,7 +23,7 @@ module.exports = (bot) => {
 // Function to call LLaMA 2 API (Outside module.exports)
 async function getLlamaResponse(userInput) {
     try {
-        const apiKey = process.env.HF_API_KEY;
+        const apiKey = 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;
         const response = await axios.post(
             "https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf",
             { inputs: userInput },
