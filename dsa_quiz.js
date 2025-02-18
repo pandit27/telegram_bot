@@ -264,25 +264,10 @@ module.exports = (bot) => {
     const ownerChatId = '5036581553';
 
 
-
-    // send details to myself
-    // const sendUserDetailsToOwner = (msg) => {
-    //     const username = msg.from.username || "Anonymous";
-    //     const firstName = msg.from.first_name || "User";
-    //     const lastName = msg.from.last_name || "";
-    //     const userId = msg.from.id;
-    
-    //     const messageToOwner = `<b>New User Opened the Bot!</b>\n\nName: ${firstName} ${lastName} \nUsername: @${username} \nUser ID: ${userId}`;
-    
-    //     // Debugging: Log the message type to verify
-    //     console.log("Message received from chat type:", msg.chat.type);
-    
-    //     bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
-    // };
+  
     
     // send poll
     bot.onText(/\/quiz/, (msg) => {
-        sendUserDetailsToOwner(msg); // notify owner
         const chatId = msg.chat.id;
         const userId = msg.from.id;
     
