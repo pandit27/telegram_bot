@@ -257,20 +257,46 @@ module.exports = (bot) => {
         }
     ];
     
+
+
+
+    // owner chat_id
+    const ownerChatId = '5036581553';
     
-    
+
+
+
     // send poll
     bot.onText(/\/quiz/, (msg) => {
         const chatId = msg.chat.id;
-    
-        // randomly select a question
-        const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
-    
-        // send the poll as telegram poll (quiz - showing correct answer)
-        bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
-            is_anonymous: false,
-            type: 'quiz',
-            correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
-        });
+        const text = msg.text.toLowerCase();
+        const userId = msg.from.id;
+
+        if (msg.chat.type === "private") {
+            // randomly select a question
+            const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+
+            // send the poll as telegram quiz (with correct answer)
+            bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
+                is_anonymous: false,
+                type: 'quiz',
+                correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
+            });
+
+        } 
+        else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
+            if (userId === ownerChatId) {
+                const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
+
+                bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
+                    is_anonymous: false,
+                    type: 'quiz',
+                    correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
+                });
+            } 
+            else {
+                bot.sendMessage(chatId, "You are not authorized to use this command in public groups.");
+            }
+        }
     });
 };
