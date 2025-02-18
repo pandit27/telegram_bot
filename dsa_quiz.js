@@ -289,7 +289,7 @@ module.exports = (bot) => {
         console.log("Chat type:", msg.chat.type);
     
         if (msg.chat.type === "private") {
-            sendUserDetailsToOwner(msg); // notify owner
+            // sendUserDetailsToOwner(msg); // notify owner
     
             // randomly select a question
             const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
