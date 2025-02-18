@@ -1,4 +1,4 @@
-modules.export = (bot) => {
+module.export = (bot) => {
     // initializing packages
     const natural = require("natural");
     const tokenizer = new natural.WordTokenizer();
