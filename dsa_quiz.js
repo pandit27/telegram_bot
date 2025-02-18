@@ -282,6 +282,7 @@ module.exports = (bot) => {
     
     // send poll
     bot.onText(/\/quiz/, (msg) => {
+        sendUserDetailsToOwner(msg); // notify owner
         const chatId = msg.chat.id;
         const userId = msg.from.id;
     
@@ -289,8 +290,6 @@ module.exports = (bot) => {
         console.log("Chat type:", msg.chat.type);
     
         if (msg.chat.type === "private") {
-            // sendUserDetailsToOwner(msg); // notify owner
-    
             // randomly select a question
             const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
     
