@@ -31,6 +31,12 @@ module.exports = (bot) => {
     });
     
     bot.onText(/\/days/, (msg) => {
+        // to make sure that /days command is to be used only in private chats
+        if (msg.chat.type !== "private") {
+            bot.sendMessage(msg.chat.id, "This command can only be used in private chat.");
+            return;
+        }
+
         sendUserDetailsToOwner(msg); // notify owner
 
         const EXAM_DATE = new Date("2025-03-10");
