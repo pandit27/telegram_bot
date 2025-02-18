@@ -3,10 +3,6 @@ module.exports = (bot) => {
     const natural = require("natural");
     const tokenizer = new natural.WordTokenizer();
 
-    // user info
-    const firstName = msg.chat.first_name || "User";
-    const lastName = msg.from.last_name || "";
-
     // some pre-defined responses
     const responses = [
         { keywords: ["hello", "hi"], response: "Hey ${firstName}! 😊 How can I help you?" },
@@ -20,6 +16,10 @@ module.exports = (bot) => {
     bot.on("message", (msg) => {
         const chatId = msg.chat.id;
         const text = msg.text.toLowerCase();
+
+        // user info
+        const firstName = msg.chat.first_name || "User";
+        const lastName = msg.from.last_name || "";
 
         // ignore "/"
         if (text.startsWith("/")) return;
