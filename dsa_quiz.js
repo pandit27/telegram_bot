@@ -285,7 +285,7 @@ module.exports = (bot) => {
 
         } 
         else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
-            if (userId === ownerChatId) {
+            if (String(userId) === String(ownerChatId)) {
                 const randomQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
 
                 bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
