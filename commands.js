@@ -37,7 +37,7 @@ module.exports = (bot) => {
             return;
         }
 
-        sendUserDetailsToOwner(msg); // notify owner
+        // sendUserDetailsToOwner(msg); // notify owner
 
         const EXAM_DATE = new Date("2025-03-15");
         const now = new Date();
@@ -58,13 +58,13 @@ module.exports = (bot) => {
     });
     
     bot.onText(/\/help/, (msg) => {
-        sendUserDetailsToOwner(msg); // notify owner
+        // sendUserDetailsToOwner(msg); // notify owner
 
         bot.sendMessage(msg.chat.id, "🧑‍💻 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
-        sendUserDetailsToOwner(msg); // notify owner
+        // sendUserDetailsToOwner(msg); // notify owner
 
         bot.sendMessage(msg.chat.id, "NIMCET exam date is yet to be announced.");
     });
