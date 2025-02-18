@@ -83,6 +83,7 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 | `/exam`  | Get the number of days left until the CUET PG exam. |
 | `/nimcet`  | Get the number of days left until the NIMCET exam. |
 | `/resources`  | Get the resources for NIMCET 2025. |
+| `/quiz`  | Get a random DSA telegram quiz. |
 
 ---
 
@@ -95,11 +96,12 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 
 ---
 
-## 🧑‍💻 Updates (version 1.02)
+## 🧑‍💻 Updates (version 1.05)
 
 🔹 "/days" & "/resources" commands can only be used in private chats. <br>
 🔹 Data of users interacting with this bot will be stored. <br>
-🔹 Added some pre-texts responses using natural package.
+🔹 Added some pre-texts responses using natural package. <br>
+🔹 Added a random DSA quiz command.
 
 ---
 
