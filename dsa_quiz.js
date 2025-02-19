@@ -10,17 +10,19 @@ const quizQuestions = {
     DSA: dsaQuestions
 };
 
-// exporing module
+// store quiz progress for each user
+const userQuizData = {};
+
+// exporting module
 module.exports = (bot) => {
     const ownerChatId = '5036581553'; // owner chat_id
 
-    // on typing command "/quiz"
+    // when the user types "/quiz"
     bot.onText(/\/quiz/, (msg) => {
         const chatId = msg.chat.id;
         const userId = msg.from.id;
 
-        // testing ke liye
-        console.log("chat type:", msg.chat.type);
+        console.log("Chat type:", msg.chat.type);
 
         // if used in a private chat
         if (msg.chat.type === "private") {
@@ -35,52 +37,113 @@ module.exports = (bot) => {
             });
         }
 
-        // if used in a group
+        // if used in a group (only owner can start)
         else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
             if (String(userId) === String(ownerChatId)) {
-                // combine all questions
-                const allQuestions = [...mathQuestions, ...reasoningQuestions, ...dsaQuestions];
-                const randomQuestion = allQuestions[Math.floor(Math.random() * allQuestions.length)];
-
-                bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
-                    is_anonymous: false,
-                    type: 'quiz',
-                    correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
-                });
-            } 
-
-            // if a user used in a group (to avoid spamming)
-            else {
-                bot.sendMessage(chatId, "It can only be used in private chat \n click on @pvnimcet2025_bot.");
+                startRandomQuiz(bot, chatId);
+            } else {
+                bot.sendMessage(chatId, "It can only be used in private chat. Click on @pvnimcet2025_bot.");
             }
         }
     });
 
-    // for GUI based button
+    // handle category selection
     bot.on("callback_query", (query) => {
         const chatId = query.message.chat.id;
-        const selectedCategory = query.data.split("_")[1]; // extract question type
+        const userId = query.from.id;
+        const selectedCategory = query.data.split("_")[1]; // extract category
 
-        console.log("Selected category:", selectedCategory); // testing ke liye
+        console.log("Selected category:", selectedCategory);
 
         if (quizQuestions[selectedCategory]) {
-            // randomly give a question
-            const randomQuestion = quizQuestions[selectedCategory][Math.floor(Math.random() * quizQuestions[selectedCategory].length)];
+            // initialize user quiz data
+            userQuizData[userId] = {
+                category: selectedCategory,
+                index: 0,
+                startTime: Date.now(),
+                attempted: 0
+            };
 
-            // console.log("Selected question:", randomQuestion); // testing ke liye
-
-            // send telegram quiz (with correct answer)
-            bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
-                is_anonymous: false,
-                type: 'quiz',
-                correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
-            });
-
-            bot.answerCallbackQuery(query.id);
-        } 
-        
-        else {
+            sendNextQuestion(bot, chatId, userId);
+        } else {
             bot.answerCallbackQuery(query.id, { text: "Error: Category not found!", show_alert: true });
         }
     });
+
+    // Handle "Next" and "End Quiz" buttons
+    bot.on("callback_query", (query) => {
+        const chatId = query.message.chat.id;
+        const userId = query.from.id;
+        const action = query.data;
+
+        if (!userQuizData[userId]) return;
+
+        if (action === "next_question") {
+            userQuizData[userId].attempted++;
+            sendNextQuestion(bot, chatId, userId);
+        } 
+        else if (action === "end_quiz") {
+            sendQuizSummary(bot, chatId, userId);
+        }
+
+        bot.answerCallbackQuery(query.id);
+    });
 };
+
+// Function to send the next question
+function sendNextQuestion(bot, chatId, userId) {
+    const userData = userQuizData[userId];
+    const category = userData.category;
+    const questionList = quizQuestions[category];
+
+    if (userData.index >= questionList.length) {
+        sendQuizSummary(bot, chatId, userId);
+        return;
+    }
+
+    const currentQuestion = questionList[userData.index];
+    userData.index++;
+
+    bot.sendPoll(chatId, currentQuestion.question, currentQuestion.options, {
+        is_anonymous: false,
+        type: 'quiz',
+        correct_option_id: currentQuestion.options.indexOf(currentQuestion.answer),
+        reply_markup: {
+            inline_keyboard: [
+                [{ text: "Next", callback_data: "next_question" }],
+                [{ text: "End Quiz", callback_data: "end_quiz" }]
+            ]
+        }
+    });
+}
+
+// function to send quiz summary
+function sendQuizSummary(bot, chatId, userId) {
+    const userData = userQuizData[userId];
+    const totalTime = ((Date.now() - userData.startTime) / 1000).toFixed(2); // time in seconds
+    const attempted = userData.attempted;
+    const category = userData.category;
+
+    const summaryText = `
+📌 **Quiz Summary**
+📝 **Category:** ${category}
+✅ **Questions Attempted:** ${attempted}
+⏳ **Time Taken:** ${totalTime} seconds
+🎯 **Accuracy:** [To be implemented if tracking responses]
+`;
+
+    bot.sendMessage(chatId, summaryText);
+    delete userQuizData[userId]; // reset user data
+}
+
+// function to start a random quiz in group (only owner can use)
+function startRandomQuiz(bot, chatId) {
+    const allQuestions = [...quizQuestions.Math, ...quizQuestions.Reasoning, ...quizQuestions.DSA];
+    const randomQuestion = allQuestions[Math.floor(Math.random() * allQuestions.length)];
+
+    bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
+        is_anonymous: false,
+        type: 'quiz',
+        correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
+    });
+}
