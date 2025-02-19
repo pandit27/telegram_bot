@@ -65,7 +65,8 @@ module.exports = (bot) => {
             };
 
             sendNextQuestion(bot, chatId, userId);
-        } else {
+        } 
+        else {
             bot.answerCallbackQuery(query.id, { text: "Error: Category not found!", show_alert: true });
         }
     });
@@ -125,11 +126,10 @@ function sendQuizSummary(bot, chatId, userId) {
     const category = userData.category;
 
     const summaryText = `
-📌 **Quiz Summary**
-📝 **Category:** ${category}
-✅ **Questions Attempted:** ${attempted}
-⏳ **Time Taken:** ${totalTime} seconds
-🎯 **Accuracy:** [To be implemented if tracking responses]
+📌 Quiz Summary
+📝 Category: ${category}
+✅ Questions Attempted: ${attempted}
+⏳ Time Taken: ${totalTime} seconds
 `;
 
     bot.sendMessage(chatId, summaryText);
