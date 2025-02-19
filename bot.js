@@ -50,19 +50,27 @@ setInterval(() => {
 // function to send a random math q (at 5 pm - INDIAN time)
 const sendDailyQuiz = () => {
     const present = new Date();
+    const hoursIST = present.getUTCHours() + 5; // convert UTC to IST
+    const minutesIST = present.getUTCMinutes() + 30;
+    
+    if (minutesIST >= 60) {
+        minutesIST -= 60;
+        hoursIST += 1;
+    }
 
-    // 5 PM IST = 11:30 AM UTC
-    if (present.getHours() === 12 && present.getMinutes() === 54) {
-        console.log("let's test rn...");
+    console.log(`Checking time: ${hoursIST}:${minutesIST} IST`);
+
+    if (hoursIST === 18 && minutesIST === 30) {
+        console.log("Sending daily quiz now!");
 
         const question = math_random[Math.floor(Math.random() * math_random.length)];
 
-        bot.sendPoll(OWNER_CHAT_ID, question.question, question.options, {
+        bot.sendPoll(CHAT_ID, question.question, question.options, {
             is_anonymous: false,
             type: 'quiz',
             correct_option_id: question.options.indexOf(question.answer)
         });
     }
-}
+};
 
 setInterval(sendDailyQuiz, 60 * 1000);
