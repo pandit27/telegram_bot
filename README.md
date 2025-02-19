@@ -99,14 +99,15 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 
 ---
 
-## 🧑‍💻 Updates (version 2.01) - 19/02/2025
+## 🧑‍💻 Updates (version 2.1) - 19/02/2025
 
 🔹 "/days" & "/resources" commands can only be used in private chats. <br>
 🔹 Data of users interacting with this bot will be stored. <br>
 🔹 Added some pre-texts responses using natural package. <br>
 🔹 Added a random DSA quiz command. <br>
 🔹 Now users can select the subject type for quiz (MATH, REASONING, DSA) <br>
-🔹 Now users can check stats of quiz (like qs attempted, time taken & total correct answers)
+🔹 Now users can check stats of quiz (like qs attempted, time taken & total correct answers) <br>
+🔹 A random Math quiz will be sent to the group everyday at 06:30 PM
 
 ---
 

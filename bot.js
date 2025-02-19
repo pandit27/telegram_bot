@@ -2,7 +2,6 @@ const TelegramBot = require("node-telegram-bot-api");
 const cron = require('node-cron');
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = "-1002165186773";
-const OWNER_CHAT_ID = "5036581553"; // owner chat_id
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
@@ -47,7 +46,7 @@ setInterval(() => {
 }, 60 * 1000);
 
 
-// function to send a random math q (at 5 pm - INDIAN time)
+// function to send a random math q (at 06:30 PM)
 const sendDailyQuiz = () => {
     const present = new Date();
     const hoursIST = present.getUTCHours() + 5; // convert UTC to IST
@@ -58,11 +57,7 @@ const sendDailyQuiz = () => {
         hoursIST += 1;
     }
 
-    console.log(`Checking time: ${hoursIST}:${minutesIST} IST`);
-
     if (hoursIST === 18 && minutesIST === 30) {
-        console.log("Sending daily quiz now!");
-
         const question = math_random[Math.floor(Math.random() * math_random.length)];
 
         bot.sendPoll(CHAT_ID, question.question, question.options, {
