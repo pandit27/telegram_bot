@@ -1,4 +1,5 @@
 const TelegramBot = require("node-telegram-bot-api");
+const cron = require('node-cron');
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = "-1002165186773";
 const EXAM_DATE = new Date("2025-03-15");
@@ -9,6 +10,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 */
 const commands = require('./commands'); // import commands.js
 commands(bot); // load in bot.js
+const math_random = require("./questions/math_random");
 
 const sendReminder = () => {
     const now = new Date();
@@ -42,3 +44,23 @@ setInterval(() => {
     const now = new Date();
     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
 }, 60 * 1000);
+
+
+// function to send a random math q (at 5 pm - INDIAN time)
+function sendDailyQuiz() {
+    const question = math_random[Math.floor(Math.random() * math_random.length)];
+    
+    bot.sendPoll(chatId, question.question, question.options, {
+        is_anonymous: false,
+        type: 'quiz',
+        correct_option_id: question.options.indexOf(question.answer)
+    });
+}
+
+// send random q at 5 PM (INDIAN time)
+cron.schedule("30 11 * * *", () => {
+    console.log("Sending the daily random math q at 5 PM IST!");
+}, {
+    scheduled: true,
+    timezone: "Asia/Kolkata"
+});
