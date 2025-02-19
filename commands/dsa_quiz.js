@@ -1,7 +1,7 @@
 // importing questions
-const mathQuestions = require("./questions/math");
-const reasoningQuestions = require("./questions/reasoning");
-const dsaQuestions = require("./questions/dsa");
+const mathQuestions = require("../questions/math");
+const reasoningQuestions = require("../questions/reasoning");
+const dsaQuestions = require("../questions/dsa");
 
 // mapping quiz (type of subject)
 const quizQuestions = {
