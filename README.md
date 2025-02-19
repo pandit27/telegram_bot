@@ -20,7 +20,7 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 - [▶️ Usage](#️-usage)
 - [📌 Commands](#-commands)
 - [🌐 Hosting Options](#-hosting-options)
-- [🧑‍💻 Updates (version 2.01) - 19/02/2025](#-updates-version-201-19022025)
+- [🧑‍💻 Updates (version 2.01) - 19/02/2025](#-updates)
 - [📄 License](#-license)
 
 
