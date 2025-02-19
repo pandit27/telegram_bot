@@ -1,25 +1,28 @@
-// Importing questions
+// importing questions
 const mathQuestions = require("./questions/math");
 const reasoningQuestions = require("./questions/reasoning");
 const dsaQuestions = require("./questions/dsa");
 
-// Mapping quiz categories correctly
+// mapping quiz (type of subject)
 const quizQuestions = {
     Math: mathQuestions,
     Reasoning: reasoningQuestions,
     DSA: dsaQuestions
 };
 
+// exporing module
 module.exports = (bot) => {
-    const ownerChatId = '5036581553';
+    const ownerChatId = '5036581553'; // owner chat_id
 
-    // Send category selection buttons
+    // on typing command "/quiz"
     bot.onText(/\/quiz/, (msg) => {
         const chatId = msg.chat.id;
         const userId = msg.from.id;
 
+        // testing ke liye
         console.log("chat type:", msg.chat.type);
 
+        // if used in a private chat
         if (msg.chat.type === "private") {
             bot.sendMessage(chatId, "Select a quiz category:", {
                 reply_markup: {
@@ -30,10 +33,13 @@ module.exports = (bot) => {
                     ]
                 }
             });
-        } 
+        }
+
+        // if used in a group
         else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
             if (String(userId) === String(ownerChatId)) {
-                const allQuestions = [...mathQuestions, ...reasoningQuestions, ...dsaQuestions]; // Combine all questions
+                // combine all questions
+                const allQuestions = [...mathQuestions, ...reasoningQuestions, ...dsaQuestions];
                 const randomQuestion = allQuestions[Math.floor(Math.random() * allQuestions.length)];
 
                 bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
@@ -42,35 +48,38 @@ module.exports = (bot) => {
                     correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
                 });
             } 
+
+            // if a user used in a group (to avoid spamming)
             else {
-                bot.sendMessage(chatId, "You are not authorized, use in private chat @pvnimcet2025_bot.");
+                bot.sendMessage(chatId, "It can only be used in private chat \n click on @pvnimcet2025_bot.");
             }
         }
     });
 
-    // Handle button clicks
+    // for GUI based button
     bot.on("callback_query", (query) => {
         const chatId = query.message.chat.id;
-        const selectedCategory = query.data.split("_")[1]; // Extract category name
+        const selectedCategory = query.data.split("_")[1]; // extract question type
 
-        console.log("Selected category:", selectedCategory); // Debugging log
+        console.log("Selected category:", selectedCategory); // testing ke liye
 
         if (quizQuestions[selectedCategory]) {
-            // Pick a random question from the selected category
+            // randomly give a question
             const randomQuestion = quizQuestions[selectedCategory][Math.floor(Math.random() * quizQuestions[selectedCategory].length)];
 
-            console.log("Selected question:", randomQuestion); // Debugging log
+            // console.log("Selected question:", randomQuestion); // testing ke liye
 
-            // Send quiz poll
+            // send telegram quiz (with correct answer)
             bot.sendPoll(chatId, randomQuestion.question, randomQuestion.options, {
                 is_anonymous: false,
                 type: 'quiz',
                 correct_option_id: randomQuestion.options.indexOf(randomQuestion.answer)
             });
 
-            // Acknowledge callback to remove "loading" icon
             bot.answerCallbackQuery(query.id);
-        } else {
+        } 
+        
+        else {
             bot.answerCallbackQuery(query.id, { text: "Error: Category not found!", show_alert: true });
         }
     });
