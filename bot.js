@@ -48,33 +48,21 @@ setInterval(() => {
 
 
 // function to send a random math q (at 5 pm - INDIAN time)
-function sendDailyQuiz() {
-    const question = math_random[Math.floor(Math.random() * math_random.length)];
-    
-    bot.sendPoll(OWNER_CHAT_ID, question.question, question.options, {
-        is_anonymous: false,
-        type: 'quiz',
-        correct_option_id: question.options.indexOf(question.answer)
-    });
+const sendDailyQuiz = () => {
+    const present = new Date();
+
+    // 5 PM IST = 11:30 AM UTC
+    if (present.getHours() === 12 && present.getMinutes() === 54) {
+        console.log("let's test rn...");
+
+        const question = math_random[Math.floor(Math.random() * math_random.length)];
+
+        bot.sendPoll(OWNER_CHAT_ID, question.question, question.options, {
+            is_anonymous: false,
+            type: 'quiz',
+            correct_option_id: question.options.indexOf(question.answer)
+        });
+    }
 }
 
-const present = new Date();
-const mins = present.getMinutes() + 1;
-const testCron = `${mins} ${present.getHours()} * * *`;
-
-cron.schedule(testCron, () => {
-    console.log("Sending math quiz in 1 min!");
-    sendDailyQuiz();
-}, {
-    scheduled: true,
-    timezone: "Asia/Kolkata"
-});
-
-// send random q at 5 PM (INDIAN time)
-// cron.schedule("30 11 * * *", () => {
-//     console.log("Sending the daily random math q at 5 PM IST!");
-//     sendDailyQuiz();
-// }, {
-//     scheduled: true,
-//     timezone: "Asia/Kolkata"
-// });
+setInterval(sendDailyQuiz, 60 * 1000);
