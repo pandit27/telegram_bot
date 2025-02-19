@@ -105,7 +105,8 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 🔹 Data of users interacting with this bot will be stored. <br>
 🔹 Added some pre-texts responses using natural package. <br>
 🔹 Added a random DSA quiz command. <br>
-🔹 Now users can select the subject type for quiz (MATH, REASONING, DSA)
+🔹 Now users can select the subject type for quiz (MATH, REASONING, DSA) <br>
+🔹 Now users can check stats of quiz (like qs attempted, time taken & total correct answers)
 
 ---
 
