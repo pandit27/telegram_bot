@@ -25,8 +25,12 @@ module.exports = (bot) => {
 
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;
+        
+        // Ensure the message has text before processing
+        if (!msg.text) return;
+    
         const text = msg.text.trim();
-
+    
         if (chatId === OWNER_ID && text.startsWith("-sendMessage")) {
             const messageContent = text.replace("-sendMessage", "").trim();
             if (messageContent.length === 0) {
@@ -37,21 +41,22 @@ module.exports = (bot) => {
             bot.sendMessage(chatId, "✅ Message sent to the group!");
             return;
         }
-
-        // respond only in private chats
+    
+        // Respond only in private chats
         if (msg.chat.type !== "private") return;
-
-        // tokenize input
+    
+        // Tokenize input
         const words = tokenizer.tokenize(text);
-        let reply = "Sorry, I'm still in the development phase.\n\nFor more information contact @PV_027.";
-
+        let reply = "Sorry, I'm still in the development phase.\n\nFor more information, contact @PV_027.";
+    
         for (let word of words) {
             if (trie.has(word)) {
                 reply = responseMap.get(word);
                 break;
             }
         }
-
+    
         bot.sendMessage(chatId, reply);
     });
+    
 };
