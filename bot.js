@@ -50,7 +50,7 @@ setInterval(() => {
 function sendDailyQuiz() {
     const question = math_random[Math.floor(Math.random() * math_random.length)];
     
-    bot.sendPoll(chatId, question.question, question.options, {
+    bot.sendPoll(CHAT_ID, question.question, question.options, {
         is_anonymous: false,
         type: 'quiz',
         correct_option_id: question.options.indexOf(question.answer)
@@ -60,6 +60,7 @@ function sendDailyQuiz() {
 // send random q at 5 PM (INDIAN time)
 cron.schedule("30 11 * * *", () => {
     console.log("Sending the daily random math q at 5 PM IST!");
+    sendDailyQuiz();
 }, {
     scheduled: true,
     timezone: "Asia/Kolkata"
