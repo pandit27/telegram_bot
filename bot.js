@@ -47,11 +47,14 @@ setInterval(() => {
 
 
 // function to send a random math q (at 06:30 PM)
+const quizResponses = new Map();
+const quizCorrectAnswers = new Map();
+
 const sendDailyQuiz = () => {
     const present = new Date();
-    const hoursIST = present.getUTCHours() + 5; // convert UTC to IST
-    const minutesIST = present.getUTCMinutes() + 30;
-    
+    let hoursIST = present.getUTCHours() + 5; // convert UTC to IST
+    let minutesIST = present.getUTCMinutes() + 30;
+
     if (minutesIST >= 60) {
         minutesIST -= 60;
         hoursIST += 1;
@@ -59,13 +62,60 @@ const sendDailyQuiz = () => {
 
     if (hoursIST === 18 && minutesIST === 30) {
         const question = math_random[Math.floor(Math.random() * math_random.length)];
+        const correctOptionId = question.options.indexOf(question.answer);
 
         bot.sendPoll(CHAT_ID, question.question, question.options, {
             is_anonymous: false,
-            type: 'quiz',
-            correct_option_id: question.options.indexOf(question.answer)
+            type: "quiz",
+            correct_option_id: correctOptionId
+        }).then((poll) => {
+            const quizId = poll.poll.id;
+            quizResponses.set(quizId, new Map());
+            quizCorrectAnswers.set(quizId, correctOptionId);
+
+            // quiz result after 1 hour
+            setTimeout(() => endQuiz(quizId), 60 * 60 * 1000);
         });
     }
 };
+
+// track user responses
+bot.on("poll_answer", (answer) => {
+    const pollId = answer.poll_id;
+    const userId = answer.user.id;
+    const firstName = answer.user.first_name || "";
+    const lastName = answer.user.last_name || "";
+    const username = answer.user.username ? `@${answer.user.username}` : "";
+    const selectedOption = answer.option_ids[0];
+
+    if (quizResponses.has(pollId) && quizCorrectAnswers.has(pollId)) {
+        const correctOptionId = quizCorrectAnswers.get(pollId);
+
+        if (selectedOption === correctOptionId) {
+            quizResponses.get(pollId).set(userId, { firstName, lastName, username });
+        }
+    }
+});
+
+// function to send quiz results after 1 hour
+const endQuiz = (quizId) => {
+    if (!quizResponses.has(quizId)) return;
+
+    const correctUsers = Array.from(quizResponses.get(quizId).values());
+
+    if (correctUsers.length === 0) {
+        bot.sendMessage(CHAT_ID, "Quiz ended! No one answered correctly today.");
+    } else {
+        let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
+        correctUsers.forEach((user, index) => {
+            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName} (${user.username})\n`;
+        });
+        bot.sendMessage(CHAT_ID, resultMessage, { parse_mode: "Markdown" });
+    }
+
+    quizResponses.delete(quizId);
+    quizCorrectAnswers.delete(quizId);
+};
+
 
 setInterval(sendDailyQuiz, 60 * 1000);
