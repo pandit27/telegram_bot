@@ -88,7 +88,7 @@ module.exports = (bot) => {
         bot.answerCallbackQuery(query.id);
     });
 
-    // Handle correct answer tracking
+    // handle correct answer tracking
     bot.on("poll_answer", (pollAnswer) => {
         const userId = pollAnswer.user.id;
         if (!userQuizData[userId]) return;
