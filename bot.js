@@ -8,7 +8,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 /*  
     importing commands 
 */
-const commands = require('./commands'); // import commands.js
+const commands = require('./commands/commands'); // import commands.js
 commands(bot); // load in bot.js
 const math_random = require("./questions/math_random");
 
