@@ -38,7 +38,7 @@ module.exports = (bot) => {
     bot.onText(/\/days/, (msg) => {
         // to make sure that /days command is to be used only in private chats
         if (msg.chat.type !== "private") {
-            bot.sendMessage(msg.chat.id, "This command can only be used in private chat. \nClick on @pvnimcet2025_bot to continue.");
+            bot.sendMessage(msg.chat.id, "It can only be used in private chat. Click on @pvnimcet2025_bot.");
             return;
         }
 

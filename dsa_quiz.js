@@ -61,17 +61,15 @@ module.exports = (bot) => {
                 category: selectedCategory,
                 index: 0,
                 startTime: Date.now(),
-                attempted: 0
+                attempted: 0,
+                correctAnswers: 0
             };
 
             sendNextQuestion(bot, chatId, userId);
         } 
-        else {
-            bot.answerCallbackQuery(query.id, { text: "Error: Category not found!", show_alert: true });
-        }
     });
 
-    // Handle "Next" and "End Quiz" buttons
+    // handle "Next" and "End Quiz" buttons
     bot.on("callback_query", (query) => {
         const chatId = query.message.chat.id;
         const userId = query.from.id;
@@ -88,6 +86,20 @@ module.exports = (bot) => {
         }
 
         bot.answerCallbackQuery(query.id);
+    });
+
+    // Handle correct answer tracking
+    bot.on("poll_answer", (pollAnswer) => {
+        const userId = pollAnswer.user.id;
+        if (!userQuizData[userId]) return;
+
+        const userData = userQuizData[userId];
+        const questionList = quizQuestions[userData.category];
+        const currentQuestion = questionList[userData.index - 1];
+
+        if (pollAnswer.option_ids.includes(currentQuestion.options.indexOf(currentQuestion.answer))) {
+            userData.correctAnswers++;
+        }
     });
 };
 
@@ -123,12 +135,14 @@ function sendQuizSummary(bot, chatId, userId) {
     const userData = userQuizData[userId];
     const totalTime = ((Date.now() - userData.startTime) / 1000).toFixed(2); // time in seconds
     const attempted = userData.attempted;
+    const correctAnswers = userData.correctAnswers;
     const category = userData.category;
 
     const summaryText = `
 📌 Quiz Summary
 📝 Category: ${category}
 ✅ Questions Attempted: ${attempted}
+🎯 Correct Answers: ${correctAnswers}
 ⏳ Time Taken: ${totalTime} seconds
 `;
 
