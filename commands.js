@@ -23,18 +23,35 @@ module.exports = (bot) => {
     const dsa_quiz = require('./dsa_quiz');
     dsa_quiz(bot);
 
-    /* 
-        commands 
+    /********************************************************************************************
+                                                commands 
+    *********************************************************************************************/
+    /*
+        1. /start command
     */
     bot.onText(/\/start/, (msg) => {
         sendUserDetailsToOwner(msg); // notify owner
-
+    
         const firstName = msg.from.first_name || "User";
         const lastName = msg.from.last_name || "";
-
-        bot.sendMessage(msg.chat.id, `👋 Hello, ${firstName} ${lastName}!\n I am your reminder bot made by @PV_027.\n\nUse /days to check the CUET PG exam countdown.`);
-    });
     
+        const welcomeMessage = `👋 Hello, ${firstName} ${lastName}!\n Use /help to get all commands.`;
+    
+        const options = {
+            reply_markup: {
+                inline_keyboard: [
+                    [{ text: "📩 Contact Owner", url: "https://t.me/PV_027" }],
+                    [{ text: "🔗 GitHub Repo", url: "https://github.com/pandit27/telegram_bot" }]
+                ]
+            }
+        };
+    
+        bot.sendMessage(msg.chat.id, welcomeMessage, options);
+    });        
+    
+    /*
+        2. /days command
+    */
     bot.onText(/\/days/, (msg) => {
         // to make sure that /days command is to be used only in private chats
         if (msg.chat.type !== "private") {
@@ -58,9 +75,12 @@ module.exports = (bot) => {
 
         console.log(`Current date: ${now}, Exam date: ${EXAM_DATE}, Time difference: ${timeDiff}`);
     });
-    
+
+    /*
+        3. /help command
+    */
     bot.onText(/\/help/, (msg) => {
-        bot.sendMessage(msg.chat.id, "🧑‍💻 commands: \n/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet	to get NIMCET exam countdown. \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
+        bot.sendMessage(msg.chat.id, "/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet : to get NIMCET exam countdown. \n/quiz : to get a random NIMCET quiz \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
     bot.onText(/\/nimcet/, (msg) => {
