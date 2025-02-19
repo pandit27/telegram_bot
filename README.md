@@ -4,11 +4,11 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ## 🚀 Features
 
-- **1. Automated Reminders** – Sends a daily countdown message at **05:30 AM**.  
-- **2. Interactive Commands** – Users can access various commands for exam updates and quizzes.  
-- **3. Modular Architecture** – Command handling is separated in `commands.js` for maintainability.  
-- **4. Multiple Hosting Options** – Compatible with **Railway, Render, Replit, and Termux**.  
-- **5. Cross-Platform Execution** – Can run on **PC, laptop, or mobile** with Node.js support.
+- **Automated Reminders** – Sends a daily countdown message at **05:30 AM**.  
+- **Interactive Commands** – Users can access various commands for exam updates and quizzes.  
+- **Modular Architecture** – Command handling is separated in `commands.js` for maintainability.  
+- **Multiple Hosting Options** – Compatible with **Railway, Render, Replit, and Termux**.  
+- **Cross-Platform Execution** – Can run on **PC, laptop, or mobile** with Node.js support.
 
 ---
 
@@ -23,6 +23,18 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 - [🧑Updates (version 2.01) - 19/02/2025](#-updates)
 - [License](#-license)
 
+
+---
+
+## 🧑‍💻 Recent Updates (v2.1) – 19/02/2025
+
+- `/days` & `/resources` commands restricted to private chats.  
+- User interaction data is now stored.  
+- Added pre-defined response handling using the `natural` package.  
+- Introduced a random DSA quiz command.  
+- Users can now select quiz subjects (MATH, REASONING, DSA).  
+- Quiz stats tracking (attempts, time taken, correct answers).  
+- Daily random Math quiz sent to the group at **06:30 PM**.
 
 ---
 
@@ -96,18 +108,6 @@ If you want to run it on **your phone**, use a Node.js runtime like:
 ✅ **Render** - Deploy as a background worker.  
 ✅ **Replit** - Run online without a server.  
 ✅ **Termux** - Run locally on a mobile device.
-
----
-
-## 🧑‍💻 Recent Updates (v2.1) – 19/02/2025
-
-- `/days` & `/resources` commands restricted to private chats.  
-- User interaction data is now stored.  
-- Added pre-defined response handling using the `natural` package.  
-- Introduced a random DSA quiz command.  
-- Users can now select quiz subjects (MATH, REASONING, DSA).  
-- Quiz stats tracking (attempts, time taken, correct answers).  
-- Daily random Math quiz sent to the group at **06:30 PM**.
 
 ---
 
