@@ -1,49 +1,38 @@
-require("dotenv").config();
-const ytdl = require("ytdl-core");
+const playdl = require("play-dl");
 const fs = require("fs");
-const path = require("path");
-
-const OWNER_ID = Number(process.env.OWNER_ID);
 
 module.exports = (bot) => {
     bot.on("message", async (msg) => {
-        const chatId = Number(msg.chat.id);
+        const chatId = msg.chat.id;
         const text = msg.text ? msg.text.trim() : "";
 
-        if (chatId !== OWNER_ID) return;
+        if (chatId !== Number(process.env.OWNER_ID)) return;
 
         if (text.startsWith("-yt")) {
             const parts = text.split(" ");
             if (parts.length < 2) {
-                bot.sendMessage(chatId, "❌ Usage: -yt <YouTube_URL>");
+                bot.sendMessage(chatId, "❌ Usage: -yt <YouTube URL>");
                 return;
             }
 
             const url = parts[1];
-            if (!ytdl.validateURL(url)) {
-                bot.sendMessage(chatId, "❌ Invalid YouTube URL");
-                return;
-            }
-
-            bot.sendMessage(chatId, "⏳ Downloading video, please wait...");
 
             try {
-                const info = await ytdl.getInfo(url);
-                const title = info.videoDetails.title.replace(/[^a-zA-Z0-9]/g, "_").substring(0, 20);
-                const filePath = path.join(__dirname, `${title}.mp4`);
+                bot.sendMessage(chatId, "⏳ Downloading... Please wait.");
 
-                const videoStream = ytdl(url, { quality: "highestvideo" });
-                const writeStream = fs.createWriteStream(filePath);
+                const video = await playdl.video_basic_info(url);
+                const stream = await playdl.stream(url);
+                const filePath = `./downloads/${video.video_details.title}.mp4`;
 
-                videoStream.pipe(writeStream);
-                
-                writeStream.on("finish", () => {
-                    bot.sendVideo(chatId, filePath, { caption: `🎥 ${info.videoDetails.title}` })
-                        .then(() => fs.unlinkSync(filePath)) // delete after sending
-                        .catch((err) => console.error("Send error:", err));
+                const fileStream = fs.createWriteStream(filePath);
+                stream.stream.pipe(fileStream);
+
+                fileStream.on("finish", async () => {
+                    bot.sendMessage(chatId, "✅ Download complete! Sending the file...");
+                    await bot.sendVideo(chatId, filePath);
                 });
-            } catch (err) {
-                bot.sendMessage(chatId, `❌ Error: ${err.message}`);
+            } catch (error) {
+                bot.sendMessage(chatId, `❌ Error: ${error.message}`);
             }
         }
     });
