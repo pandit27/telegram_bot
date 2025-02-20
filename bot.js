@@ -99,7 +99,7 @@ bot.on("poll_answer", (answer) => {
     }
 });
 
-// function to send quiz results after 1 hour
+// function to send quiz results after 4 hours
 const endQuiz = (quizId) => {
     if (!quizResponses.has(quizId)) return;
 
