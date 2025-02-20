@@ -48,7 +48,7 @@ module.exports = (bot) => {
             return;
         }
 
-        // send replied message to group
+        // send replied message to the group
         if (chatId === OWNER_ID && msg.reply_to_message && text === "-sm") {
             console.log("Forwarding message:", msg.reply_to_message);
             bot.forwardMessage(GROUP_ID, chatId, msg.reply_to_message.message_id)

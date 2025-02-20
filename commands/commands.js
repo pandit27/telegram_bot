@@ -22,6 +22,8 @@ module.exports = (bot) => {
     aiTexts(bot);
     const dsa_quiz = require('./dsa_quiz');
     dsa_quiz(bot);
+    const personal = require('../utils/personal');
+    personal(bot);
 
     /********************************************************************************************
                                                 commands 
