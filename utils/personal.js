@@ -3,6 +3,9 @@ require("dotenv").config();
 const OWNER_ID = Number(process.env.OWNER_ID);
 
 module.exports = (bot) => {
+    const youtube = require("./packages/youtube");
+    youtube(bot);
+
     bot.on("message", async (msg) => {
         const chatId = Number(msg.chat.id);
         const text = msg.text ? msg.text.trim() : "";
