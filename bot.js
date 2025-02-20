@@ -85,7 +85,7 @@ bot.on("poll_answer", (answer) => {
     const userId = answer.user.id;
     const firstName = answer.user.first_name || "";
     const lastName = answer.user.last_name || "";
-    const username = answer.user.username ? `@${answer.user.username}` : "";
+    const username = answer.user.username ? `@${answer.user.username}` : "Anonymous";
     const selectedOption = answer.option_ids[0];
 
     if (quizResponses.has(pollId) && quizCorrectAnswers.has(pollId)) {
@@ -108,7 +108,7 @@ const endQuiz = (quizId) => {
     } else {
         let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
         correctUsers.forEach((user, index) => {
-            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName} (${user.username})\n`;
+            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName} @(${user.username})\n`;
         });
         bot.sendMessage(CHAT_ID, resultMessage, { parse_mode: "Markdown" });
     }

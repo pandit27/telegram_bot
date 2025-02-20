@@ -16,7 +16,7 @@ module.exports = (bot) => {
     // predefined responses
     const responses = [
         { keywords: ["hello", "hi", "Hello", "Hi", "hey", "Hey"], response: "Hey there! 😊 How can I help?" },
-        { keywords: ["nimcet", "NIMCET", "Nimcet"], response: "Good luck for NIMCET Exam 🙂" },
+        // { keywords: ["nimcet", "NIMCET", "Nimcet"], response: "Good luck for NIMCET Exam 🙂" },
     ];
 
     // using Trie DS for faster lookup
