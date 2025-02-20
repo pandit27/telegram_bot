@@ -47,7 +47,7 @@ module.exports = (bot) => {
     
         // Tokenize input
         const words = tokenizer.tokenize(text);
-        let reply = "Sorry, I'm still in the development phase.\n\nFor more information, contact @PV_027.";
+        let reply = "";
     
         for (let word of words) {
             if (trie.has(word)) {
