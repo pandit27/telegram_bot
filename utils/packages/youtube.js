@@ -20,17 +20,14 @@ module.exports = (bot) => {
             try {
                 bot.sendMessage(chatId, "⏳ Downloading... Please wait.");
 
-                const video = await playdl.video_basic_info(url);
-                const stream = await playdl.stream(url);
-                const filePath = `./downloads/${video.video_details.title}.mp4`;
+                const video = await playdl.video_info(url);
+                const fileName = `./downloads/${video.video_details.id}.mp4`;
+                
+                const buffer = await playdl.download(url, { quality: "highest" });
+                fs.writeFileSync(fileName, buffer);
 
-                const fileStream = fs.createWriteStream(filePath);
-                stream.stream.pipe(fileStream);
-
-                fileStream.on("finish", async () => {
-                    bot.sendMessage(chatId, "✅ Download complete! Sending the file...");
-                    await bot.sendVideo(chatId, filePath);
-                });
+                bot.sendMessage(chatId, "✅ Download complete! Sending the file...");
+                await bot.sendVideo(chatId, fileName);
             } catch (error) {
                 bot.sendMessage(chatId, `❌ Error: ${error.message}`);
             }
