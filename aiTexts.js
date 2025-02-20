@@ -3,22 +3,23 @@ const natural = require("natural");
 const { Trie } = require("mnemonist");
 const tokenizer = new natural.WordTokenizer();
 
+// chat ids
 const OWNER_ID = Number(process.env.OWNER_ID);
 const GROUP_ID = Number(process.env.GROUP_ID);
 
-console.log("OWNER_ID:", OWNER_ID);
-console.log("GROUP_ID:", GROUP_ID);
+// console.log("OWNER_ID:", OWNER_ID);
+// console.log("GROUP_ID:", GROUP_ID);
 
 module.exports = (bot) => {
     const trie = new Trie();
 
-    // Predefined responses
+    // predefined responses
     const responses = [
-        { keywords: ["hello", "hi"], response: "Hey there! 😊 How can I help?" },
-        { keywords: ["bye", "goodbye"], response: "Have a great day! 👋" },
+        { keywords: ["hello", "hi", "Hello", "Hi", "hey", "Hey"], response: "Hey there! 😊 How can I help?" },
+        { keywords: ["nimcet", "NIMCET", "Nimcet"], response: "Good luck for NIMCET Exam 🙂" },
     ];
 
-    // Using Trie DS for faster lookup
+    // using Trie DS for faster lookup
     const responseMap = new Map();
     responses.forEach(({ keywords, response }) => {
         keywords.forEach((word) => {
@@ -30,7 +31,7 @@ module.exports = (bot) => {
     bot.on("message", async (msg) => {
         const chatId = Number(msg.chat.id);
         
-        // Ensure the message has text before processing
+        // ensure the message has text before processing
         if (!msg.text) return;
 
         const text = msg.text.trim();
@@ -46,10 +47,10 @@ module.exports = (bot) => {
             return;
         }
 
-        // Respond only in private chats
+        // respond only in private chats
         if (msg.chat.type !== "private") return;
 
-        // Tokenize input
+        // tokenize input
         const words = tokenizer.tokenize(text);
         let reply = "";
 
