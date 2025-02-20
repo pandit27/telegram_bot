@@ -36,6 +36,7 @@ module.exports = (bot) => {
 
         const text = msg.text.trim();
 
+        // send message to the group using "-sm <message>"
         if (chatId === OWNER_ID && text.startsWith("-sm")) {
             const messageContent = text.replace("-sm", "").trim();
             if (!messageContent.length) {
@@ -44,6 +45,13 @@ module.exports = (bot) => {
             }
             bot.sendMessage(GROUP_ID, messageContent);
             bot.sendMessage(chatId, "✅ Message sent to the group!");
+            return;
+        }
+
+        // send replied message to group
+        if (chatId === OWNER_ID && msg.reply_to_message && text === "-sm") {
+            bot.forwardMessage(GROUP_ID, chatId, msg.reply_to_message.message_id);
+            bot.sendMessage(chatId, "✅ Message forwarded to the group!");
             return;
         }
 
