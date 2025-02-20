@@ -15,13 +15,21 @@ module.exports = (bot) => {
             }
 
             const city = parts.slice(1).join(" ");
-            const weatherUrl = `https://wttr.in/${encodeURIComponent(city)}?format=%C+%t+%w+%h`;
+            const weatherUrl = `https://wttr.in/${encodeURIComponent(city)}?format=%C|%t|%f|%w|%h|%P|%S|%s`;
 
             try {
                 const response = await axios.get(weatherUrl);
-                const weatherData = response.data;
+                const data = response.data.split("|");
 
-                const weatherText = `🌤 Weather in *${city}*:\n${weatherData}`;
+                const weatherText = `🌍 *Weather in ${city}*:
+🌦 Condition: ${data[0]}
+🌡 Temperature: ${data[1]} (Feels like ${data[2]})
+💨 Wind: ${data[3]}
+💧 Humidity: ${data[4]}
+🌍 Pressure: ${data[5]}
+🌅 Sunrise: ${data[6]}
+🌇 Sunset: ${data[7]}`;
+
                 bot.sendMessage(chatId, weatherText, { parse_mode: "Markdown" });
             } catch (error) {
                 bot.sendMessage(chatId, "❌ Could not fetch weather. Check city name or try again later.");
