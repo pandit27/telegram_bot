@@ -22,7 +22,7 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 - Introduced a random DSA quiz command.  
 - New `/quiz` command with subject selection (MATH, REASONING, DSA)
 - Quiz stats tracking (attempts, time taken, accuracy) 
-- Daily Math quiz at **06:30 PM**.
+- Daily Math quiz at **05:30 PM**.
 
 ---
 
