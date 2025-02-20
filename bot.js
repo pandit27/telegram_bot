@@ -60,7 +60,7 @@ const sendDailyQuiz = () => {
         hoursIST += 1;
     }
 
-    if (hoursIST === 18 && minutesIST === 30) {
+    if (hoursIST === 17 && minutesIST === 30) {
         const question = math_random[Math.floor(Math.random() * math_random.length)];
         const correctOptionId = question.options.indexOf(question.answer);
 
