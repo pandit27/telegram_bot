@@ -1,4 +1,4 @@
-# 👧🏻 **Lucy** - Telegram Exam Reminder Bot <br>
+# **Lucy** - Telegram Exam Reminder Bot <br>
 <img src="assets/images/Lucy.jpg" alt="Bot Image" width="400" height="auto" style="display: block; margin: auto; border-radius: 10px; object-fit: cover; max-width: 100%;" />
 
 
