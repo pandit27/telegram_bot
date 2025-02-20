@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = (bot) => {
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;
-        const text = msg.text ? text.trim() : "";
+        const text = msg.text ? msg.text.trim() : "";
 
         if (chatId !== Number(process.env.OWNER_ID)) return;
 
