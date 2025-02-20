@@ -1,5 +1,5 @@
 const TelegramBot = require("node-telegram-bot-api");
-const cron = require('node-cron');
+// const cron = require('node-cron');
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = "-1002165186773";
 const EXAM_DATE = new Date("2025-03-15");
