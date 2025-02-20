@@ -84,16 +84,6 @@ node bot.js
 | `/resources` | NIMCET 2025 study materials.               |
 | `/quiz`    | Generates a random NIMCET quiz.             |
 
-
----
-
-## 🌐 Hosting Options
-
-- **Railway** - Free cloud hosting with auto-restarts.  
-- **Render** - Deploy as a background worker.  
-- **Replit** - Run online without a server.  
-- **Termux** - Run locally on a mobile device.
-
 ---
 
 ## 📄 License
