@@ -15,7 +15,7 @@ module.exports = (bot) => {
             }
 
             const city = parts.slice(1).join(" ");
-            const weatherUrl = `https://wttr.in/${encodeURIComponent(city)}?format=%C|%t|%f|%w|%h|%P|%S|%s`;
+            const weatherUrl = `https://wttr.in/${encodeURIComponent(city)}?format=%C|%t|%w|%h|%P|%S|%s&m`;
 
             try {
                 const response = await axios.get(weatherUrl);
@@ -23,12 +23,12 @@ module.exports = (bot) => {
 
                 const weatherText = `🌍 *Weather in ${city}*:
 🌦 Condition: ${data[0]}
-🌡 Temperature: ${data[1]} (Feels like ${data[2]})
-💨 Wind: ${data[3]}
-💧 Humidity: ${data[4]}
-🌍 Pressure: ${data[5]}
-🌅 Sunrise: ${data[6]}
-🌇 Sunset: ${data[7]}`;
+🌡 Temperature: ${data[1]}
+💨 Wind: ${data[2]}
+💧 Humidity: ${data[3]}
+🌍 Pressure: ${data[4]}
+🌅 Sunrise: ${data[5]}
+🌇 Sunset: ${data[6]}`;
 
                 bot.sendMessage(chatId, weatherText, { parse_mode: "Markdown" });
             } catch (error) {
