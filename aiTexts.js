@@ -32,10 +32,10 @@ module.exports = (bot) => {
     
         const text = msg.text.trim();
     
-        if (chatId === OWNER_ID && text.startsWith("-sm")) {
-            const messageContent = text.replace("-sm", "").trim();
+        if (chatId === OWNER_ID && text.startsWith("-sendMessage")) {
+            const messageContent = text.replace("-sendMessage", "").trim();
             if (messageContent.length === 0) {
-                bot.sendMessage(chatId, "❌ You need to enter a message after '-sm'.");
+                bot.sendMessage(chatId, "❌ You need to enter a message after '-sendMessage'.");
                 return;
             }
             bot.sendMessage(GROUP_ID, `${messageContent}`);
