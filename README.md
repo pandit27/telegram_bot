@@ -14,20 +14,6 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ---
 
-## 📜 Table of Contents
-- [Telegram Exam Reminder Bot](#-telegram-exam-reminder-bot)
-- [Features](#-features)
-- [Recent Updates](#-recent-updates-v21--19022025)
-- [Installation](#-installation)
-- [Configuration](#️-configuration)
-- [Usage](#️-usage)
-- [Commands](#-commands)
-- [Hosting Options](#-hosting-options)
-- [License](#-license)
-
-
----
-
 ## 🧑‍💻 Recent Updates (v2.1) – 19/02/2025
 
 - `/days` & `/resources` commands restricted to private chats.  
