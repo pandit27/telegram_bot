@@ -27,6 +27,10 @@ module.exports = (bot) => {
         }
 
         // forward message using chat ID
+        /* 
+            use karne ke liye bas uss message par reply and use -fwd <userid>
+            can be used only in that bot (out of scope not defined)
+        */
         if (msg.reply_to_message && text.startsWith("-fwd")) {
             const parts = text.split(" ");
             if (parts.length < 2) {
