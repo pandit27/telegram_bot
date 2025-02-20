@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const natural = require("natural");
 const { Trie } = require("mnemonist");
 const tokenizer = new natural.WordTokenizer();
