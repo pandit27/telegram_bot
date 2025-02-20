@@ -25,7 +25,7 @@ module.exports = (bot) => {
                 const example = data.meanings[0]?.definitions[0]?.example || "No example available.";
                 const synonyms = data.meanings[0]?.synonyms.slice(0, 5).join(", ") || "None";
 
-                const message = `📖 *Definition of "${word}":*\n📌 *Meaning:* ${definition}\n📝 *Example:* ${example}\n🔄 *Synonyms:* ${synonyms}`;
+                const message = `📖 *Definition of "${word}":*\n\n*Meaning:* ${definition}\n\n *Example:* ${example}\n\n *Synonyms:* ${synonyms}`;
 
                 bot.sendMessage(chatId, message, { parse_mode: "Markdown" });
             } catch (error) {
