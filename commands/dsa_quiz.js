@@ -26,7 +26,7 @@ module.exports = (bot) => {
 
         // if used in a private chat
         if (msg.chat.type === "private") {
-            bot.sendMessage(chatId, "Select a quiz category:", {
+            bot.sendMessage(chatId, "Select a subject:", {
                 reply_markup: {
                     inline_keyboard: [
                         [{ text: "Math", callback_data: "quiz_Math" }],
@@ -52,8 +52,6 @@ module.exports = (bot) => {
         const chatId = query.message.chat.id;
         const userId = query.from.id;
         const selectedCategory = query.data.split("_")[1]; // extract category
-
-        console.log("Selected category:", selectedCategory);
 
         if (quizQuestions[selectedCategory]) {
             // initialize user quiz data
@@ -139,11 +137,11 @@ function sendQuizSummary(bot, chatId, userId) {
     const category = userData.category;
 
     const summaryText = `
-📝 Quiz Summary
-    Category: ${category}
-    Questions Attempted: ${attempted}
-    Correct Answers: ${correctAnswers}
-    Time Taken: ${totalTime} seconds
+Quiz Summary ✅
+Subject: ${category}
+Questions Attempted: ${attempted}
+Correct Answers: ${correctAnswers}
+Time Taken: ${totalTime} seconds
 `;
 
     bot.sendMessage(chatId, summaryText);
