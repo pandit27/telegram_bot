@@ -89,10 +89,10 @@ node bot.js
 
 ## 🌐 Hosting Options
 
-✅ **Railway** - Free cloud hosting with auto-restarts.  
-✅ **Render** - Deploy as a background worker.  
-✅ **Replit** - Run online without a server.  
-✅ **Termux** - Run locally on a mobile device.
+- **Railway** - Free cloud hosting with auto-restarts.  
+- **Render** - Deploy as a background worker.  
+- **Replit** - Run online without a server.  
+- **Termux** - Run locally on a mobile device.
 
 ---
 
