@@ -42,7 +42,7 @@ module.exports = (bot) => {
             if (String(userId) === String(ownerChatId)) {
                 startRandomQuiz(bot, chatId);
             } else {
-                bot.sendMessage(chatId, "It can only be used in private chat. Click on @pvnimcet2025_bot.");
+                bot.sendMessage(chatId, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
             }
         }
     });
@@ -139,11 +139,11 @@ function sendQuizSummary(bot, chatId, userId) {
     const category = userData.category;
 
     const summaryText = `
-📌 Quiz Summary
-📝 Category: ${category}
-✅ Questions Attempted: ${attempted}
-🎯 Correct Answers: ${correctAnswers}
-⏳ Time Taken: ${totalTime} seconds
+📝 Quiz Summary
+    Category: ${category}
+    Questions Attempted: ${attempted}
+    Correct Answers: ${correctAnswers}
+    Time Taken: ${totalTime} seconds
 `;
 
     bot.sendMessage(chatId, summaryText);
