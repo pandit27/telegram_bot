@@ -46,7 +46,9 @@ setInterval(() => {
 }, 60 * 1000);
 
 
-// function to send a random math q (at 06:30 PM)
+/*-------------------------------------------------------------------------------------------------
+                        function to send a random math q (at 06:30 PM)
+-------------------------------------------------------------------------------------------------*/
 const quizResponses = new Map();
 const quizCorrectAnswers = new Map();
 
@@ -60,7 +62,7 @@ const sendDailyQuiz = () => {
         hoursIST += 1;
     }
 
-    if (hoursIST === 17 && minutesIST === 30) {
+    if (hoursIST === 16 && minutesIST === 0) {
         const question = math_random[Math.floor(Math.random() * math_random.length)];
         const correctOptionId = question.options.indexOf(question.answer);
 
@@ -73,8 +75,8 @@ const sendDailyQuiz = () => {
             quizResponses.set(quizId, new Map());
             quizCorrectAnswers.set(quizId, correctOptionId);
 
-            // quiz result after 1 hour
-            setTimeout(() => endQuiz(quizId), 60 * 60 * 1000);
+            // quiz result after 4 hours
+            setTimeout(() => endQuiz(quizId), 4 * 60 * 60 * 1000);
         });
     }
 };
@@ -85,7 +87,7 @@ bot.on("poll_answer", (answer) => {
     const userId = answer.user.id;
     const firstName = answer.user.first_name || "";
     const lastName = answer.user.last_name || "";
-    const username = answer.user.username ? `@${answer.user.username}` : "Anonymous";
+    // const username = answer.user.username ? `@${answer.user.username}` : "Anonymous";
     const selectedOption = answer.option_ids[0];
 
     if (quizResponses.has(pollId) && quizCorrectAnswers.has(pollId)) {
@@ -108,7 +110,8 @@ const endQuiz = (quizId) => {
     } else {
         let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
         correctUsers.forEach((user, index) => {
-            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName} @(${user.username})\n`;
+            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
+            // (${user.username}) // lets not add it for now
         });
         bot.sendMessage(CHAT_ID, resultMessage, { parse_mode: "Markdown" });
     }
