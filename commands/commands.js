@@ -1,5 +1,5 @@
 module.exports = (bot) => {
-    const OWNER_CHAT_ID = "5036581553"; // owner chat_id
+    const OWNER_CHAT_ID = process.env.GROUP_ID; // owner chat_id
 
     // send details to myself 
     const sendUserDetailsToOwner = (msg) => {

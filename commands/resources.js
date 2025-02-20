@@ -6,7 +6,7 @@ module.exports = (bot) => {
             return;
         }
 
-        const OWNER_CHAT_ID = "5036581553"; // owner chat_id
+        const OWNER_CHAT_ID = process.env.OWNER_ID; // owner chat_id
 
         // user info
         const username = msg.from.username || "Anonymous";

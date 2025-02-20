@@ -15,7 +15,7 @@ const userQuizData = {};
 
 // exporting module
 module.exports = (bot) => {
-    const ownerChatId = '5036581553'; // owner chat_id
+    const ownerChatId = process.env.OWNER_ID; // owner chat_id
 
     // when the user types "/quiz"
     bot.onText(/\/quiz/, (msg) => {
