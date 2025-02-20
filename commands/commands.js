@@ -30,6 +30,11 @@ module.exports = (bot) => {
         1. /start command
     */
     bot.onText(/\/start/, (msg) => {
+        if (msg.chat.type !== "private") {
+            bot.sendMessage(msg.chat.id, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
+            return;
+        }
+
         sendUserDetailsToOwner(msg); // notify owner
     
         const firstName = msg.from.first_name || "User";
@@ -80,6 +85,11 @@ module.exports = (bot) => {
         3. /help command
     */
     bot.onText(/\/help/, (msg) => {
+        if (msg.chat.type !== "private") {
+            bot.sendMessage(msg.chat.id, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
+            return;
+        }
+
         bot.sendMessage(msg.chat.id, "/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet : to get NIMCET exam countdown. \n/quiz : to get a random NIMCET quiz \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
