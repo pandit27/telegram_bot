@@ -39,9 +39,8 @@ module.exports = (bot) => {
 
         // if used in a group (only owner can start)
         else if (msg.chat.type === "group" || msg.chat.type === "supergroup") {
-            if (String(userId) === String(ownerChatId)) {
-                startRandomQuiz(bot, chatId);
-            } else {
+            if (String(userId) === String(ownerChatId)) startRandomQuiz(bot, chatId);
+            else {
                 bot.sendMessage(chatId, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
             }
         }
@@ -102,7 +101,7 @@ module.exports = (bot) => {
 };
 
 // Function to send the next question
-function sendNextQuestion(bot, chatId, userId) {
+const sendNextQuestion = (bot, chatId, userId) => {
     const userData = userQuizData[userId];
     const category = userData.category;
     const questionList = quizQuestions[category];
@@ -129,7 +128,7 @@ function sendNextQuestion(bot, chatId, userId) {
 }
 
 // function to send quiz summary
-function sendQuizSummary(bot, chatId, userId) {
+const sendQuizSummary = (bot, chatId, userId) => {
     const userData = userQuizData[userId];
     const totalTime = ((Date.now() - userData.startTime) / 1000).toFixed(2); // time in seconds
     const attempted = userData.attempted;
@@ -137,11 +136,11 @@ function sendQuizSummary(bot, chatId, userId) {
     const category = userData.category;
 
     const summaryText = `
-Quiz Summary ✅
-Subject: ${category}
-Questions Attempted: ${attempted}
-Correct Answers: ${correctAnswers}
-Time Taken: ${totalTime} seconds
+✅ Quiz Summary:
+- Subject: ${category}
+- Questions Attempted: ${attempted}
+- Correct Answers: ${correctAnswers}
+- Time Taken: ${totalTime} seconds
 `;
 
     bot.sendMessage(chatId, summaryText);
