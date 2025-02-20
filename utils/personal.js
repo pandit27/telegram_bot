@@ -9,41 +9,35 @@ module.exports = (bot) => {
 
         if (chatId !== OWNER_ID) return;
 
-        // send message using username
+        // send message using chat ID
         if (text.startsWith("-send")) {
             const parts = text.split(" ");
             if (parts.length < 3) {
-                bot.sendMessage(chatId, "❌ Usage: -send @username message");
+                bot.sendMessage(chatId, "❌ Usage: -send chat_id message");
                 return;
             }
 
-            const username = parts[1];
+            const targetChatId = Number(parts[1]);
             const message = parts.slice(2).join(" ");
 
-            bot.getChat(username)
-                .then((user) => {
-                    bot.sendMessage(user.id, message);
-                    bot.sendMessage(chatId, `✅ Message sent to ${username}!`);
-                })
+            bot.sendMessage(targetChatId, message)
+                .then(() => bot.sendMessage(chatId, `✅ Message sent to ${targetChatId}!`))
                 .catch((err) => bot.sendMessage(chatId, `❌ Error: ${err.message}`));
             return;
         }
 
-        // forward message using username
+        // forward message using chat ID
         if (msg.reply_to_message && text.startsWith("-fwd")) {
             const parts = text.split(" ");
             if (parts.length < 2) {
-                bot.sendMessage(chatId, "❌ Usage: -fwd @username");
+                bot.sendMessage(chatId, "❌ Usage: -fwd chat_id");
                 return;
             }
 
-            const username = parts[1];
+            const targetChatId = Number(parts[1]);
 
-            bot.getChat(username)
-                .then((user) => {
-                    bot.forwardMessage(user.id, chatId, msg.reply_to_message.message_id);
-                    bot.sendMessage(chatId, `✅ Message forwarded to ${username}!`);
-                })
+            bot.forwardMessage(targetChatId, chatId, msg.reply_to_message.message_id)
+                .then(() => bot.sendMessage(chatId, `✅ Message forwarded to ${targetChatId}!`))
                 .catch((err) => bot.sendMessage(chatId, `❌ Error: ${err.message}`));
             return;
         }
