@@ -1,5 +1,5 @@
 require("dotenv").config();
-const ytdl = require("ytdl-core");
+const ytdl = require("youtube-dl-exec");
 const fs = require("fs");
 const path = require("path");
 
