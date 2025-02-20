@@ -50,8 +50,10 @@ module.exports = (bot) => {
 
         // send replied message to group
         if (chatId === OWNER_ID && msg.reply_to_message && text === "-sm") {
-            bot.forwardMessage(GROUP_ID, chatId, msg.reply_to_message.message_id);
-            bot.sendMessage(chatId, "✅ Message forwarded to the group!");
+            console.log("Forwarding message:", msg.reply_to_message);
+            bot.forwardMessage(GROUP_ID, chatId, msg.reply_to_message.message_id)
+                .then(() => bot.sendMessage(chatId, "✅ Message forwarded to the group!"))
+                .catch((err) => bot.sendMessage(chatId, `❌ Error forwarding message: ${err.message}`));
             return;
         }
 
