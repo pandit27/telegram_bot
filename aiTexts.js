@@ -3,8 +3,8 @@ const natural = require("natural");
 const { Trie } = require("mnemonist");
 const tokenizer = new natural.WordTokenizer();
 
-const OWNER_ID = process.env.OWNER_ID;;
-const GROUP_ID = process.env.GROUP_ID;;
+const OWNER_ID = process.env.OWNER_ID;
+const GROUP_ID = process.env.GROUP_ID;
 
 module.exports = (bot) => {
     const trie = new Trie();
