@@ -6,23 +6,23 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ## 🚀 Features
 
-- **Automated Reminders** – Sends a daily countdown message at **05:30 AM**.  
-- **Interactive Commands** – Users can access various commands for exam updates and quizzes.  
-- **Modular Architecture** – Command handling is separated in `commands.js` for maintainability.  
-- **Multiple Hosting Options** – Compatible with **Railway, Render, Replit, and Termux**.  
-- **Cross-Platform Execution** – Can run on **PC, laptop, or mobile** with Node.js support.
+- **Daily Reminders** – Auto countdown at **05:30 AM**.  
+- **Smart Commands** – Quick access to exam updates & quizzes.  
+- **Modular Design** – Clean `commands.js` for easy maintenance.  
+- **Multiple Hosting** – Runs on **Railway, Render, Replit, Termux**.  
+- **Cross-Platform** – Works on **PC, laptop, & mobile** with Node.js.  
 
 ---
 
-## 🧑‍💻 Recent Updates (v2.1) – 19/02/2025
+## 🧑‍💻 Recent Updates (v2.1) – 20/02/2025
 
-- `/days` & `/resources` commands restricted to private chats.  
-- User interaction data is now stored.  
-- Added pre-defined response handling using the `natural` package.  
+- `/days` & `/resources` restricted to private chats (PRIVATE_ONLY=true)
+- User interaction data is now stored.
+- Added `natural` package for response handling  
 - Introduced a random DSA quiz command.  
-- Users can now select quiz subjects (MATH, REASONING, DSA).  
-- Quiz stats tracking (attempts, time taken, correct answers).  
-- Daily random Math quiz sent to the group at **06:30 PM**.
+- New `/quiz` command with subject selection (MATH, REASONING, DSA)
+- Quiz stats tracking (attempts, time taken, accuracy) 
+- Daily Math quiz at **06:30 PM**.
 
 ---
 
@@ -71,22 +71,19 @@ Run the bot locally using:
 node bot.js
 ```
 
-If you want to run it on **your phone**, use a Node.js runtime like:
-- [Termux](https://f-droid.org/en/packages/com.termux/)
-- [Replit](https://replit.com/)
-
 ---
 
 ## 📌 Commands
 
-| Command  | Description |
-|----------|-------------|
-| `/start` | Starts the bot and provides a welcome message. |
-| `/help`  | Displays a list of available commands. |
-| `/exam`  | Shows the number of days left until the CUET PG exam. |
-| `/nimcet` | Displays the countdown for the NIMCET exam. |
-| `/resources` | Provides study resources for NIMCET 2025. |
-| `/quiz` | Generates a random NIMCET quiz. |
+| Command    | Description                                   |
+|------------|-----------------------------------------------|
+| `/start`   | Welcome message & bot introduction.          |
+| `/help`    | Lists all available commands.                |
+| `/exam`    | CUET PG countdown.                           |
+| `/nimcet`  | NIMCET exam countdown.                       |
+| `/resources` | NIMCET 2025 study materials.               |
+| `/quiz`    | Generates a random NIMCET quiz.             |
+
 
 ---
 
