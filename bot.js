@@ -109,8 +109,9 @@ const endQuiz = (quizId) => {
     const correctUsers = Array.from(quizResponses.get(quizId).values());
 
     if (correctUsers.length === 0) {
-        bot.sendMessage(CHAT_ID, "Quiz ended! No one answered correctly today.");
-    } else {
+        bot.sendMessage(OWNER_ID, "Quiz ended! No one answered correctly today.");
+    } 
+    else {
         let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
         correctUsers.forEach((user, index) => {
             resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
