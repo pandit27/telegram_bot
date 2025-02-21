@@ -21,12 +21,12 @@ module.exports = (bot) => {
                 if (expression.includes("=")) {
                     // solve equations using nerdamer
                     let solutions = nerdamer(`solve(${expression})`).evaluate().toString();
-                    responseText = `📌 Solutions: ${solutions}`;
+                    responseText = `🧑🏻‍🏫 Solutions: \n${solutions}`;
                 } 
                 else {
                     // simplify expression using mathjs
                     let simplified = math.simplify(expression).toString();
-                    responseText = `📌 Simplified Expression: ${simplified}`;
+                    responseText = `🧑🏻‍🏫 Simplified Expression: \n${simplified}`;
                 }
 
                 bot.sendMessage(chatId, responseText);
