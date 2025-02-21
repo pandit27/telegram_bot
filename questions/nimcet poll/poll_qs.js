@@ -28,7 +28,7 @@ module.exports = [
         options: ["Roz ek test lagata hoon", "Hafte mein 2-3 baar", "Mahine mein kabhi-kabhi", "Ab tak ek bhi nahi diya"]
     },
     {
-        question: "Aapki favorite subject kya hai?",
+        question: "Aapka favorite subject kya hai?",
         options: ["Mathematics - Logic aur formulas pasand hain", "Reasoning - Mazedaar puzzles hain", "Computer Basics - Coding aur tech pasand hai", "English - Reading aur grammar strong hai"]
     },
     {
