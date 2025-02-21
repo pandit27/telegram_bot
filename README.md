@@ -92,4 +92,4 @@ This project is open-source and available under the **MIT License**.
 Thanks. 
 
 Made by **Piyush Jha** with ❤️ & ☕. <br><br>
-[Contact Owner](https://t.me/PV_027)                    [Open Bot](https://t.me/pvnimcet2025_bot)   
+[Contact Owner](https://t.me/PV_027)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Open Bot](https://t.me/pvnimcet2025_bot)   
