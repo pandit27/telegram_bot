@@ -11,6 +11,8 @@ module.exports = (bot) => {
     weathers(bot);
     const dictionary = require("./packages/dictionary");
     dictionary(bot);
+    const ai_chatbot = require("./packages/ai_chatbot");
+    ai_chatbot(bot);
 /*****************************************************************************************/
 
 
