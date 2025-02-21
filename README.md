@@ -91,5 +91,5 @@ This project is open-source and available under the **MIT License**.
 
 Thanks. 
 
-Made by **Piyush Jha** with ❤️ & ☕. <br>
-[Contact Owner](htpps://t.me/PV_027)
+Made by **Piyush Jha** with ❤️ & ☕.
+This site was built using [GitHub Pages](https://pages.github.com/).
