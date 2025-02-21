@@ -3,23 +3,25 @@ const natural = require("natural");
 const { Trie } = require("mnemonist");
 const tokenizer = new natural.WordTokenizer();
 
-// chat ids
+/*------------------------------------------------------------------------------------------
+                                        chat ids
+-------------------------------------------------------------------------------------------*/
 const OWNER_ID = Number(process.env.OWNER_ID);
 const GROUP_ID = Number(process.env.GROUP_ID);
-
-// console.log("OWNER_ID:", OWNER_ID);
-// console.log("GROUP_ID:", GROUP_ID);
 
 module.exports = (bot) => {
     const trie = new Trie();
 
-    // predefined responses
+    /*------------------------------------------------------------------------------------------
+                            pre-defined responses
+    -------------------------------------------------------------------------------------------*/
     const responses = [
         { keywords: ["hello", "hi", "Hello", "Hi", "hey", "Hey"], response: "Hey there! 😊 How can I help?" },
-        // { keywords: ["nimcet", "NIMCET", "Nimcet"], response: "Good luck for NIMCET Exam 🙂" },
     ];
 
-    // using Trie DS for faster lookup
+    /*------------------------------------------------------------------------------------------
+                using Trie ds for faster lookup in the pre-defined responses array
+    -------------------------------------------------------------------------------------------*/
     const responseMap = new Map();
     responses.forEach(({ keywords, response }) => {
         keywords.forEach((word) => {
@@ -28,6 +30,9 @@ module.exports = (bot) => {
         });
     });
 
+    /*------------------------------------------------------------------------------------------
+                        function to send message (with `-sm` command )
+    -------------------------------------------------------------------------------------------*/    
     bot.on("message", async (msg) => {
         const chatId = Number(msg.chat.id);
         

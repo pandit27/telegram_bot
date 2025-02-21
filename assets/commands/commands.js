@@ -1,7 +1,9 @@
 module.exports = (bot) => {
-    const OWNER_CHAT_ID = process.env.OWNER_ID; // owner chat_id
+    const OWNER_CHAT_ID = process.env.OWNER_ID;
 
-    // send details to myself 
+    /*------------------------------------------------------------------------------------------
+                                    send details to myself
+    -------------------------------------------------------------------------------------------*/
     const sendUserDetailsToOwner = (msg) => {
         const username = msg.from.username || "Anonymous";
         const firstName = msg.from.first_name || "User";
@@ -13,9 +15,9 @@ module.exports = (bot) => {
         bot.sendMessage(OWNER_CHAT_ID, messageToOwner, { parse_mode: "HTML" });
     };    
 
-    /* 
-        importing & loading files
-    */
+    /*------------------------------------------------------------------------------------------
+                                importing & loading modules
+    -------------------------------------------------------------------------------------------*/
     const resources = require('./resources');
     resources(bot);
     const aiTexts = require('./aiTexts');
@@ -25,9 +27,9 @@ module.exports = (bot) => {
     const personal = require('../utils/personal');
     personal(bot);
 
-    /********************************************************************************************
-                                                commands 
-    *********************************************************************************************/
+    /*------------------------------------------------------------------------------------------
+                                            commands
+    -------------------------------------------------------------------------------------------*/
     /*
         1. /start command
     */
@@ -95,7 +97,10 @@ module.exports = (bot) => {
         bot.sendMessage(msg.chat.id, "/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet : to get NIMCET exam countdown. \n/quiz : to get a random NIMCET quiz \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
     });
 
-    bot.onText(/\/nimcet/, (msg) => {
+    /*
+        4. /nimcet_date command
+    */
+    bot.onText(/\/nimcet_date/, (msg) => {
         bot.sendMessage(msg.chat.id, "NIMCET exam date is yet to be announced.");
     });
 }
