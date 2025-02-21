@@ -10,20 +10,18 @@ module.exports = (bot, OWNER_ID) => {
                 return;
             }
 
-            const guideMessage = `🔹 *Bot Commands* 🔹
+            const guideMessage = ` *Bot Commands* 
 
-*1️. AI Chatbot:* \`-ai <message>\`
-*2️. Weather:* \`-weather <city>\`
-*3️. Handwriting Generator:* \`-handwriting <text>\`
-*4️. Face Detection:* Reply to an image with \`-detect\`
-*5️. Dictionary:* \`-define <word>\`
-*6️. YouTube Download:* \`-yt <YouTube URL>\`
-*7️. Forward Message:* Reply with \`-fwd <chat_id>\`
-*8️. Send Message:* \`-send <chat_id> <message>\`
-*9️. Remove Background:* Reply with \`-removebg\`
-*10. Solve Math:* \`-math <expression>\`
-
-🔐 *Restricted to Owner*`;
+*1. AI Chatbot:* \`-ai <message>\`
+*2. Weather:* \`-weather <city>\`
+*3. Handwriting Generator:* \`-handwriting <text>\`
+*4. Face Detection:* Reply to an image with \`-detect\`
+*5. Dictionary:* \`-define <word>\`
+*6. YouTube Download:* \`-yt <YouTube URL>\`
+*7. Forward Message:* Reply with \`-fwd <chat_id>\`
+*8. Send Message:* \`-send <chat_id> <message>\`
+*9. Remove Background:* Reply with \`-removebg\`
+*10. Solve Math:* \`-math <expression>\``;
 
             bot.sendMessage(chatId, guideMessage, { parse_mode: "Markdown" });
         }
