@@ -92,4 +92,4 @@ This project is open-source and available under the **MIT License**.
 Thanks. 
 
 Made by **Piyush Jha** with ❤️ & ☕. <br>
-<a href="htpps://t.me/PV_027" target="_blank">Contact Owner</a>
+[![🔗 Contact Owner](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](htpps://t.me/PV_027)
