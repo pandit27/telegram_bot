@@ -12,7 +12,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 const commands = require('./commands/commands'); // import commands.js
 commands(bot); // load in bot.js
 const math_random = require("./questions/math_random");
-const poll_qs = require('./poll_qs');
+const poll_qs = require('./questions/nimcet poll/nimcet_poll');
 poll_qs(bot, OWNER_ID)
 
 const sendReminder = () => {
