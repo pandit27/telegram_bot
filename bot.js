@@ -1,24 +1,26 @@
 const TelegramBot = require("node-telegram-bot-api");
-// const cron = require('node-cron');
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
-// importing modules
-/* ----------------------------------------------------------------------------- */
+/*-------------------------------------------------------------------------------------------------
+                                    importing modules
+-------------------------------------------------------------------------------------------------*/
 const commands = require('./assets/commands/commands');
 commands(bot);
 const math_random = require("./assets/questions/math_random");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
-/* ----------------------------------------------------------------------------- */
 
+
+/*-------------------------------------------------------------------------------------------------
+                function to send exam remider (at 05:30 AM)
+-------------------------------------------------------------------------------------------------*/
 const sendReminder = () => {
     const now = new Date();
     
-    // reminder everyday at 05:30 AM (Indian time)
     if (now.getHours() !== 0 || now.getMinutes() !== 0) return;
 
     const timeDiff = EXAM_DATE - now;
@@ -42,15 +44,18 @@ const sendReminder = () => {
 // to send reminder
 sendReminder();
 
-// function to schedule remider
+/*-------------------------------------------------------------------------------------------------
+                            function to schedule remider
+-------------------------------------------------------------------------------------------------*/
 setInterval(() => {
     const now = new Date();
     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
 }, 60 * 1000);
 
 
+
 /*-------------------------------------------------------------------------------------------------
-                        function to send a random math q (at 06:30 PM)
+                        function to send a random math q (at 05:00 PM)
 -------------------------------------------------------------------------------------------------*/
 const quizResponses = new Map();
 const quizCorrectAnswers = new Map();
@@ -65,7 +70,7 @@ const sendDailyQuiz = () => {
         hoursIST += 1;
     }
 
-    if (hoursIST === 18 && minutesIST === 0) {
+    if (hoursIST === 17 && minutesIST === 0) {
         const question = math_random[Math.floor(Math.random() * math_random.length)];
         const correctOptionId = question.options.indexOf(question.answer);
 
@@ -78,31 +83,34 @@ const sendDailyQuiz = () => {
             quizResponses.set(quizId, new Map());
             quizCorrectAnswers.set(quizId, correctOptionId);
 
-            // quiz result after 2 hours
-            setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
+            // quiz result after 1 hour
+            setTimeout(() => endQuiz(quizId), 1 * 60 * 60 * 1000);
         });
     }
 };
 
-// track user responses
+/*-------------------------------------------------------------------------------------------------
+                        track user responses (those who ticked the correct option)
+-------------------------------------------------------------------------------------------------*/
 bot.on("poll_answer", (answer) => {
     const pollId = answer.poll_id;
     const userId = answer.user.id;
     const firstName = answer.user.first_name || "";
     const lastName = answer.user.last_name || "";
-    // const username = answer.user.username ? `@${answer.user.username}` : "Anonymous";
     const selectedOption = answer.option_ids[0];
 
     if (quizResponses.has(pollId) && quizCorrectAnswers.has(pollId)) {
         const correctOptionId = quizCorrectAnswers.get(pollId);
 
         if (selectedOption === correctOptionId) {
-            quizResponses.get(pollId).set(userId, { firstName, lastName, username });
+            quizResponses.get(pollId).set(userId, { firstName, lastName });
         }
     }
 });
 
-// function to send quiz results after 4 hours
+/*-------------------------------------------------------------------------------------------------
+                                   function to send quiz result
+-------------------------------------------------------------------------------------------------*/
 const endQuiz = (quizId) => {
     if (!quizResponses.has(quizId)) return;
 
@@ -115,7 +123,6 @@ const endQuiz = (quizId) => {
         let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
         correctUsers.forEach((user, index) => {
             resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
-            // (${user.username}) // lets not add it for now
         });
         bot.sendMessage(CHAT_ID, resultMessage, { parse_mode: "Markdown" });
     }
@@ -124,5 +131,12 @@ const endQuiz = (quizId) => {
     quizCorrectAnswers.delete(quizId);
 };
 
-
-setInterval(sendDailyQuiz, 60 * 1000);
+/*-------------------------------------------------------------------------------------------------
+                                    to send quiz result
+-------------------------------------------------------------------------------------------------*/
+setInterval(() => {
+    const now = new Date();
+    if (now.getHours() === 17 && now.getMinutes() === 59) {
+        setTimeout(sendDailyQuiz, 60 * 1000);
+    }
+}, 60 * 1000);
