@@ -6,6 +6,7 @@
     "face-api.js": "^0.22.2",
     "fs": "^0.0.1-security",
     "handwritten.js": "^18.11.3",
+    "mathsteps": "^0.2.0",
     "mnemonist": "^0.40.2",
     "natural": "^8.0.1",
     "node-cron": "^3.0.3",

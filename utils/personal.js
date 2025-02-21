@@ -19,6 +19,8 @@ module.exports = (bot) => {
     detect_face(bot);
     const remove_bg = require("./packages/remove_bg");
     remove_bg(bot);
+    const mathstep = require("./math_pkg/mathstep");
+    mathstep(bot);
 /*****************************************************************************************/
 
 
