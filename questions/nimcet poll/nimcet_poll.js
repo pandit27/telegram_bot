@@ -1,4 +1,4 @@
-module.exports = (bot, OWNER_ID) => {
+module.exports = (bot, CHAT_ID) => {
     const poll_qs = require('./poll_qs');
     const sendNimcetPoll = () => {
         const present = new Date();
@@ -10,10 +10,10 @@ module.exports = (bot, OWNER_ID) => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 17 && minutesIST === 25) { // 10 PM IST
+        if (hoursIST === 21 && minutesIST === 0) { // 10 PM IST
             const poll = poll_qs[Math.floor(Math.random() * poll_qs.length)];
 
-            bot.sendPoll(OWNER_ID, poll.question, poll.options, {
+            bot.sendPoll(CHAT_ID, poll.question, poll.options, {
                 is_anonymous: false,
                 allows_multiple_answers: false
             });

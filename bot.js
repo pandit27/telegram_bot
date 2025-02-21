@@ -6,14 +6,14 @@ const OWNER_ID = process.env.OWNER_ID;
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
-/*  
-    importing commands 
-*/
+// importing modules
+/* ----------------------------------------------------------------------------- */
 const commands = require('./commands/commands'); // import commands.js
 commands(bot); // load in bot.js
 const math_random = require("./questions/math_random");
 const poll_qs = require('./questions/nimcet poll/nimcet_poll');
-poll_qs(bot, OWNER_ID)
+poll_qs(bot, CHAT_ID)
+/* ----------------------------------------------------------------------------- */
 
 const sendReminder = () => {
     const now = new Date();
@@ -78,7 +78,7 @@ const sendDailyQuiz = () => {
             quizResponses.set(quizId, new Map());
             quizCorrectAnswers.set(quizId, correctOptionId);
 
-            // quiz result after 4 hours
+            // quiz result after 2 hours
             setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
         });
     }
