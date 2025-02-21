@@ -21,6 +21,8 @@ module.exports = (bot) => {
     remove_bg(bot);
     const mathstep = require("./math_pkg/mathstep");
     mathstep(bot);
+    const guide = require("./guide");
+    guide(bot, OWNER_ID)
 /*****************************************************************************************/
 
 
