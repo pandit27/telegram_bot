@@ -1,4 +1,7 @@
-const mathsteps = require("mathsteps");
+const { create, all } = require("mathjs");
+const math = create(all);
+const nerdamer = require("nerdamer");
+require("nerdamer/Algebra");
 
 module.exports = (bot) => {
     bot.on("message", async (msg) => {
@@ -15,33 +18,18 @@ module.exports = (bot) => {
             try {
                 let responseText = "";
 
-                // to make sure that its an eqn (must contain '=')
                 if (expression.includes("=")) {
-                    const steps = mathsteps.solveEquation(expression);
-                    steps.forEach((step, index) => {
-                        responseText += `📝 Step ${index + 1}:\n`;
-                        responseText += `Before: ${step.oldEquation.ascii()}\n`;
-                        responseText += `Change: ${step.changeType}\n`;
-                        responseText += `After: ${step.newEquation.ascii()}\n\n`;
-                    });
+                    // solve equations using nerdamer
+                    let solutions = nerdamer(`solve(${expression})`).evaluate().toString();
+                    responseText = `📌 Solutions: ${solutions}`;
                 } 
                 else {
-                    // Simplify an exprn
-                    const steps = mathsteps.simplifyExpression(expression);
-                    steps.forEach((step, index) => {
-                        responseText += `📝 Step ${index + 1}:\n`;
-                        responseText += `Before: ${step.oldNode.toString()}\n`;
-                        responseText += `Change: ${step.changeType}\n`;
-                        responseText += `After: ${step.newNode.toString()}\n\n`;
-                    });
+                    // simplify expression using mathjs
+                    let simplified = math.simplify(expression).toString();
+                    responseText = `📌 Simplified Expression: ${simplified}`;
                 }
 
-                if (responseText === "") {
-                    bot.sendMessage(chatId, "❌ Unable to solve or simplify the given input.");
-                } 
-                else {
-                    bot.sendMessage(chatId, responseText);
-                }
+                bot.sendMessage(chatId, responseText);
             } catch (error) {
                 bot.sendMessage(chatId, "❌ Error: Unable to process the expression.");
                 console.error(error);
