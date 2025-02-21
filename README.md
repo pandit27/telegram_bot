@@ -14,15 +14,10 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ---
 
-## 🧑‍💻 Recent Updates (v2.1) – 20/02/2025
+## 🧑‍💻 Recent Updates (v2.2) – 21/02/2025
 
-- `/days` & `/resources` restricted to private chats (PRIVATE_ONLY=true)
-- User interaction data is now stored.
-- Added `natural` package for response handling  
-- Introduced a random DSA quiz command.  
-- New `/quiz` command with subject selection (MATH, REASONING, DSA)
-- Quiz stats tracking (attempts, time taken, accuracy) 
-- Daily Math quiz at **04:00 PM**.
+- Added a lot of features for personal use.
+- Daily Math quiz at **05:00 PM** with results after 1 hour.
 
 ---
 
