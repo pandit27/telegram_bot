@@ -8,10 +8,10 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 
 // importing modules
 /* ----------------------------------------------------------------------------- */
-const commands = require('./commands/commands'); // import commands.js
+const commands = require('./assets/commands/commands'); // import commands.js
 commands(bot); // load in bot.js
-const math_random = require("./questions/math_random");
-const poll_qs = require('./questions/nimcet poll/nimcet_poll');
+const math_random = require("./assets/questions/math_random");
+const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
 /* ----------------------------------------------------------------------------- */
 
