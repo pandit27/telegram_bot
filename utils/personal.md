@@ -56,8 +56,14 @@
 ### **9. Remove bg of Images**
 - Command: Reply to an image with `-removebg`.
 - Works **only for the bot owner**.
-- Uses `remove.bg.js` for bg removal.
+- Uses `remove.bg` for bg removal.
 - Returns the image with removed bg.
+
+### **10. Solve Math Equations**
+- Command: Reply to an image with `-math`.
+- Works **only for the bot owner**.
+- Uses `mathjs` & `nerdamer` to solve equations.
+- Returns the calculated answer.
 
 ### **Security and Restrictions**
 - Only the owner (defined via `OWNER_ID`) can use certain commands.
