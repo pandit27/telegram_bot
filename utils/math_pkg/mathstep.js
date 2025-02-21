@@ -8,7 +8,7 @@ module.exports = (bot) => {
         const chatId = msg.chat.id;
         const text = msg.text;
 
-        if (text.startsWith("-math")) {
+        if (typeof text === "string" && text.startsWith("-math")) {
             const expression = text.slice(5).trim();
             if (!expression) {
                 bot.sendMessage(chatId, "❌ Usage: -math <expression or equation>");
