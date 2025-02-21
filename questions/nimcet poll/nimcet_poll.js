@@ -10,7 +10,7 @@ module.exports = (bot, OWNER_ID) => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 17 && minutesIST === 25) { // 10 PM IST
+        if (hoursIST === 17 && minutesIST === 23) { // 10 PM IST
             const poll = poll_qs[Math.floor(Math.random() * poll_qs.length)];
 
             bot.sendPoll(OWNER_ID, poll.question, poll.options, {
