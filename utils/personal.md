@@ -53,6 +53,12 @@
 - Sends a custom message to a specified chat ID.
 - Useful for private message automation.
 
+### **9. Remove bg of Images**
+- Command: Reply to an image with `-removebg`.
+- Works **only for the bot owner**.
+- Uses `remove.bg.js` for bg removal.
+- Returns the image with removed bg.
+
 ### **Security and Restrictions**
 - Only the owner (defined via `OWNER_ID`) can use certain commands.
 - Prevents unauthorized access and usage.

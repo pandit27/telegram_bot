@@ -16,7 +16,7 @@ module.exports = (bot) => {
             try {
                 // get file path from Telegram
                 const file = await bot.getFile(fileId);
-                const fileUrl = `https://api.telegram.org/file/botNGPkDcoMzNbhDYTkSsLTmGqf/${file.file_path}`;
+                const fileUrl = `https://api.telegram.org/file/bot${process.env.BOT_TOKEN}/${file.file_path}`;
 
                 bot.sendMessage(chatId, "⏳ Removing background... Please wait.");
 
