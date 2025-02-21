@@ -3,7 +3,6 @@ const axios = require("axios");
 const { createCanvas, Image } = require("canvas");
 const faceapi = require("face-api.js");
 const path = require("path");
-const fetch = require("node-fetch");
 const { Canvas, ImageData } = require("canvas");
 
 const MODEL_URL = path.join(__dirname, "models");
@@ -24,6 +23,7 @@ module.exports = (bot) => {
             const photo = msg.reply_to_message.photo[msg.reply_to_message.photo.length - 1].file_id;
             try {
                 const fileUrl = await bot.getFileLink(photo);
+                const fetch = (await import("node-fetch")).default;
                 const response = await fetch(fileUrl);
                 const buffer = await response.buffer();
                 fs.writeFileSync("input.jpg", buffer);
