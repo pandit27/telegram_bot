@@ -10,7 +10,7 @@ module.exports = (bot, CHAT_ID) => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 21 && minutesIST === 0) { // 10 PM IST
+        if (hoursIST === 21 && minutesIST === 0) {
             const poll = poll_qs[Math.floor(Math.random() * poll_qs.length)];
 
             bot.sendPoll(CHAT_ID, poll.question, poll.options, {
