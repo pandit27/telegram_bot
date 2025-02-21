@@ -91,4 +91,4 @@ This project is open-source and available under the **MIT License**.
 
 Thanks. 
 
-Made by **<a href="<a href="https://t.me/PV_027" target="_blank">Piyush Jha<a>** with ❤️ & ☕.
+Made by **<a href="<a href="https://t.me/PV_027" target="_blank">Piyush Jha</a>** with ❤️ & ☕.
