@@ -2,16 +2,14 @@ const fs = require("fs");
 const axios = require("axios");
 const { createCanvas, Image } = require("canvas");
 const faceapi = require("face-api.js");
-const path = require("path");
 const { Canvas, ImageData } = require("canvas");
 
-const MODEL_URL = path.join(__dirname, "models");
 const OWNER_ID = Number(process.env.OWNER_ID);
 
 (async () => {
-    await faceapi.nets.ssdMobilenetv1.loadFromDisk(MODEL_URL);
-    await faceapi.nets.faceLandmark68Net.loadFromDisk(MODEL_URL);
-    await faceapi.nets.faceRecognitionNet.loadFromDisk(MODEL_URL);
+    await faceapi.nets.ssdMobilenetv1.loadFromUri("https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights");
+    await faceapi.nets.faceLandmark68Net.loadFromUri("https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights");
+    await faceapi.nets.faceRecognitionNet.loadFromUri("https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights");
 })();
 
 module.exports = (bot) => {

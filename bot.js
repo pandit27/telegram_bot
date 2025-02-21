@@ -62,7 +62,7 @@ const sendDailyQuiz = () => {
         hoursIST += 1;
     }
 
-    if (hoursIST === 16 && minutesIST === 0) {
+    if (hoursIST === 18 && minutesIST === 0) {
         const question = math_random[Math.floor(Math.random() * math_random.length)];
         const correctOptionId = question.options.indexOf(question.answer);
 
@@ -76,7 +76,7 @@ const sendDailyQuiz = () => {
             quizCorrectAnswers.set(quizId, correctOptionId);
 
             // quiz result after 4 hours
-            setTimeout(() => endQuiz(quizId), 4 * 60 * 60 * 1000);
+            setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
         });
     }
 };
