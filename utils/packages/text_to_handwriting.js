@@ -17,12 +17,15 @@ module.exports = (bot) => {
             }
 
             const inputText = parts.slice(1).join(" ");
-            const outputPath = "handwriting.png";
+            const outputPath = "handwriting.pdf";
 
             try {
-                await handwritten(inputText, outputPath);
-                bot.sendPhoto(chatId, outputPath, { caption: "📝 Your handwritten text" });
-                fs.unlinkSync(outputPath); // delete the file after sending
+                const converted = await handwritten(inputText);
+                converted.pipe(fs.createWriteStream(outputPath));
+                converted.on("finish", () => {
+                    bot.sendDocument(chatId, outputPath, { caption: "📝 Your handwritten text" });
+                    fs.unlinkSync(outputPath); // delete the file from sending
+                });
             } catch (error) {
                 bot.sendMessage(chatId, "❌ Could not generate handwriting. Try again later.");
             }
