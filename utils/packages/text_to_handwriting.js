@@ -1,4 +1,6 @@
 const axios = require("axios");
+const handwritten = require("handwritten.js");
+const fs = require("fs");
 
 module.exports = (bot) => {
     bot.on("message", async (msg) => {
@@ -15,12 +17,12 @@ module.exports = (bot) => {
             }
 
             const inputText = parts.slice(1).join(" ");
-            const apiUrl = `https://api.freetts.com/text-image-generator?text=${encodeURIComponent(inputText)}&font=handwriting`;
+            const outputPath = "handwriting.png";
 
             try {
-                const response = await axios.get(apiUrl, { responseType: "arraybuffer" });
-                const imageBuffer = Buffer.from(response.data, "binary");
-                bot.sendPhoto(chatId, imageBuffer, { caption: "📝 Your handwritten text" });
+                await handwritten(inputText, outputPath);
+                bot.sendPhoto(chatId, outputPath, { caption: "📝 Your handwritten text" });
+                fs.unlinkSync(outputPath); // delete the file after sending
             } catch (error) {
                 bot.sendMessage(chatId, "❌ Could not generate handwriting. Try again later.");
             }

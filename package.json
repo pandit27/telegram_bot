@@ -3,6 +3,7 @@
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
+    "handwritten.js": "^18.11.3",
     "mnemonist": "^0.40.2",
     "natural": "^8.0.1",
     "node-cron": "^3.0.3",
