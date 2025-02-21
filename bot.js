@@ -2,6 +2,7 @@ const TelegramBot = require("node-telegram-bot-api");
 // const cron = require('node-cron');
 const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
 const CHAT_ID = process.env.GROUP_ID;
+const OWNER_ID = process.env.OWNER_ID;
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
@@ -11,6 +12,8 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 const commands = require('./commands/commands'); // import commands.js
 commands(bot); // load in bot.js
 const math_random = require("./questions/math_random");
+const poll_qs = require('./poll_qs');
+poll_qs(bot, OWNER_ID)
 
 const sendReminder = () => {
     const now = new Date();
