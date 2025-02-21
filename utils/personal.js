@@ -13,6 +13,8 @@ module.exports = (bot) => {
     dictionary(bot);
     const ai_chatbot = require("./packages/ai_chatbot");
     ai_chatbot(bot);
+    const text_to_handwriting = require("./packages/text_to_handwriting");
+    text_to_handwriting(bot);
 /*****************************************************************************************/
 
 
