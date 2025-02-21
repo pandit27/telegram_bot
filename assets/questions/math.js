@@ -70,7 +70,7 @@ module.exports = [
             answer: "πr^2"
         },
         {
-            question: "The value of 2^3 × 2^4 is:",
+            question: "The value of 2^3 * 2^4 is:",
             options: ["2^7", "2^12", "2^1", "2^4"],
             answer: "2^7"
         },

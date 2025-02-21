@@ -10,7 +10,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 -------------------------------------------------------------------------------------------------*/
 const commands = require('./assets/commands/commands');
 commands(bot);
-const math_random = require("./assets/questions/math_random");
+const random_q = require("./assets/questions/random_q");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
 
@@ -55,7 +55,7 @@ setInterval(() => {
 
 
 /*-------------------------------------------------------------------------------------------------
-                        function to send a random math q (at 05:00 PM)
+                        function to send a random q (at 05:00 PM)
 -------------------------------------------------------------------------------------------------*/
 const quizResponses = new Map();
 const quizCorrectAnswers = new Map();
@@ -71,7 +71,7 @@ const sendDailyQuiz = () => {
     }
 
     if (hoursIST === 17 && minutesIST === 0) {
-        const question = math_random[Math.floor(Math.random() * math_random.length)];
+        const question = random_q[Math.floor(Math.random() * random_q.length)];
         const correctOptionId = question.options.indexOf(question.answer);
 
         bot.sendPoll(CHAT_ID, question.question, question.options, {

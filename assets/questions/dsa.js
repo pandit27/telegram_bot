@@ -211,7 +211,7 @@ module.exports = [
     },
     {
         question: "Which algorithm solves the longest common subsequence problem using dynamic programming?",
-        options: ["Dijkstra’s Algorithm", "Knapsack Algorithm", "LCS Algorithm", "Floyd-Warshall Algorithm"],
+        options: ["Dijkstra's Algorithm", "Knapsack Algorithm", "LCS Algorithm", "Floyd-Warshall Algorithm"],
         answer: "LCS Algorithm"
     },
     {

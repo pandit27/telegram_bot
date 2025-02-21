@@ -20,6 +20,41 @@ module.exports = [
         answer: "1/4"
     },
     {
+        question: "What is the worst-case time complexity of bubble sort?",
+        options: ["O(nlogn)", "O(n^2)", "O(n)", "O(logn)"],
+        answer: "O(n^2)"
+    },
+    {
+        question: "Which algorithm is best used for finding the shortest path in a weighted graph?",
+        options: ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
+        answer: "Dijkstra's Algorithm"
+    },
+    {
+        question: "Which of the following is a greedy algorithm?",
+        options: ["Kruskal's Algorithm", "Bellman-Ford Algorithm", "Merge Sort", "Quick Sort"],
+        answer: "Kruskal's Algorithm"
+    },
+    {
+        question: "What is the time complexity of inserting an element into a min-heap?",
+        options: ["O(1)", "O(logn)", "O(n)", "O(nlogn)"],
+        answer: "O(logn)"
+    },
+    {
+        question: "Which of the following is not a characteristic of a stack?",
+        options: ["Last In First Out (LIFO)", "Elements are added and removed from the same end", "Can be implemented using arrays or linked lists", "Elements can be accessed randomly"],
+        answer: "Elements can be accessed randomly"
+    },
+    {
+        question: "In which of the following operations is the time complexity O(1) for a hash table?",
+        options: ["Insertion", "Search", "Deletion", "All of the above"],
+        answer: "All of the above"
+    },
+    {
+        question: "Which data structure is used in breadth-first search?",
+        options: ["Stack", "Queue", "Heap", "Linked List"],
+        answer: "Queue"
+    },
+    {
         question: "The value of the integral ∫(0 to π/2) ln(sin x) dx is:",
         options: ["-π ln 2 / 2", "0", "π ln 2 / 2", "-π/2"],
         answer: "-π ln 2 / 2"
@@ -233,5 +268,40 @@ module.exports = [
         question: "If tan(x) + tan(y) + tan(z) = tan(x)tan(y)tan(z), then which of the following is true?",
         options: ["x + y + z = π", "x + y + z = 2π", "x + y + z = 0", "x + y + z = π/2"],
         answer: "x + y + z = π"
+    },
+    {
+        question: "A is B's brother. B is C's sister. C is D's father. How is A related to D?",
+        options: ["Uncle", "Aunt", "Brother", "Father"],
+        answer: "Uncle"
+    },
+    {
+        question: "If the day before yesterday was Wednesday, what day will it be three days after tomorrow?",
+        options: ["Sunday", "Monday", "Tuesday", "Thursday"],
+        answer: "Tuesday"
+    },
+    {
+        question: "Which number should replace the question mark? 121, 144, 169, ?, 225",
+        options: ["176", "196", "189", "209"],
+        answer: "196"
+    },
+    {
+        question: "If A is taller than B but shorter than C, and D is shorter than A but taller than B, who is the second tallest?",
+        options: ["A", "B", "C", "D"],
+        answer: "A"
+    },
+    {
+        question: "Which word does not belong in the group? Apple, Banana, Carrot, Mango",
+        options: ["Apple", "Banana", "Carrot", "Mango"],
+        answer: "Carrot"
+    },
+    {
+        question: "A man walks 3 km north, then turns east and walks 4 km. How far is he from his starting point?",
+        options: ["3 km", "4 km", "5 km", "7 km"],
+        answer: "5 km"
+    },
+    {
+        question: "What comes next in the sequence? 2, 3, 5, 7, 11, __?",
+        options: ["12", "13", "15", "17"],
+        answer: "13"
     }
 ];
