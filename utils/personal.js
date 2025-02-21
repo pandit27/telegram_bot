@@ -15,6 +15,8 @@ module.exports = (bot) => {
     ai_chatbot(bot);
     const text_to_handwriting = require("./packages/text_to_handwriting");
     text_to_handwriting(bot);
+    const detect_face = require("./packages/detect_face");
+    detect_face(bot);
 /*****************************************************************************************/
 
 
