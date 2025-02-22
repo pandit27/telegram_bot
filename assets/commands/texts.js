@@ -4,7 +4,8 @@
 require("dotenv").config();
 const natural = require("natural");
 const { Trie } = require("mnemonist");
-const tokenizer = new natural.WordTokenizer();
+const levenshtein = require("fast-levenshtein");
+// const tokenizer = new natural.WordTokenizer();
 
 
 
@@ -23,6 +24,8 @@ const GROUP_ID = Number(process.env.GROUP_ID);
 -------------------------------------------------------------------------------------------*/
 module.exports = (bot) => {
     const trie = new Trie();
+    const responseMap = new Map();
+    const keywordList = [];
 
 
     /*------------------------------------------------------------------------------------------
@@ -34,13 +37,13 @@ module.exports = (bot) => {
     /*------------------------------------------------------------------------------------------
                 using Trie ds for faster lookup in the pre-defined responses array
     -------------------------------------------------------------------------------------------*/
-    const responseMap = new Map();
     responses.forEach(({ keywords, response }) => {
-    keywords.forEach((word) => {
-        const lowerCaseWord = word.toLowerCase(); // Convert to lowercase
-        trie.add(lowerCaseWord);
-        responseMap.set(lowerCaseWord, response);
-      });
+        keywords.forEach((word) => {
+            const lowerCaseWord = word.toLowerCase();
+            trie.add(lowerCaseWord);
+            responseMap.set(lowerCaseWord, response);
+            keywordList.push(lowerCaseWord);
+        });
     });
 
 
@@ -79,22 +82,28 @@ module.exports = (bot) => {
         // respond only in private chats
         if (msg.chat.type !== "private") return;
 
-        // tokenize input
-        const words = tokenizer.tokenize(text);
-        let reply = "";
-
-        for (let i = 0; i < words.length; i++) {
-            for (let j = i; j < words.length; j++) {
-                const phrase = words.slice(i, j + 1).join(" ").toLowerCase();
-                if (trie.has(phrase)) {
-                    reply = responseMap.get(phrase);
-                    break;
-                }
-            }
-            if (reply) break;
+        // exact match using Trie
+        if (trie.has(text)) {
+            return bot.sendMessage(chatId, responseMap.get(text));
         }
 
-        bot.sendMessage(chatId, reply);
+        // Fuzzy matching using Levenshtein distance
+        let bestMatch = { keyword: null, distance: Infinity };
+        keywordList.forEach((keyword) => {
+            const distance = levenshtein.get(text, keyword);
+            if (distance < bestMatch.distance) {
+                bestMatch = { keyword, distance };
+            }
+        });
+
+        // If the closest match is within a reasonable distance (80% similarity)
+        const maxDistance = Math.floor(bestMatch.keyword.length * 0.2); // Allow ~20% differences
+        if (bestMatch.distance <= maxDistance) {
+            return bot.sendMessage(chatId, responseMap.get(bestMatch.keyword));
+        }
+
+        // Default response if no close match is found
+        bot.sendMessage(chatId, "I don't understand that question.");
     });
 
 };
