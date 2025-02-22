@@ -1,11 +1,17 @@
+/*-------------------------------------------------------------------------------------------------
+                                       initial setup
+-------------------------------------------------------------------------------------------------*/
+require('dotenv').config(); // to use .env setup
 const TelegramBot = require("node-telegram-bot-api");
-require('dotenv').config();
 const TOKEN = process.env.TOKEN;
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
 const TEST_ID = Number("-1002411306855");
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
+
+
+
 
 /*-------------------------------------------------------------------------------------------------
                                     importing modules
@@ -14,17 +20,23 @@ const commands = require('./assets/commands/commands');
 commands(bot);
 const random_q = require("./assets/questions/random_q");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
-poll_qs(bot, CHAT_ID)
-// const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
-// message_analyzer(bot, OWNER_ID, CHAT_ID);
+poll_qs(bot, CHAT_ID);
 const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
 keyword_alert(bot, OWNER_ID, TEST_ID);
+/*---------------------------------------------------------------------------------------------*/
+// - for testing purposes (we'll use temp.js)
 // const temp = require("./temp");
 // temp(bot, TEST_ID);
+/*---------------------------------------------------------------------------------------------*/
+
+
 
 
 /*-------------------------------------------------------------------------------------------------
                 function to send exam remider (at 05:30 AM)
+            --------------------------------------------------------
+        - we can change the time to send reminder  accordingly
+        - we're using setInterval() to send at the required time
 -------------------------------------------------------------------------------------------------*/
 const sendReminder = () => {
     const now = new Date();
@@ -41,16 +53,15 @@ const sendReminder = () => {
         const message = `📢 <b>CUET PG 2025 Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
         bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" });
     } 
-    else if (timeDiff === 0) {
-        bot.sendMessage(CHAT_ID, `<b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`, { parse_mode: "HTML" });
-    } 
-    else {
-        bot.sendMessage(CHAT_ID, `<b>Exam Completed!</b> 🎉\nHope you did well!`, { parse_mode: "HTML" });
-    }
+    else if (timeDiff === 0) bot.sendMessage(CHAT_ID, `<b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`, { parse_mode: "HTML" });
+    else bot.sendMessage(CHAT_ID, `<b>Exam Completed!</b> 🎉\nHope you did well!`, { parse_mode: "HTML" });
 };
 
 // to send reminder
 sendReminder();
+
+
+
 
 /*-------------------------------------------------------------------------------------------------
                             function to schedule remider
@@ -59,6 +70,7 @@ setInterval(() => {
     const now = new Date();
     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
 }, 60 * 1000);
+
 
 
 
@@ -108,6 +120,9 @@ const sendDailyQuiz = () => {
 
 sendDailyQuiz();
 
+
+
+
 /*-------------------------------------------------------------------------------------------------
                         track user responses (those who ticked the correct option)
 -------------------------------------------------------------------------------------------------*/
@@ -126,6 +141,9 @@ bot.on("poll_answer", (answer) => {
         }
     }
 });
+
+
+
 
 /*-------------------------------------------------------------------------------------------------
                                    function to send quiz result
@@ -149,6 +167,9 @@ const endQuiz = (quizId) => {
     quizResponses.delete(quizId);
     quizCorrectAnswers.delete(quizId);
 };
+
+
+
 
 /*-------------------------------------------------------------------------------------------------
                                     to send quiz result

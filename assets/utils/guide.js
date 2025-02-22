@@ -12,16 +12,17 @@ module.exports = (bot, OWNER_ID) => {
 
             const guideMessage = ` *Bot Commands* 
 
-*1. AI Chatbot:* \`-ai <message>\`
-*2. Weather:* \`-weather <city>\`
-*3. Handwriting Generator:* \`-handwriting <text>\`
-*4. Face Detection:* Reply to an image with \`-detect\`
+*1. Send Message to group:* \`-sm <message>\
+*2. Send Message:* \`-send <chat_id> <message>\`
+*3. Forward Message:* Reply with \`-fwd <chat_id>\`
+*4. Weather:* \`-weather <city>\`
 *5. Dictionary:* \`-define <word>\`
-*6. YouTube Download:* \`-yt <YouTube URL>\`
-*7. Forward Message:* Reply with \`-fwd <chat_id>\`
-*8. Send Message:* \`-send <chat_id> <message>\`
+*6. Solve Math:* \`-math <expression>\`
+*7. YouTube Download:* \`-yt <YouTube URL>\`
+*8. AI Chatbot:* \`-ai <message>\`
 *9. Remove Background:* Reply with \`-removebg\`
-*10. Solve Math:* \`-math <expression>\``;
+*10. Face Detection:* Reply to an image with \`-detect\`
+*11. Handwriting Generator:* \`-handwriting <text>\``;
 
             bot.sendMessage(chatId, guideMessage, { parse_mode: "Markdown" });
         }
