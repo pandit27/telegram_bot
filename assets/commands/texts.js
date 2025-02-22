@@ -36,10 +36,11 @@ module.exports = (bot) => {
     -------------------------------------------------------------------------------------------*/
     const responseMap = new Map();
     responses.forEach(({ keywords, response }) => {
-        keywords.forEach((word) => {
-            trie.add(word);
-            responseMap.set(word, response);
-        });
+    keywords.forEach((word) => {
+        const lowerCaseWord = word.toLowerCase(); // Convert to lowercase
+        trie.add(lowerCaseWord);
+        responseMap.set(lowerCaseWord, response);
+      });
     });
 
 
