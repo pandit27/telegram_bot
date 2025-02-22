@@ -19,6 +19,8 @@ const message_analyzer = require("./client/admin tools/private chat/message_anal
 message_analyzer(bot, OWNER_ID, CHAT_ID);
 const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
 keyword_alert(bot, OWNER_ID, TEST_ID);
+const temp = require("./temp");
+temp(bot, TEST_ID);
 
 
 /*-------------------------------------------------------------------------------------------------
