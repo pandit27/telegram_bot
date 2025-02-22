@@ -15,7 +15,7 @@ const random_q = require("./assets/questions/random_q");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
 const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
-message_analyzer(bot, OWNER_ID, GROUP_ID);
+message_analyzer(bot, OWNER_ID, CHAT_ID);
 
 
 /*-------------------------------------------------------------------------------------------------
