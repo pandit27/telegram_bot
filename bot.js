@@ -1,6 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
+require('dotenv').config();
 const TOKEN = process.env.TOKEN;
-"8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI"
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
 const TEST_ID = Number("-1002411306855");
@@ -15,12 +15,12 @@ commands(bot);
 const random_q = require("./assets/questions/random_q");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
-const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
-message_analyzer(bot, OWNER_ID, CHAT_ID);
+// const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
+// message_analyzer(bot, OWNER_ID, CHAT_ID);
 const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
 keyword_alert(bot, OWNER_ID, TEST_ID);
-const temp = require("./temp");
-temp(bot, TEST_ID);
+// const temp = require("./temp");
+// temp(bot, TEST_ID);
 
 
 /*-------------------------------------------------------------------------------------------------
@@ -63,39 +63,50 @@ setInterval(() => {
 
 
 /*-------------------------------------------------------------------------------------------------
-                        function to send a random q (at 05:00 PM)
+                                function to send a random q
 -------------------------------------------------------------------------------------------------*/
 const quizResponses = new Map();
 const quizCorrectAnswers = new Map();
 
-const sendDailyQuiz = () => {
-    const present = new Date();
-    let hoursIST = present.getUTCHours() + 5; // convert UTC to IST
-    let minutesIST = present.getUTCMinutes() + 30;
+const sendQuiz = () => {
+    const question = random_q[Math.floor(Math.random() * random_q.length)];
+    const correctOptionId = question.options.indexOf(question.answer);
 
-    if (minutesIST >= 60) {
-        minutesIST -= 60;
-        hoursIST += 1;
-    }
+    bot.sendPoll(CHAT_ID, question.question, question.options, {
+        is_anonymous: false,
+        type: "quiz",
+        correct_option_id: correctOptionId
+    }).then((poll) => {
+        const quizId = poll.poll.id;
+        quizResponses.set(quizId, new Map());
+        quizCorrectAnswers.set(quizId, correctOptionId);
 
-    if (hoursIST === 17 && minutesIST === 0) {
-        const question = random_q[Math.floor(Math.random() * random_q.length)];
-        const correctOptionId = question.options.indexOf(question.answer);
-
-        bot.sendPoll(CHAT_ID, question.question, question.options, {
-            is_anonymous: false,
-            type: "quiz",
-            correct_option_id: correctOptionId
-        }).then((poll) => {
-            const quizId = poll.poll.id;
-            quizResponses.set(quizId, new Map());
-            quizCorrectAnswers.set(quizId, correctOptionId);
-
-            // quiz result after 2 hours
-            setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
-        });
-    }
+        // quiz result after 2 hours
+        setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
+    });
 };
+
+// send quiz immediately
+// sendQuiz();
+
+const sendDailyQuiz = () => {
+    setInterval(() => {
+        const present = new Date();
+        let hoursIST = present.getUTCHours() + 5; // convert UTC to IST
+        let minutesIST = present.getUTCMinutes() + 30;
+
+        if (minutesIST >= 60) {
+            minutesIST -= 60;
+            hoursIST += 1;
+        }
+
+        if (hoursIST === 18 && minutesIST === 30) {
+            sendQuiz();
+        }
+    }, 60 * 1000); // check every minute
+};
+
+sendDailyQuiz();
 
 /*-------------------------------------------------------------------------------------------------
                         track user responses (those who ticked the correct option)
