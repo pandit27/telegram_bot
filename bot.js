@@ -1,5 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI";
+const TOKEN = process.env.TOKEN;
+"8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI"
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
 const EXAM_DATE = new Date("2025-03-15");
