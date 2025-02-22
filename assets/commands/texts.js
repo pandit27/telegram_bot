@@ -83,11 +83,15 @@ module.exports = (bot) => {
         const words = tokenizer.tokenize(text);
         let reply = "";
 
-        for (let word of words) {
-            if (trie.has(word)) {
-                reply = responseMap.get(word);
-                break;
+        for (let i = 0; i < words.length; i++) {
+            for (let j = i; j < words.length; j++) {
+                const phrase = words.slice(i, j + 1).join(" ").toLowerCase();
+                if (trie.has(phrase)) {
+                    reply = responseMap.get(phrase);
+                    break;
+                }
             }
+            if (reply) break;
         }
 
         bot.sendMessage(chatId, reply);
