@@ -3,7 +3,7 @@ const responses = [
     { keywords: ["how are you", "how r u", "how's it going", "hows it going"], response: "I'm just a bot, but I'm here to help! 😊" },
     { keywords: ["bye", "goodbye", "see you", "cya"], response: "Goodbye! Have a great day! 😊" },
     { keywords: ["thank you", "thanks", "thx", "ty"], response: "You're welcome! 😊 Happy to help." },
-    { keywords: ["who are you", "what is your name"], response: "I'm Lucy! 🤖 Your NIMCET assistant bot." },
+    { keywords: ["who are you", "what is your name", "your name", "name"], response: "I'm Lucy! 🤖 Your NIMCET assistant bot." },
     { keywords: ["nimcet syllabus", "syllabus"], response: "The NIMCET syllabus includes Mathematics, Analytical Ability & Logical Reasoning, Computer Awareness, and General English." },
     { keywords: ["nimcet exam date", "exam date"], response: "The NIMCET exam is usually held in June. Please check the official website for exact dates." },
     { keywords: ["best books for nimcet", "nimcet books", "best books", "books", "book"], response: "Recommended books: Arihant MCA Guide, R.S. Aggarwal for Mathematics, and previous year papers." },
