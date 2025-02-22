@@ -88,7 +88,7 @@ const responses = [
     { keywords: ["who created you", "where are you from"], response: "I was created by some really smart developers! 🛠️" },
     { keywords: ["are you a robot", "are you human"], response: "I'm an AI, but I try to be as helpful as possible! 🤖" },
     { keywords: ["what do you like", "your favorite thing"], response: "Helping people is my favorite thing to do! 💡" },
-    { keywords: ["can you learn", "do you improve"], response: "I can learn from updates and new data! Always getting smarter. 📈" },
+    { keywords: ["learn", "improve"], response: "I can learn from updates and new data! Always getting smarter. 📈" },
 ];
 
 module.exports = responses;
