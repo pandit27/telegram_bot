@@ -35,10 +35,10 @@ const sendReminder = () => {
         bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" });
     } 
     else if (timeDiff === 0) {
-        bot.sendMessage(CHAT_ID, `🚨 <b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`, { parse_mode: "HTML" });
+        bot.sendMessage(CHAT_ID, `<b>Today is the Exam!</b> 🎯\n\nBest of luck! 🍀`, { parse_mode: "HTML" });
     } 
     else {
-        bot.sendMessage(CHAT_ID, `✅ <b>Exam Completed!</b> 🎉\nHope you did well!`, { parse_mode: "HTML" });
+        bot.sendMessage(CHAT_ID, `<b>Exam Completed!</b> 🎉\nHope you did well!`, { parse_mode: "HTML" });
     }
 };
 
