@@ -81,8 +81,8 @@ const sendQuiz = () => {
         quizResponses.set(quizId, new Map());
         quizCorrectAnswers.set(quizId, correctOptionId);
 
-        // quiz result after 2 hours
-        setTimeout(() => endQuiz(quizId), 2 * 60 * 60 * 1000);
+        // to send quiz result
+        setTimeout(() => endQuiz(quizId), 1 * 60 * 60 * 1000);
     });
 };
 
@@ -155,7 +155,7 @@ const endQuiz = (quizId) => {
 -------------------------------------------------------------------------------------------------*/
 setInterval(() => {
     const now = new Date();
-    if (now.getHours() === 18 && now.getMinutes() === 59) {
+    if (now.getHours() === 19 && now.getMinutes() === 25) {
         setTimeout(sendDailyQuiz, 60 * 1000);
     }
 }, 60 * 1000);
