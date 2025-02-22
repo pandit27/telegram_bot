@@ -3,6 +3,7 @@ const TOKEN = process.env.TOKEN;
 "8169135424:AAFMNrthUWEsFMAE3qQJSuSCyv9rJxNg9jI"
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
+const TEST_ID = "-1002411306855";
 const EXAM_DATE = new Date("2025-03-15");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
@@ -16,6 +17,8 @@ const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID)
 const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
 message_analyzer(bot, OWNER_ID, CHAT_ID);
+const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
+keyword_alert(bot, OWNER_ID, TEST_ID);
 
 
 /*-------------------------------------------------------------------------------------------------
