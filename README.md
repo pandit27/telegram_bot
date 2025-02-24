@@ -16,6 +16,7 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ## 🧑‍💻 Recent Updates (v2.4) – 24/02/2025
 
+- Specific keywords will now be monitored in the group.
 - New features available (onwer_id only) - like weather, dicitionary, eqn solver and so on...
 - Daily Math quiz at **05:30 PM** with results after 3 hours.
 - A random general NIMCET poll will be sent to the group at **09:00 PM**.
