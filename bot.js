@@ -16,6 +16,8 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 /*-------------------------------------------------------------------------------------------------
                                     importing modules
 -------------------------------------------------------------------------------------------------*/
+const exprt = require("./all_exports");
+exprt(bot, CHAT_ID, TEST_ID, OWNER_ID);
 const commands = require('./assets/commands/commands');
 commands(bot);
 const random_q = require("./assets/questions/random_q");
