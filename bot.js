@@ -6,8 +6,8 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = process.env.TOKEN;
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
-const TEST_ID = Number("-1002411306855");
-const EXAM_DATE = new Date("2025-03-15");
+const TEST_ID = process.env.TEST_ID;
+const EXAM_DATE = new Date("2025-03-20");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 
@@ -94,7 +94,7 @@ const sendQuiz = () => {
         quizCorrectAnswers.set(quizId, correctOptionId);
 
         // to send quiz result
-        setTimeout(() => endQuiz(quizId), 1 * 60 * 60 * 1000);
+        setTimeout(() => endQuiz(quizId), 3 * 60 * 60 * 1000);
     });
 };
 
@@ -112,7 +112,7 @@ const sendDailyQuiz = () => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 18 && minutesIST === 30) {
+        if (hoursIST === 17 && minutesIST === 0) {
             sendQuiz();
         }
     }, 60 * 1000); // check every minute
@@ -154,29 +154,22 @@ const endQuiz = (quizId) => {
     const correctUsers = Array.from(quizResponses.get(quizId).values());
 
     if (correctUsers.length === 0) {
-        bot.sendMessage(OWNER_ID, "Quiz ended! No one answered correctly today.");
-    } 
+        bot.sendMessage(OWNER_ID, "🏁 The quiz has finished! No one answered correctly today.");
+    }
+    
     else {
-        let resultMessage = "Quiz Ended! Here are the users who answered correctly:**\n\n";
+        let resultMessage = "🏁 The quiz has finished!\n\nUsers who answered correctly:\n\n";
+        const medals = ["🥇", "🥈", "🥉"];
+
         correctUsers.forEach((user, index) => {
-            resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
+            if (index < 3) resultMessage += `${medals[index]} ${user.firstName} ${user.lastName}\n`; 
+            else resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
         });
+
         bot.sendMessage(CHAT_ID, resultMessage, { parse_mode: "Markdown" });
+        bot.sendMessage(OWNER_ID, resultMessage, { parse_mode: "Markdown" });
     }
 
     quizResponses.delete(quizId);
     quizCorrectAnswers.delete(quizId);
 };
-
-
-
-
-/*-------------------------------------------------------------------------------------------------
-                                    to send quiz result
--------------------------------------------------------------------------------------------------*/
-setInterval(() => {
-    const now = new Date();
-    if (now.getHours() === 19 && now.getMinutes() === 25) {
-        setTimeout(sendDailyQuiz, 60 * 1000);
-    }
-}, 60 * 1000);
