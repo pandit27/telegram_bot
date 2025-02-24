@@ -1,34 +1,27 @@
-module.exports = (bot, OWNER_ID, GROUP_ID) => {
-    let alertKeywords = new Set();
+const alertKeywords = require("../../../assets/arrays and jsons/alert_keywords");
 
+module.exports = (bot, OWNER_ID, GROUP_ID) => {
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;
-        const userId = msg.from.id;
-        const text = msg.text ? msg.text.trim() : "";
+        const text = msg.text?.trim();
 
-        // ignore bot messages
-        if (msg.from.is_bot || !text) return;
+        if (!msg.from || msg.from.is_bot || !text) return;
 
-        // owner sets a keyword alert in private chat
-        if (chatId === OWNER_ID && text.startsWith("-setalert ")) {
-            const keyword = text.split(" ").slice(1).join(" ").toLowerCase();
-            if (!keyword) {
-                bot.sendMessage(chatId, "❌ Usage: -setalert <keyword>");
-                return;
-            }
-            alertKeywords.add(keyword);
-            bot.sendMessage(chatId, `✅ Alert set for keyword: "${keyword}"`);
-            return;
-        }
+        const ownerIdNum = Number(OWNER_ID);
+        const groupIdNum = Number(GROUP_ID);
 
-        // check if any keyword is mentioned in the group
-        if (chatId === GROUP_ID) {
+        if (chatId === groupIdNum) {
             for (let keyword of alertKeywords) {
                 if (text.toLowerCase().includes(keyword)) {
-                    bot.sendMessage(OWNER_ID, `🚨 *Keyword Alert!*
-📌 Mentioned in Group: ${keyword}
-👤 By: ${msg.from.first_name}
-💬 Message: "${text}"`, { parse_mode: "Markdown" });
+                    const username = msg.from.username ? `@${msg.from.username}` : "(No username)";
+                    const messageLink = `https://t.me/c/${groupIdNum.toString().slice(4)}/${msg.message_id}`;
+
+                    bot.sendMessage(ownerIdNum, `🚨 <b>Keyword Alert!</b>\n
+                        📌 <b>Mentioned in Group:</b> ${keyword}\n
+                        👤 <b>By:</b> ${msg.from.first_name} ${username}\n
+                        💬 <b>Message:</b> "${text}"\n
+                        🔗 <a href='${messageLink}'>View Message</a>`, 
+                        { parse_mode: "HTML", disable_web_page_preview: true });
                     break;
                 }
             }

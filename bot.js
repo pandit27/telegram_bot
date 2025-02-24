@@ -22,7 +22,7 @@ const random_q = require("./assets/questions/random_q");
 const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
 poll_qs(bot, CHAT_ID);
 const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
-keyword_alert(bot, OWNER_ID, TEST_ID);
+keyword_alert(bot, OWNER_ID, CHAT_ID);
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
 // const temp = require("./temp");
