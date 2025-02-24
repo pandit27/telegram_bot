@@ -112,7 +112,7 @@ const sendDailyQuiz = () => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 17 && minutesIST === 0) {
+        if (hoursIST === 17 && minutesIST === 30) {
             sendQuiz();
         }
     }, 60 * 1000); // check every minute

@@ -1,4 +1,4 @@
-# **Lucy** - Telegram Bot (v2.2) <br>
+# **Lucy** - Telegram Bot (v2.4) <br>
 <img src="assets/images/Lucy.jpg" alt="Lucy" width="400" height="auto" style="display: block; margin: auto; border-radius: 10px; object-fit: cover; max-width: 100%;"/>
 
 
@@ -14,10 +14,10 @@ A **simple** Telegram bot that sends daily reminders for upcoming exams and prov
 
 ---
 
-## 🧑‍💻 Recent Updates (v2.2) – 21/02/2025
+## 🧑‍💻 Recent Updates (v2.4) – 24/02/2025
 
 - New features available (onwer_id only) - like weather, dicitionary, eqn solver and so on...
-- Daily Math quiz at **06:30 PM** with results after 1 hour.
+- Daily Math quiz at **05:30 PM** with results after 3 hours.
 - A random general NIMCET poll will be sent to the group at **09:00 PM**.
 
 ---
