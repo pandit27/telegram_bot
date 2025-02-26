@@ -328,7 +328,7 @@ module.exports = [
         question: "Introducing a boy, a girl said, 'He is the only son of my mother's father.' How is the girl related to the boy?",
         options: ["Sister", "Cousin", "Mother", "Aunt"],
         answer: "Sister"
-    }
+    },
     {
         question: "A is B's brother. B is C's sister. C is D's father. How is A related to D?",
         options: ["Uncle", "Aunt", "Brother", "Father"],
