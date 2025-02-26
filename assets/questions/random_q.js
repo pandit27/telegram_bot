@@ -5,11 +5,6 @@ module.exports = [
         answer: "b² - 2ac"
     },
     {
-        question: "The function f(x) = x^3 - 3x + 2 has:",
-        options: ["One real root", "Two real roots", "Three real roots", "No real root"],
-        answer: "Three real roots"
-    },
-    {
         question: "The number of real solutions of the equation sin(x) + cos(x) = 2x - x² in the interval [0,1] is:",
         options: ["0", "1", "2", "Infinite"],
         answer: "1"
@@ -28,11 +23,6 @@ module.exports = [
         question: "Which algorithm is best used for finding the shortest path in a weighted graph?",
         options: ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
         answer: "Dijkstra's Algorithm"
-    },
-    {
-        question: "Which of the following is a greedy algorithm?",
-        options: ["Kruskal's Algorithm", "Bellman-Ford Algorithm", "Merge Sort", "Quick Sort"],
-        answer: "Kruskal's Algorithm"
     },
     {
         question: "What is the time complexity of inserting an element into a min-heap?",
@@ -68,11 +58,6 @@ module.exports = [
         question: "If f(x) = x⁵ - 5x + 7, then f'(x) has:",
         options: ["Exactly one real root", "Two real roots", "Three real roots", "Four real roots"],
         answer: "Two real roots"
-    },
-    {
-        question: "The number of real solutions of the equation 2^x + 3^x = 5^x is:",
-        options: ["0", "1", "2", "Infinite"],
-        answer: "1"
     },
     {
         question: "If the function f(x) = e^x + e^(-x) is increasing for x > a, then the least value of a is:",
@@ -140,16 +125,6 @@ module.exports = [
         answer: "√3/2"
     },
     {
-        question: "If the eccentricity of a hyperbola is √2, then the ratio of the distances of a point on the hyperbola from the focus and the directrix is:",
-        options: ["1/√2", "√2", "1", "2"],
-        answer: "√2"
-    },
-    {
-        question: "The sum of the first n natural numbers is:",
-        options: ["n(n+1)/2", "n(n-1)/2", "n²", "n(n+1)"],
-        answer: "n(n+1)/2"
-    },
-    {
         question: "If sinθ + cosθ = 1, then the general value of θ is:",
         options: ["2nπ", "nπ + (-1)^n (π/4) - (π/4)", "2nπ + π/2", "None of these"],
         answer: "None of these"
@@ -158,11 +133,6 @@ module.exports = [
         question: "The number of solutions of sin(3x) = cos(2x) in the interval (π/2, π) is:",
         options: ["0", "1", "2", "3"],
         answer: "1"
-    },
-    {
-        question: "If sin(x) - sin(2x) + sin(3x) = 0 for 0 ≤ x < π/2, the number of values of x is:",
-        options: ["0", "1", "2", "3"],
-        answer: "2"
     },
     {
         question: "The number of solutions of sin(x) = cos²(x) in the interval (0,10) is:",
@@ -253,11 +223,6 @@ module.exports = [
         question: "If A, B, C are angles of a triangle, then sin(A) + sin(B) + sin(C) is always:",
         options: ["Greater than 2", "Less than 2", "Equal to 2", "Undefined"],
         answer: "Less than 2"
-    },
-    {
-        question: "If the roots of x² - px + q = 0 are sin(A) and cos(A), then p² - q² is:",
-        options: ["1", "0", "p", "q"],
-        answer: "1"
     },
     {
         question: "If tan(A) = m/n and tan(B) = p/q, then tan(A + B) is:",

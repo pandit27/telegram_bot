@@ -36,10 +36,6 @@ module.exports = [
         options: ["Confident - Sab set hai", "Thoda nervous - Bas silly mistakes na ho", "Dara hua - Pressure manage nahi hota", "Jo hoga dekha jayega"]
     },
     {
-        question: "Aap exam se ek din pehle kaise tayyari karenge?",
-        options: ["Ek final revision karenge", "Sirf important topics dekhenge", "Abhi batana mushkil hai", "Chill karenge"]
-    },
-    {
         question: "Aap kaunse tareeke se zyada achha seekhte hain?",
         options: ["Concepts ko samajh kar", "Practice questions lagakar", "Short tricks aur strategies se", "Videos aur notes dekh kar"]
     },
@@ -102,10 +98,6 @@ module.exports = [
     {
         question: "Sabse challenging section kaunsa lagta hai?",
         options: ["Math - Concept aur calculations", "Reasoning - Trick aur patterns", "Computer Basics - Theory yaad rakhni hoti hai", "English - Vocabulary tough lagti hai"]
-    },
-    {
-        question: "Agar exam ke time pressure high ho raha ho toh?",
-        options: ["Deep breath lekar focus karenge", "Jo aata hai pehle woh karenge", "Ek moment ke liye break lenge", "Sochenge ki sabko yahi feel ho raha hoga"]
     },
     {
         question: "Sabse effective revision strategy kya lagti hai?",
@@ -174,10 +166,6 @@ module.exports = [
     {
         question: "Kaunse tareeke se revision karna pasand hai?",
         options: ["Short notes se", "Practice questions se", "Mock tests se", "Ab tak revision shuru nahi kiya"]
-    },
-    {
-        question: "Exam hall me sabse bada dar kya hota hai?",
-        options: ["Question samajh nahi aaya toh?", "Silly mistakes ho gayi toh?", "Time khatam ho gaya toh?", "Paper bahut easy aaya toh?"]
     },
     {
         question: "Tayari ka sabse boring part kya lagta hai?",
@@ -388,10 +376,6 @@ module.exports = [
         options: ["Bohot saare, kaafi practice ho gayi", "Kuch chhote projects kiye hain", "Bas ek do projects banaye hain", "Projects? Abhi tak shuru nahi kiya"]
     },
     {
-        question: "Programming languages ka kya scene hai?",
-        options: ["Python aur Java expert hain", "C++ zyada use karta hain", "Sirf MCA ke liye seekhna padega", "Language nahi, logic important hai"]
-    },
-    {
         question: "NIMCET prep ke saath coding ka sabse bada challenge kya hai?",
         options: ["Time management", "Dono subjects shift karna", "Coding me improvement slow hai", "Sirf NIMCET par focus karna chah raha hain"]
     },
@@ -430,10 +414,6 @@ module.exports = [
     {
         question: "Ek Math problem solve nahi ho rahi, kya karenge?",
         options: ["Tab tak try karenge jab tak ho na jaye", "Dusri approach se dekhenge", "Solution dekhne ka time aa gaya", "Chhod kar agli question par badh jayenge"]
-    },
-    {
-        question: "Math kaunsa part zyada pasand hai?",
-        options: ["Algebra - Logical lagta hai", "Geometry - Figures pasand hain", "Calculus - Differentiation/Integration mazedar hai", "Pasand? Sirf NIMCET nikalna hai"]
     },
     {
         question: "Math padhte waqt sabse common problem kya hoti hai?",
