@@ -49,7 +49,7 @@ module.exports = [
     },
     {
         question: "NIMCET ki tayari ke liye sabse bada weapon kya hai?",
-        options: ["PYQs - History repeat hoti hai", "Short tricks - Time bachana zaroori hai", "Concepts - Bina base sab fake hai", "Luck - Kyunki kismat bhi kaam aati hai"]
+        options: ["PYQs - History repeat hoti hai", "Short tricks - Time bachana zaroori hai", "Concepts - Bina base sab fake hai", "Consistency - Rozana mehnat hi success ka raaz hai"]
     },
     {
         question: "Mock test ka result aane ke baad sabse pehli cheez kya karenge?",
@@ -93,7 +93,7 @@ module.exports = [
     },
     {
         question: "Agar exam hall me question out of syllabus lag raha ho toh?",
-        options: ["Aage badhenge aur time waste nahi karenge", "Ek attempt karne ki koshish karenge", "Andaza laga kar mark karenge", "Paper banane wale ko yaad karenge"]
+        options: ["Aage badhenge aur time waste nahi karenge", "Ek attempt karne ki koshish karenge", "Andaza laga kar mark karenge", "Paper banane wale ko kosenge"]
     },
     {
         question: "Sabse challenging section kaunsa lagta hai?",
@@ -118,10 +118,6 @@ module.exports = [
     {
         question: "Tayari ke beech distraction kaise handle karenge?",
         options: ["Phone door rakh denge", "Break lekar wapas focus karenge", "Study schedule maintain karenge", "Distraction ke saath manage karne ki aadat dalenge"]
-    },
-    {
-        question: "Exam ke din ka breakfast plan kya hai?",
-        options: ["Healthy aur light", "Jo bhi mil jaye", "Stress mein bhool jayenge", "Bas chai ya coffee"]
     },
     {
         question: "Agar kisi ek topic pe zyada time lag raha hai toh?",
@@ -154,10 +150,6 @@ module.exports = [
     {
         question: "Kaunsa subject sabse zyada dikkat deta hai?",
         options: ["Math - Numbers dikhte hi tension", "Reasoning - Pattern dikhte hi confusion", "English - Grammar yaad nahi rehti", "Computer - Theory yaad nahi hoti"]
-    },
-    {
-        question: "NIMCET ke baad pehla kaam kya karenge?",
-        options: ["Aram se soenge", "Travel plan banayenge", "Result ka intezaar karenge", "Abhi soch nahi pa rahe"]
     },
     {
         question: "NIMCET ka syllabus dekhne ke baad pehli feeling kya thi?",
@@ -210,10 +202,6 @@ module.exports = [
     {
         question: "Exam se ek raat pehle ka plan kya hai?",
         options: ["Achi tarah revise karna", "Jaldi so jaana", "Thoda chill karna", "Abhi decide nahi kiya"]
-    },
-    {
-        question: "Agar ek din sirf ek subject padhna ho toh kaunsa hoga?",
-        options: ["Math", "Reasoning", "English", "Computer Basics"]
     },
     {
         question: "Agar preparation restart karni pade toh kya alag karenge?",
@@ -301,7 +289,7 @@ module.exports = [
     },
     {
         question: "College me sabse pehli competition kis cheez ki hogi?",
-        options: ["Highest CGPA", "Fastest coding", "Best pranks", "Most bunked classes"]
+        options: ["Highest CGPA", "Fastest coding", "Most popular student", "Most bunked classes"]
     },
     {
         question: "College ke pehle semester me sabse bada shock kya ho sakta hai?",
@@ -333,7 +321,7 @@ module.exports = [
     },
     {
         question: "HR round ke time sabse badi dikkat kya hoti hai?",
-        options: ["‘Tell me about yourself’ ka jawab", "Salary expectations ka jawab", "Confidence maintain karna", "Fake smile kaise rakhein"]
+        options: ["‘Tell me about yourself’ ka jawab", "Salary expectations ka jawab", "Confidence maintain karna", "Unexpected questions ka answer dena"]
     },
     {
         question: "Sabse pehli job ka target kya hai?",
@@ -401,7 +389,7 @@ module.exports = [
     },
     {
         question: "Kaunsa Math topic sabse zyada time le raha hai?",
-        options: ["Permutation & Combination - Kaise sochu?", "Definite Integration - Limits ka problem", "Number System - Basics bhi tough lagta hai", "Vectors - Directions ka confusion"]
+        options: ["Permutation & Combination - Kaise sochu?", "Definite Integration - Limits ka problem", "Complex Numbers - Imaginary part ka confusion", "Vectors - Directions ka confusion"]
     },
     {
         question: "Math me shortcut tricks use karte hain?",

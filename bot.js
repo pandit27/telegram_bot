@@ -148,7 +148,7 @@ bot.on("poll_answer", (answer) => {
 
 
 /*-------------------------------------------------------------------------------------------------
-                                   function to send quiz result
+                                   function to send quiz result (only top 10)
 -------------------------------------------------------------------------------------------------*/
 const endQuiz = (quizId) => {
     if (!quizResponses.has(quizId)) return;
@@ -156,15 +156,15 @@ const endQuiz = (quizId) => {
     const correctUsers = Array.from(quizResponses.get(quizId).values());
 
     if (correctUsers.length === 0) {
-        bot.sendMessage(OWNER_ID, "🏁 The quiz has finished! No one answered correctly today.");
+        bot.sendMessage(OWNER_ID, "🏁 The time for today's POTD has ended! No one answered correctly today.");
     }
-    
-    else {
-        let resultMessage = "🏁 The quiz has finished!\n\nUsers who answered correctly:\n\n";
-        const medals = ["🥇", "🥈", "🥉"];
 
-        correctUsers.forEach((user, index) => {
-            if (index < 3) resultMessage += `${medals[index]} ${user.firstName} ${user.lastName}\n`; 
+    else {
+        let resultMessage = "🏁 The time for today's POTD has ended!\n\nFirst 10 users who answered correctly:\n\n";
+        const medals = ["🥇", "🥈", "🥉"];
+        
+        correctUsers.slice(0, 10).forEach((user, index) => {
+            if (index < 3) resultMessage += `${medals[index]} ${user.firstName} ${user.lastName}\n`;
             else resultMessage += `${index + 1}. ${user.firstName} ${user.lastName}\n`;
         });
 
