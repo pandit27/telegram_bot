@@ -63,12 +63,12 @@ module.exports = (bot) => {
     */
     bot.onText(/\/days/, (msg) => {
         // to make sure that /days command is to be used only in private chats
-        if (msg.chat.type !== "private") {
-            bot.sendMessage(msg.chat.id, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
-            return;
-        }
+        // if (msg.chat.type !== "private") {
+        //     bot.sendMessage(msg.chat.id, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
+        //     return;
+        // }
 
-        const EXAM_DATE = new Date("2025-03-15");
+        const EXAM_DATE = new Date("2025-03-27");
         const now = new Date();
         const timeDiff = EXAM_DATE - now;
         if (timeDiff > 0) {
