@@ -2,24 +2,6 @@ module.exports = (bot, OWNER_ID, GROUP_ID) => {
     let messageHistory = [];
     const MAX_MESSAGES = 100;
 
-    // function to fetch recent messages from the group (bot must be an admin)
-    async function preloadMessages() {
-        try {
-            const messages = await bot.getChatHistory(GROUP_ID, { limit: MAX_MESSAGES });
-            messages.forEach((msg) => {
-                if (msg.text && !msg.from.is_bot) {
-                    messageHistory.push({ userId: msg.from.id, text: msg.text.trim() });
-                }
-            });
-            console.log("✅ Preloaded past messages successfully.");
-        } catch (err) {
-            console.error("❌ Error preloading messages:", err.message);
-        }
-    }
-
-    // preload messages when the bot starts
-    preloadMessages();
-
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;
         const userId = msg.from.id;
@@ -36,8 +18,10 @@ module.exports = (bot, OWNER_ID, GROUP_ID) => {
             }
         }
 
-        // analyze recent messages (only owner can use that too in private chat)
+        // analyze recent messages (only owner can use it in private chat)
         if (chatId === OWNER_ID && text === "-analyze") {
+            console.log("command pressed");
+
             if (messageHistory.length === 0) {
                 bot.sendMessage(chatId, "❌ No messages to analyze from the group.");
                 return;
@@ -47,25 +31,37 @@ module.exports = (bot, OWNER_ID, GROUP_ID) => {
             let wordCounts = {};
             let totalMessages = messageHistory.length;
             let totalWords = 0;
-            
+
             messageHistory.forEach(({ userId, text }) => {
                 userCounts[userId] = (userCounts[userId] || 0) + 1;
-                let words = text.split(/\s+/);
+                let words = text.split(/\s+/).filter(word => word.trim() !== "");
                 totalWords += words.length;
                 words.forEach(word => {
                     wordCounts[word] = (wordCounts[word] || 0) + 1;
                 });
             });
 
-            let mostActiveUser = Object.entries(userCounts).sort((a, b) => b[1] - a[1])[0];
-            let mostCommonWord = Object.entries(wordCounts).sort((a, b) => b[1] - a[1])[0];
-            let avgMessageLength = (totalWords / totalMessages).toFixed(2);
+            if (Object.keys(userCounts).length === 0 || Object.keys(wordCounts).length === 0) {
+                bot.sendMessage(chatId, "❌ No valid analysis data. Please send more messages in the group.");
+                return;
+            }
+
+            let mostActiveUser = Object.entries(userCounts).sort((a, b) => b[1] - a[1])[0] || ["N/A", 0];
+            let mostCommonWord = Object.entries(wordCounts).sort((a, b) => b[1] - a[1])[0] || ["N/A", 0];
+            let avgMessageLength = totalMessages > 0 ? (totalWords / totalMessages).toFixed(2) : "0";
 
             let report = `📊 *Message Analysis (Last ${totalMessages} messages in group)*\n\n` +
-                `👑 Most Active User: ${mostActiveUser ? mostActiveUser[0] : "N/A"} (${mostActiveUser ? mostActiveUser[1] : 0} messages)\n` +
-                `💬 Most Common Word: "${mostCommonWord ? mostCommonWord[0] : "N/A"}" (${mostCommonWord ? mostCommonWord[1] : 0} times)\n` +
+                `👑 Most Active User: ${mostActiveUser[0]} (${mostActiveUser[1]} messages)\n` +
+                `💬 Most Common Word: "${mostCommonWord[0]}" (${mostCommonWord[1]} times)\n` +
                 `📏 Avg. Message Length: ${avgMessageLength} words\n` +
                 `📢 Total Messages: ${totalMessages}`;
+
+            console.log("Generated Report:", report);
+
+            if (!report.trim()) {
+                bot.sendMessage(chatId, "❌ No valid analysis data.");
+                return;
+            }                
 
             bot.sendMessage(chatId, report, { parse_mode: "Markdown" });
         }
