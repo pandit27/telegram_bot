@@ -21,8 +21,8 @@ exprt(bot, CHAT_ID, TEST_ID, OWNER_ID);
 const random_q = require("./assets/questions/random_q");
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
-const temp = require("./temp");
-temp(bot);
+// const temp = require("./temp");
+// temp(bot);
 /*---------------------------------------------------------------------------------------------*/
 
 
@@ -127,7 +127,9 @@ bot.on("poll_answer", (answer) => {
     const userId = answer.user.id;
     const firstName = answer.user.first_name || "";
     const lastName = answer.user.last_name || "";
+    const username = answer.user.username ? `(@${answer.user.username})` : "";
     const selectedOption = answer.option_ids[0];
+    const selectedOptionText = quizOptions.get(pollId)[selectedOptionIndex] || "Unknown Option";
 
     if (quizResponses.has(pollId) && quizCorrectAnswers.has(pollId)) {
         const correctOptionId = quizCorrectAnswers.get(pollId);
@@ -136,6 +138,9 @@ bot.on("poll_answer", (answer) => {
             quizResponses.get(pollId).set(userId, { firstName, lastName });
         }
     }
+
+    const q_message = `📊 *New Quiz Vote*\n👤 User: [${firstName} ${lastName}](tg://user?id=${userId}) ${username}\n✅ Chose: *${selectedOptionText}*`;
+    bot.sendMessage(OWNER_ID, q_message, { parse_mode: "Markdown" });
 });
 
 
