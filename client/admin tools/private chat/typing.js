@@ -1,11 +1,11 @@
-let typingInterval = null;
-
 module.exports = (bot, OWNER_ID, GROUP_ID) => {
+    let typingInterval = null;
+
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;
         const text = msg.text?.trim();
 
-        if (chatId !== OWNER_ID) return; // only owner can use
+        if (Number(chatId) !== Number(OWNER_ID)) return;
 
         if (text === "/type") {
             if (typingInterval) {
@@ -20,8 +20,12 @@ module.exports = (bot, OWNER_ID, GROUP_ID) => {
                     await bot.sendChatAction(GROUP_ID, "typing");
                 } catch (error) {
                     console.error("❌ Error in typing:", error.message);
-                    clearInterval(typingInterval);
-                    typingInterval = null;
+                    
+                    if (typingInterval) {
+                        clearInterval(typingInterval);
+                        typingInterval = null;
+                    }
+                    
                     bot.sendMessage(chatId, "⚠️ Error: Unable to type.");
                 }
             }, 5000);
