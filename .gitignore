@@ -2,6 +2,7 @@ index.js
 node_modules
 .env
 gitpush.sh
+gc.sh
 brain.js
 nlp_model.js
 basic_llm.js
