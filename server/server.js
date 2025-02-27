@@ -1,46 +1,61 @@
 require('dotenv').config();
-const { Telegraf } = require('telegraf');
+const { TelegramClient } = require('telegram');
+const { StringSession } = require('telegram/sessions');
 const axios = require('axios');
 const express = require('express');
 
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
+const apiId = parseInt(process.env.TELEGRAM_API_ID);
+const apiHash = process.env.TELEGRAM_API_HASH;
+const botToken = process.env.TELEGRAM_BOT_TOKEN;
+const stringSession = new StringSession(process.env.TELEGRAM_SESSION || '');
+
+const client = new TelegramClient(stringSession, apiId, apiHash, { connectionRetries: 5 });
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 let aiMode = new Map();
 
-bot.command('ai', (ctx) => {
-    aiMode.set(ctx.chat.id, true);
-    ctx.reply('AI mode activated! Send a message, and I will respond. Type /stopai to deactivate.');
-});
+(async () => {
+    await client.start({
+        botAuthToken: botToken
+    });
+    console.log('Bot is running...');
+})();
 
-bot.command('stopai', (ctx) => {
-    aiMode.delete(ctx.chat.id);
-    ctx.reply('❌ AI mode deactivated.');
-});
+client.addEventHandler(async (event) => {
+    const message = event.message;
+    if (!message || !message.text) return;
 
-bot.on('text', async (ctx) => {
-    if (aiMode.get(ctx.chat.id)) {
-        const userMessage = ctx.message.text;
+    const chatId = message.chatId;
+    const userMessage = message.text;
+
+    if (userMessage.startsWith('/ai')) {
+        aiMode.set(chatId, true);
+        await client.sendMessage(chatId, { message: 'AI mode activated! Send a message, and I will respond. Type /stopai to deactivate.' });
+    } 
+
+    else if (userMessage.startsWith('/stopai')) {
+        aiMode.delete(chatId);
+        await client.sendMessage(chatId, { message: '❌ AI mode deactivated.' });
+    } 
+
+    else if (aiMode.get(chatId)) {
         try {
             const response = await axios.post(
-                'https://api.openai.com/v1/chat/completions',
+                'local:101:24:07',
                 {
-                    model: 'gpt-3.5-turbo',
+                    model: 'custom llm',
                     messages: [{ role: 'user', content: userMessage }],
                 },
-                { headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` } }
+                { headers: { Authorization: `key: ${key}` } }
             );
-            ctx.reply(response.data.choices[0].message.content);
-        } 
-        catch (error) {
+            await client.sendMessage(chatId, { message: response.data.choices[0].message.content });
+        } catch (error) {
             console.error('AI API Error:', error);
-            ctx.reply('An error occured.');
+            await client.sendMessage(chatId, { message: 'An error occurred while processing your request.' });
         }
     }
 });
-
-bot.launch().then(() => console.log('Bot is running...'));
 
 app.get('/', (req, res) => {
     res.send('Bot is live...');

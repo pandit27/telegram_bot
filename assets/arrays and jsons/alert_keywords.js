@@ -1,3 +1,3 @@
 module.exports = [
-    "piyush", "jha", "iq", "admin", "dsa", "nimcet", "cuet"
+    "piyush", "jha", "iq", "admin", "dsa"
 ];
