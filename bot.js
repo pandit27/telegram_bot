@@ -90,7 +90,7 @@ const sendQuiz = () => {
         quizCorrectAnswers.set(quizId, correctOptionId);
 
         // to send quiz result
-        setTimeout(() => endQuiz(quizId), 3 * 60 * 60 * 1000);
+        setTimeout(() => endQuiz(quizId), 2.5 * 60 * 60 * 1000);
     });
 };
 
