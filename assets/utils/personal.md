@@ -65,6 +65,12 @@
 - Uses `mathjs` & `nerdamer` to solve equations.
 - Returns the calculated answer.
 
+### **11. Translator**
+- Command: `-math <text>`.
+- Works **only for the bot owner**.
+- Uses `api.mymemory.translated.net`.
+- Returns the translated text (in Hindi).
+
 ### **Security and Restrictions**
 - Only the owner (defined via `OWNER_ID`) can use certain commands.
 - Prevents unauthorized access and usage.

@@ -23,7 +23,9 @@ module.exports = (bot) => {
     const mathstep = require("./math_pkg/mathstep");
     mathstep(bot);
     const guide = require("./guide");
-    guide(bot, OWNER_ID)
+    guide(bot, OWNER_ID);
+    const translator = require("./packages/translator");
+    translator(bot);
 
 
 /*------------------------------------------------------------------------------------------

@@ -4,17 +4,31 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const faq_chats = require("./client/group tools/group chat/faq_chat");
     faq_chats(bot, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
+    
+    
+    /* ------------------------------------------------------------------------------------ */
     // const message_analyzer = require("./client/admin tools/private chat/message_analyzer");
     // message_analyzer(bot, OWNER_ID, TEST_ID);
+    /* ------------------------------------------------------------------------------------ */
+
+
     /* ------------------------------------------------------------------------------------ */
     const commands = require('./assets/commands/commands');
     commands(bot);
     /* ------------------------------------------------------------------------------------ */
+    
+    
+    /* ------------------------------------------------------------------------------------ */
     const random_q = require("./assets/questions/random_q");
+    /* ------------------------------------------------------------------------------------ */
+
+
     /* ------------------------------------------------------------------------------------ */
     const poll_qs = require('./assets/questions/nimcet poll/nimcet_poll');
     poll_qs(bot, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
+
+    
     /* ------------------------------------------------------------------------------------ */
     const keyword_alert = require("./client/admin tools/private chat/keyword_alert");
     keyword_alert(bot, OWNER_ID, CHAT_ID);
