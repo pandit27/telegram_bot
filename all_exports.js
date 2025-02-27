@@ -26,6 +26,6 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
 
     /* ------------------------------------------------------------------------------------ */
     const typing = require("./client/admin tools/private chat/typing");
-    typing(bot, OWNER_ID, GROUP_ID);
+    typing(bot, OWNER_ID, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
 };
