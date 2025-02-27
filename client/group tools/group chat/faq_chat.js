@@ -1,4 +1,3 @@
-const TelegramBot = require("node-telegram-bot-api");
 const faq = require("../../../assets/arrays and jsons/faq_data");
 
 module.exports = (bot, GROUP_ID) => {

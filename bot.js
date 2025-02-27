@@ -18,6 +18,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 -------------------------------------------------------------------------------------------------*/
 const exprt = require("./all_exports");
 exprt(bot, CHAT_ID, TEST_ID, OWNER_ID);
+const random_q = require("./assets/questions/random_q");
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
 // const temp = require("./temp");
@@ -107,7 +108,7 @@ const sendDailyQuiz = () => {
             hoursIST += 1;
         }
 
-        if (hoursIST === 17 && minutesIST === 30) {
+        if (hoursIST === 18 && minutesIST === 0) {
             sendQuiz();
         }
     }, 60 * 1000); // check every minute
