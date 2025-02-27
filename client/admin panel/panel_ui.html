@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Admin Dashboard</h2>
+        
+        <!-- Group Stats -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold">Group Stats</h3>
+            <p id="stats" class="mt-2 text-gray-700">Loading...</p>
+        </div>
+        
+        <!-- Ban User -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold">Ban User</h3>
+            <input type="number" id="banUserId" placeholder="Enter User ID" class="border p-2 w-full mt-2">
+            <button onclick="banUser()" class="mt-2 bg-red-500 text-white px-4 py-2 rounded">Ban</button>
+        </div>
+        
+        <!-- Unban User -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold">Unban User</h3>
+            <input type="number" id="unbanUserId" placeholder="Enter User ID" class="border p-2 w-full mt-2">
+            <button onclick="unbanUser()" class="mt-2 bg-green-500 text-white px-4 py-2 rounded">Unban</button>
+        </div>
+        
+        <!-- Custom Reactions -->
+        <div>
+            <h3 class="text-lg font-semibold">Custom Reactions</h3>
+            <input type="text" id="reactionKeyword" placeholder="Enter keyword" class="border p-2 w-full mt-2">
+            <input type="text" id="reactionResponse" placeholder="Enter response" class="border p-2 w-full mt-2">
+            <button onclick="addReaction()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add Reaction</button>
+            <ul id="reactionList" class="mt-4"></ul>
+        </div>
+    </div>
+
+    <!-- 
+                                    script (to handle the requests)
+    -->
+    <script>
+        async function fetchStats() {
+            const res = await fetch('/stats');
+            const data = await res.json();
+            document.getElementById('stats').innerText = `Members: ${data.members}, Banned: ${data.banned}`;
+        }
+
+        async function banUser() {
+            const userId = document.getElementById('banUserId').value;
+            await fetch('/ban', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ userId }) });
+            alert('User banned!');
+            fetchStats();
+        }
+
+        async function unbanUser() {
+            const userId = document.getElementById('unbanUserId').value;
+            await fetch('/unban', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ userId }) });
+            alert('User unbanned!');
+            fetchStats();
+        }
+
+        async function addReaction() {
+            const keyword = document.getElementById('reactionKeyword').value;
+            const response = document.getElementById('reactionResponse').value;
+            await fetch('/reaction', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ keyword, response }) });
+            alert('Reaction added!');
+            loadReactions();
+        }
+
+        async function loadReactions() {
+            const res = await fetch('/reactions');
+            const data = await res.json();
+            const list = document.getElementById('reactionList');
+            list.innerHTML = Object.entries(data).map(([key, value]) => `<li>${key} → ${value}</li>`).join('');
+        }
+
+        fetchStats();
+        loadReactions();
+    </script>
+</body>
+</html>
