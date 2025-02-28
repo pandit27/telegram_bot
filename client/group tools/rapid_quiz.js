@@ -28,8 +28,7 @@ module.exports = (bot, OWNER_ID, GROUP_ID) => {
         bot.sendMessage(GROUP_ID, `💻 Get ready for the **Computer Section** Quiz!
 
             🖊 10 questions  
-            ⏱️ 30 seconds per question  
-            📄 The first question will be sent in **30 seconds**!`, { parse_mode: "Markdown" });
+            ⏱️ 30 seconds/q`, { parse_mode: "Markdown" });
             
         bot.sendMessage(OWNER_ID, "✅ *Quiz started!* The bot is now conducting a quiz in the group.", { parse_mode: "Markdown" });      
 
