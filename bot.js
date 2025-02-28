@@ -22,7 +22,7 @@ const random_q = require("./assets/questions/random_q");
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
 // const temp = require("./temp");
-// temp(bot, OWNER_ID, TEST_ID);
+// temp(bot, CHAT_ID);
 /*---------------------------------------------------------------------------------------------*/
 
 
