@@ -28,4 +28,10 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const typing = require("./client/admin tools/private chat/typing");
     typing(bot, OWNER_ID, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
+
+
+    /* ------------------------------------------------------------------------------------ */
+    const personal = require("./assets/utils/personal");
+    personal(bot, OWNER_ID);
+    /* ------------------------------------------------------------------------------------ */
 };

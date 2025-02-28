@@ -1,8 +1,10 @@
 require("dotenv").config();
 
-const OWNER_ID = Number(process.env.OWNER_ID);
 
 module.exports = (bot) => {
+    const OWNER_ID = Number(process.env.OWNER_ID);
+
+    
 /*------------------------------------------------------------------------------------------
                                     importing modules
 -------------------------------------------------------------------------------------------*/
