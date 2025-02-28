@@ -6,6 +6,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = process.env.TOKEN;
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
+const CUET_ID = process.env.CUET_ID;
 const TEST_ID = process.env.TEST_ID;
 const EXAM_DATE = new Date("2025-03-27"); // CUET PG (SCQP09) Exam on 27th March, 2025
 const bot = new TelegramBot(TOKEN, { polling: true });
@@ -17,7 +18,7 @@ const bot = new TelegramBot(TOKEN, { polling: true });
                                     importing modules
 -------------------------------------------------------------------------------------------------*/
 const exprt = require("./all_exports");
-exprt(bot, CHAT_ID, TEST_ID, OWNER_ID);
+exprt(bot, CHAT_ID, CUET_ID, OWNER_ID);
 const random_q = require("./assets/questions/random_q");
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
