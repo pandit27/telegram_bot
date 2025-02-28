@@ -32,24 +32,12 @@ module.exports = [
         options: ["Venn Diagram ka orientation samajhna", "n(A U B) wale formula me mistake", "Complement aur subset ka confusion", "Sets easy lagta hai, par marks nahi milte"]
     },
     {
-        question: "Mock tests ko aap kitna mahatva dete hain?",
-        options: ["Roz ek test lagate hain", "Hafte mein 2-3 baar", "Mahine mein kabhi-kabhi", "Ab tak ek bhi nahi diya"]
-    },
-    {
         question: "Sabse challenging section kaunsa lagta hai?",
         options: ["Math - Concept aur calculations", "Reasoning - Trick aur patterns", "Computer Basics - Theory yaad rakhni hoti hai", "English - Vocabulary tough lagti hai"]
     },
     {
-        question: "Agar mock test ka score low aaya toh?",
-        options: ["Analyze karenge aur mistakes sudharenge", "Thoda tension lenge phir wapas lagenge", "Score ignore karenge aur aage badhenge", "Sochenge ki exam tak sab sahi ho jayega"]
-    },
-    {
         question: "Agar ek time machine hoti, toh kis moment pe jaake cheezein sahi karte?",
         options: ["Jab syllabus shuru karna tha", "Pehla mock test dene se pehle", "Jab silly mistakes chhod sakte the", "Jab ‘Kal se padhai pakka’ waala jhooth bola tha"]
-    },
-    {
-        question: "Mock tests dene ka aapka tareeka kya hai?",
-        options: ["Roz ek test", "Sirf weekend par", "Jab mann kare", "Ab tak ek bhi nahi diya"]
     },
     {
         question: "Definite Integration ka toughest part?",
@@ -142,10 +130,6 @@ module.exports = [
     {
         question: "Ab tak kitne projects banaye hain?",
         options: ["Bohot saare, kaafi practice ho gayi", "Kuch chhote projects kiye hain", "Bas ek do projects banaye hain", "Projects? Woh kya hote hain"]
-    },
-    {
-        question: "Mock test me Math ka score kaise aata hai?",
-        options: ["Badiya, improvement ho raha hai", "Fluctuate karta hai", "Bas passing marks aate hain", "Marks nahi aa rahe"]
     },
     {
         question: "Math me shortcut tricks use karte hain?",

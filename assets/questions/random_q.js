@@ -225,11 +225,6 @@ module.exports = [
         answer: "8"
     },
     {
-        question: "The number of solutions of sin⁴(θ) + cos⁴(θ) - sin(θ)cos(θ) = 0 in [0,4π] is:",
-        options: ["2", "4", "6", "8"],
-        answer: "4"
-    },
-    {
         question: "If a, b, c are in A.P., then the value of tan(a)tan(c) is:",
         options: ["tan²(b)", "1", "0", "-tan²(b)"],
         answer: "1"

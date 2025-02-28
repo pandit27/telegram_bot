@@ -34,4 +34,9 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const personal = require("./assets/utils/personal");
     personal(bot, OWNER_ID);
     /* ------------------------------------------------------------------------------------ */
+
+    /* ------------------------------------------------------------------------------------ */
+    const rapid_quiz = require("./client/group tools/rapid_quiz");
+    rapid_quiz(bot, OWNER_ID, CHAT_ID);
+    /* ------------------------------------------------------------------------------------ */
 };
