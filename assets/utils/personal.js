@@ -24,8 +24,8 @@ module.exports = (bot) => {
     remove_bg(bot);
     const mathstep = require("./math_pkg/mathstep");
     mathstep(bot);
-    const guide = require("./guide");
-    guide(bot);
+    // const guide = require("./guide");
+    // guide(bot);
     const translator = require("./packages/translator");
     translator(bot);
 
