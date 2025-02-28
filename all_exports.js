@@ -39,4 +39,9 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const rapid_quiz = require("./client/group tools/rapid_quiz");
     rapid_quiz(bot, OWNER_ID, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
+
+    /* ------------------------------------------------------------------------------------ */
+    const formula_math = require("./client/group tools/formula_math");
+    formula_math(bot, OWNER_ID, TEST_ID);
+    /* ------------------------------------------------------------------------------------ */
 };

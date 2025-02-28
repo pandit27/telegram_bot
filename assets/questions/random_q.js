@@ -210,11 +210,6 @@ module.exports = [
         answer: "2"
     },
     {
-        question: "The number of solutions of |cot(x)| = cot(x) + 1/sin(x) in the interval [0,2π] is:",
-        options: ["1", "2", "3", "4"],
-        answer: "2"
-    },
-    {
         question: "The number of solutions of 2θ - cos²(θ) + √2 = 0 in ℝ is:",
         options: ["0", "1", "2", "3"],
         answer: "0"
@@ -433,5 +428,105 @@ module.exports = [
         question: "What does the BIOS do?",
         options: ["Loads the operating system", "Runs applications", "Manages memory", "Controls the mouse"],
         answer: "Loads the operating system"
-    }
+    },
+    {
+        question: "If x is real, then the minimum value of (x² - x + 1)/(x² + x + 1) is:",
+        options: ["1/2", "2", "3", "1/3"],
+        answer: "1/3"
+    },
+    {
+        question: "Number of real solutions of the eqn sin(eˣ) = 5ˣ + 5⁻ˣ is:",
+        options: ["0", "2", "1", "infinitely many"],
+        answer: "0"
+    },
+    {
+        question: "If the real number x when added to its inverse gives the minimum value of the sum, then the value of x is equal to",
+        options: ["-2", "2", "-1", "1"],
+        answer: "1"
+    },
+    {
+        question: "The harmonic mean of two numbers is 4. Their arithmetic mean A and the geometric mean G satisfy the relation 2A + G² = 27. Then, the two numbers are",
+        options: ["4 & 2", "6 & 3", "5 & 7", "4 & 1"],
+        answer: "6 & 3"
+    },
+    {
+        question: "The mean of first n natural numbers is equal to (n + 7)/3, then n is equal to",
+        options: ["12", "13", "14", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: "If 2ᵃ = 3ᵇ = 6⁻ᶜ, then ab + bc + ca is equal to",
+        options: ["0", "1", "2", "none of these"],
+        answer: "0"
+    },
+    {
+        question: "If logₓ y = 100 and log₂ x = 10, then the value of y is",
+        options: ["2¹⁰", "2¹⁰⁰", "2¹⁰⁰⁰", "2¹⁰⁰⁰⁰"],
+        answer: "2¹⁰⁰⁰"
+    },
+    {
+        question: "If n is an integer between 0 to 21, then find a value of n for which the value of n!(21-n)! is minimum.",
+        options: ["9+1", "10+1", "11+1", "12+1"],
+        answer: "9+1"
+    },
+    {
+        question: "If A and B are square matrices such that B = -A⁻¹ BA, then (A + B)² is",
+        options: ["0", "A² + B²", "A² + 2AB + B²", "A + B"],
+        answer: "A² + B²"
+    },
+    {
+        question: "In a skew symmetric matrix, the diagonal elements are all",
+        options: ["different from each other", "zero", "one", "none of these"],
+        answer: "zero"
+    },
+    {
+        question: "Words with or without meaning are to be formed using all the letters of the word EXAMINATION. The probability that the letter M appears at the fourth position in any such word is:",
+        options: ["1/66", "1/11", "1/9", "2/11"],
+        answer: "1/11"
+    },
+    {
+        question: " Number of digits in 2¹⁰⁰ ?",
+        options: ["100", "100 - 69", "100 + 69", "69"],
+        answer: "100 - 69"
+    },
+    {
+        question: "log x² - log 2x = 3log 3 - log 6 then x = ?",
+        options: ["3", "9", "4", "5"],
+        answer: "9"
+    },
+    {
+        question: "e*ln(x) = x, no. of real solutions?",
+        options: ["infinite", "1", "2", "none of these"],
+        answer: "1"
+    },
+    {
+        question: "If P(x) & Q(x) are quadratic eqns with the discriminants D1 & D2 respectively, then the eqn P(x)*Q(x) = 0 has at least two real roots when",
+        options: ["D1 + D2 <= 0", "D1 + D2 > 0", "D1 + D2 < 0", "D1 + D2 >= 0"],
+        answer: "D1 + D2 >= 0"
+    },
+    {
+        question: "The number of real roots of the eqn (x - 1)² + (x - 2)² + (x - 3)² = 0 is?",
+        options: ["1", "2", "3", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: "The eqn (x - 19)(x - 97) = p, has real roots r & s, then the maximum real root of the eqn (x - r)(x - s) = -p is",
+        options: ["13", "19", "97", "1843"],
+        answer: "97"
+    },
+    {
+        question: "If x & y are the roots of t² - 6t + p = 0, and the AM of x & y is greater than or equal to the GM of x² and y², determine the possible range of the values of p.",
+        options: ["(0, 9)", "[-3, 3]", "(-1, 2]", "(-9, inf]"],
+        answer: "[-3, 3]"
+    },
+    {
+        question: "All the values of m for which both roots of the eqn x² - 2mx + m² - 1 = 0 are greater than -2 but less than 4 lie in the interval",
+        options: ["0 < m < 3", "4 < m < -3", "1 < m < 3", "none of these"],
+        answer: "none of these"
+    },
+    // {
+    //     question: "",
+    //     options: ["", "", "", ""],
+    //     answer: ""
+    // },
 ];
