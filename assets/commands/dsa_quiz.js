@@ -31,7 +31,7 @@ module.exports = (bot) => {
                     inline_keyboard: [
                         [{ text: "Math", callback_data: "quiz_Math" }],
                         [{ text: "Reasoning", callback_data: "quiz_Reasoning" }],
-                        [{ text: "DSA", callback_data: "quiz_DSA" }]
+                        [{ text: "Computer", callback_data: "quiz_DSA" }]
                     ]
                 }
             });

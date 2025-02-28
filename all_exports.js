@@ -44,4 +44,9 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const formula_math = require("./client/group tools/formula_math");
     formula_math(bot, OWNER_ID, TEST_ID);
     /* ------------------------------------------------------------------------------------ */
+
+    /* ------------------------------------------------------------------------------------ */
+    const cuet_poll = require("./client/group tools/group chat/cuet_poll");
+    cuet_poll(bot);
+    /* ------------------------------------------------------------------------------------ */
 };

@@ -22,8 +22,8 @@ exprt(bot, CHAT_ID, CUET_ID, OWNER_ID);
 const random_q = require("./assets/questions/random_q");
 /*---------------------------------------------------------------------------------------------*/
 // - for testing purposes (we'll use temp.js)
-const temp = require("./temp");
-temp(bot);
+// const temp = require("./temp");
+// temp(bot);
 /*---------------------------------------------------------------------------------------------*/
 
 
