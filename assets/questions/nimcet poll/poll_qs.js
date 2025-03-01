@@ -44,20 +44,12 @@ module.exports = [
         options: ["Limit change me galti ho jati hai", "Properties yaad hai, apply nahi hoti", "Parts wale question gamble jaisa lagte hain", "Area under curve"]
     },
     {
-        question: "NIMCET ke baad sabse pehla kaam kya karenge?",
-        options: ["Coding me lag jayenge", "Trip plan karenge", "Results ka intezaar karenge", "Abhi nahi socha hai"]
-    },
-    {
         question: "Permutations & Combinations me struggle?",
         options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuch aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai"]
     },
     {
         question: "Agar top NIT mil gaya toh pehla thought kya hoga?",
         options: ["Masti time!", "Ab placement ki tension", "Aur kya chahiye life me?", "Hostel ka sochna padega"]
-    },
-    {
-        question: "NIMCET ke baad coding start karenge ya break lenge?",
-        options: ["Ek dum relax", "Thoda coding, thoda masti", "Full focus coding par", "Abhi decide nahi kiya"]
     },
     {
         question: "Sabse bada distraction kya hai?",
@@ -125,7 +117,7 @@ module.exports = [
     },
     {
         question: "NIMCET ke baad coding ka kya plan hai?",
-        options: ["Full-time coding mode on", "Placement ke liye shuru karenge", "Freelancing try karenge", "Pehle thoda break lenge"]
+        options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
     },
     {
         question: "Ab tak kitne projects banaye hain?",

@@ -335,11 +335,6 @@ module.exports = [
         answer: "-5"
     },
     {
-        question: "Which number should replace the question mark? 121, 144, 169, ?, 225",
-        options: ["176", "196", "189", "209"],
-        answer: "196"
-    },
-    {
         question: "If A is taller than B but shorter than C, and D is shorter than A but taller than B, who is the second tallest?",
         options: ["A", "B", "C", "D"],
         answer: "A"
@@ -523,6 +518,86 @@ module.exports = [
         question: "All the values of m for which both roots of the eqn x² - 2mx + m² - 1 = 0 are greater than -2 but less than 4 lie in the interval",
         options: ["0 < m < 3", "4 < m < -3", "1 < m < 3", "none of these"],
         answer: "none of these"
+    },
+    {
+        question: "If the sides of a right angled triangle are in AP, then the sides are proportional to",
+        options: ["1 : 2 : 3", "2 : 3 : 4", "3 : 4 : 5", "4 : 5 : 6"],
+        answer: "3 : 4 : 5"
+    },
+    {
+        question: "Number of ways of selecting 2 balls from 5 similar balls is",
+        options: ["ln (5C2)", "ln e", "5C2", "5P2"],
+        answer: "ln e"
+    },
+    {
+        question: "Smallest positive integer that is divisible by all the numbers from 1 to 10, excluding prime numbers?",
+        options: ["2250", "120", "360", "99"],
+        answer: "360"
+    },
+    {
+        question: "How many 4 digit numbers exist such that the digit sum equals 3! - sin² x - cos² x?",
+        options: ["15", "20", "35", "40"],
+        answer: "35"
+    },
+    {
+        question: "f(3x+2) + f(3x+29) = 0, then period of f(x) is",
+        options: ["7", "8", "10", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: "If the roots of the equation x² - ax + b = 0 are twice the roots of the equation x² - bx + a = 0, then find b/a.",
+        options: ["2", "4", "6", "8"],
+        answer: "2"
+    },
+    {
+        question: "If a + b + c = 0, then find the value of (a³ + b³ + c³)/(abc)",
+        options: ["abc", "2abc", "3abc", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: "Find the number of real solutions of |x|² - 3|x| + 2 = 0.",
+        options: ["1", "4", "7", "10"],
+        answer: "4"
+    },
+    {
+        question: "lim (x→0) (cos(ax) - cos(bx)) / x²",
+        options: ["(b² + a²)/2", "(b² - a²)/2", "(b² - a²)", "(b² + a²)"],
+        answer: "(b² - a²)/2"
+    },
+    {
+        question: "A bag contains 5 red and 3 blue balls. If 3 balls are drawn at random without replacement, find the probability that exactly 2 are red.",
+        options: ["15 / 28", "15 / 56", "30 / 28", "30 / 56"],
+        answer: "15 / 28"
+    },
+    {
+        question: "If A and B are events such that P(A|B) = 1/2, P(B|A) = 1/3, and P(A∩B) = 1/6, find P(A∪B).",
+        options: ["2 / 3", "1 / 3", "4 / 3", "7 / 3"],
+        answer: "2 / 3"
+    },
+    {
+        question: "A problem in mathematics is given to three students whose chances of solving it are 1/2, 1/3, and 1/4. What is the probability that the problem is solved?",
+        options: ["2 / 3", "3 / 2", "4 / 3", "3 / 4"],
+        answer: "3 / 4"
+    },
+    {
+        question: "Two numbers are chosen from {1, 2, 3, ..., 20}. Find the probability that their sum is odd.",
+        options: ["7 / 19", "2 / 19", "10 / 19", "1 / 19"],
+        answer: "10 / 19"
+    },
+    {
+        question: "If three vertices of a regular hexagon are chosen at random, what is the probability that the triangle formed is equilateral?",
+        options: ["2 / 10", "4 / 10", "6 / 10", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: " In triangle ABC, if a/sin(A) = b/sin(B) = c/sin(C) = k, and a = 2, A = 30°, find k.",
+        options: ["1", "2", "3", "4"],
+        answer: "4"
+    },
+    {
+        question: " In a group of 100 people, 72 can speak English and 43 can speak French. How many can speak both English and French?",
+        options: ["10", "28", "15", "19"],
+        answer: "15"
     },
     // {
     //     question: "",
