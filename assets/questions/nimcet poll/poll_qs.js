@@ -109,7 +109,7 @@ module.exports = [
     },
     {
         question: "Competitive programming ka kya status hai?",
-        options: ["Regular practice karta hain", "Kabhi-kabhi contests deta hain", "Basic level pe hain", "Naam suna hai, karna shuru nahi kiya"]
+        options: ["Regular practice karte hain", "Kabhi-kabhi contests dete hain", "Basic level pe hain", "Naam suna hai, karna shuru nahi kiya"]
     },
     {
         question: "DSA practice ke liye kaunsa platform use kar rahe hain?",
