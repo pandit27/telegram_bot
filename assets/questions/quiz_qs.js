@@ -1030,11 +1030,6 @@ module.exports = [
         answer: "O(logn)"
     },
     {
-        question: "Which of the following is not a characteristic of a stack?",
-        options: ["Last In First Out (LIFO)", "Elements are added and removed from the same end", "Can be implemented using arrays or linked lists", "Elements can be accessed randomly"],
-        answer: "Elements can be accessed randomly"
-    },
-    {
         question: "In which of the following operations is the time complexity O(1) for a hash table?",
         options: ["Insertion", "Search", "Deletion", "All of the above"],
         answer: "All of the above"

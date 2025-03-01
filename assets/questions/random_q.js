@@ -15,44 +15,9 @@ module.exports = [
         answer: "1/4"
     },
     {
-        question: "What is the worst-case time complexity of bubble sort?",
-        options: ["O(nlogn)", "O(n^2)", "O(n)", "O(logn)"],
-        answer: "O(n^2)"
-    },
-    {
-        question: "Which algorithm is best used for finding the shortest path in a weighted graph?",
-        options: ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall Algorithm"],
-        answer: "Dijkstra's Algorithm"
-    },
-    {
-        question: "What is the time complexity of inserting an element into a min-heap?",
-        options: ["O(1)", "O(logn)", "O(n)", "O(nlogn)"],
-        answer: "O(logn)"
-    },
-    {
         question: "The eccentricity of the hyperbola 9x² - 16y² = 144 is:",
         options: ["5/4", "4/3", "3/2", "5/3"],
         answer: "5/4"
-    },
-    {
-        question: "Which of the following is not a characteristic of a stack?",
-        options: ["Last In First Out (LIFO)", "Elements are added and removed from the same end", "Can be implemented using arrays or linked lists", "Elements can be accessed randomly"],
-        answer: "Elements can be accessed randomly"
-    },
-    {
-        question: "In which of the following operations is the time complexity O(1) for a hash table?",
-        options: ["Insertion", "Search", "Deletion", "All of the above"],
-        answer: "All of the above"
-    },
-    {
-        question: "If A is coded as 1, B as 2, C as 3, and so on, what is the sum of the numerical values of the letters in 'DOG'?",
-        options: ["26", "24", "22", "20"],
-        answer: "26"
-    },
-    {
-        question: "Which data structure is used in breadth-first search?",
-        options: ["Stack", "Queue", "Heap", "Linked List"],
-        answer: "Queue"
     },
     {
         question: "The value of the integral ∫(0 to π/2) ln(sin x) dx is:",
@@ -100,16 +65,6 @@ module.exports = [
         answer: "1/3"
     },
     {
-        question: "Which memory is volatile?",
-        options: ["ROM", "Hard Disk", "RAM", "CD-ROM"],
-        answer: "RAM"
-    },
-    {
-        question: "Which of the following is an input device?",
-        options: ["Monitor", "Printer", "Keyboard", "Speaker"],
-        answer: "Keyboard"
-    },
-    {
         question: "The area of the region bounded by the curves y = x² and y = x is:",
         options: ["1/6", "1/4", "1/3", "1/2"],
         answer: "1/6"
@@ -118,11 +73,6 @@ module.exports = [
         question: "If the matrix A is such that A² = I, where I is the identity matrix, then the inverse of A is:",
         options: ["A", "-A", "A²", "I"],
         answer: "A"
-    },
-    {
-        question: "A man is facing north. He turns 90° clockwise, then 180° counterclockwise, and then 90° clockwise again. Which direction is he facing now?",
-        options: ["North", "South", "East", "West"],
-        answer: "North"
     },
     {
         question: "The value of the determinant of the matrix [[2, 3], [5, 7]] is:",
@@ -140,39 +90,14 @@ module.exports = [
         answer: "y = Ce^x"
     },
     {
-        question: "If in a certain code, 'MANGO' is written as 'NCOPH', how is 'APPLE' written in the same code?",
-        options: ["BQPMF", "BOQMF", "BQQMF", "BPPMF"],
-        answer: "BQQMF"
-    },
-    {
         question: "The number of ways to arrange the letters in the word 'MATHEMATICS' is:",
         options: ["11!", "11! / (2! 2! 2!)", "11! / (2! 2! 2! 3!)", "11! / (2! 2! 2! 2!)"],
         answer: "11! / (2! 2! 2!)"
     },
     {
-        question: "The number of positive integral solutions of the equation x₁ + x₂ + x₃ = 10 is:",
-        options: ["36", "45", "55", "84"],
-        answer: "36"
-    },
-    {
         question: "If the probability of an event occurring is 0.2, then the odds in favor of the event are:",
         options: ["1:4", "1:5", "2:5", "4:1"],
         answer: "1:4"
-    },
-    {
-        question: "Which of the following is a secondary storage device?",
-        options: ["RAM", "ROM", "Hard Disk", "Cache"],
-        answer: "Hard Disk"
-    },
-    {
-        question: "What is the full form of CPU?",
-        options: ["Central Processing Unit", "Computer Processing Unit", "Central Printed Unit", "Central Process Unit"],
-        answer: "Central Processing Unit"
-    },
-    {
-        question: "A is the father of B, but B is not the son of A. What is B to A?",
-        options: ["Daughter", "Son", "Nephew", "Cousin"],
-        answer: "Daughter"
     },
     {
         question: "The value of sin(2π/3) is:",
@@ -230,11 +155,6 @@ module.exports = [
         answer: "0"
     },
     {
-        question: "Complete the series: 3, 6, 11, 18, 27, ?",
-        options: ["36", "37", "38", "39"],
-        answer: "38"
-    },
-    {
         question: "The number of solutions of tan(5x) = cot(3x) in (0, π) is:",
         options: ["2", "4", "6", "8"],
         answer: "4"
@@ -245,34 +165,14 @@ module.exports = [
         answer: "276"
     },
     {
-        question: "Which of the following is the brain of a computer?",
-        options: ["RAM", "CPU", "Hard Disk", "ROM"],
-        answer: "CPU"
-    },
-    {
-        question: "Which part of the CPU performs arithmetic and logical operations?",
-        options: ["Control Unit (CU)", "Arithmetic Logic Unit (ALU)", "Memory Unit", "Register"],
-        answer: "Arithmetic Logic Unit (ALU)"
-    },
-    {
         question: "The number of real solutions of the equation x³ - 3x + 2 = 0 is:",
         options: ["0", "1", "2", "3"],
         answer: "3"
     },
     {
-        question: "If ‘P × Q’ means ‘P is the mother of Q’, ‘P + Q’ means ‘P is the father of Q’, ‘P – Q’ means ‘P is the brother of Q’, then which of the following means ‘R is the uncle of S’?",
-        options: ["R – T × S", "R + T × S", "R – T + S", "R × T – S"],
-        answer: "R – T × S"
-    },
-    {
         question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
         options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
         answer: "x + y + z = 0"
-    },
-    {
-        question: "Pointing to a man, a woman said, 'His mother is the only daughter of my mother.' How is the woman related to the man?",
-        options: ["Mother", "Grandmother", "Sister", "Aunt"],
-        answer: "Mother"
     },
     {
         question: "If α, β are the roots of x² - 5x + 6 = 0, then the value of α³ + β³ is:",
@@ -290,11 +190,6 @@ module.exports = [
         answer: "6"
     },
     {
-        question: "Arrange the following words in dictionary order: (1) Mango, (2) Apple, (3) Banana, (4) Guava",
-        options: ["2, 3, 4, 1", "2, 3, 1, 4", "3, 2, 1, 4", "3, 2, 4, 1"],
-        answer: "2, 3, 1, 4"
-    },
-    {
         question: "If A, B, C are angles of a triangle, then sin(A) + sin(B) + sin(C) is always:",
         options: ["Greater than 2", "Less than 2", "Equal to 2", "Undefined"],
         answer: "Less than 2"
@@ -305,59 +200,14 @@ module.exports = [
         answer: "(mp + nq) / (mq - np)"
     },
     {
-        question: "If 5 * 3 = 28, 6 * 2 = 27, then 7 * 4 = ?",
-        options: ["48", "49", "50", "51"],
-        answer: "50"
-    },
-    {
         question: "If tan(x) + tan(y) + tan(z) = tan(x)tan(y)tan(z), then which of the following is true?",
         options: ["x + y + z = π", "x + y + z = 2π", "x + y + z = 0", "x + y + z = π/2"],
         answer: "x + y + z = π"
     },
     {
-        question: "Introducing a boy, a girl said, 'He is the only son of my mother's father.' How is the girl related to the boy?",
-        options: ["Sister", "Cousin", "Mother", "Aunt"],
-        answer: "Sister"
-    },
-    {
-        question: "A is B's brother. B is C's sister. C is D's father. How is A related to D?",
-        options: ["Uncle", "Aunt", "Brother", "Father"],
-        answer: "Uncle"
-    },
-    {
-        question: "If the day before yesterday was Wednesday, what day will it be three days after tomorrow?",
-        options: ["Sunday", "Monday", "Tuesday", "Thursday"],
-        answer: "Tuesday"
-    },
-    {
-        question: "The value of the integral ∫₀¹ (2x³ - 3x² + x - 5) dx is:",
-        options: ["-5", "-4", "-3", "-2"],
-        answer: "-5"
-    },
-    {
-        question: "If A is taller than B but shorter than C, and D is shorter than A but taller than B, who is the second tallest?",
-        options: ["A", "B", "C", "D"],
-        answer: "A"
-    },
-    {
-        question: "Which word does not belong in the group? Apple, Banana, Carrot, Mango",
-        options: ["Apple", "Banana", "Carrot", "Mango"],
-        answer: "Carrot"
-    },
-    {
         question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
         options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
         answer: "1 - (5/6)^6"
-    },
-    {
-        question: "A man walks 3 km north, then turns east and walks 4 km. How far is he from his starting point?",
-        options: ["3 km", "4 km", "5 km", "7 km"],
-        answer: "5 km"
-    },
-    {
-        question: "What comes next in the sequence? 2, 3, 5, 7, 11, __?",
-        options: ["12", "13", "15", "17"],
-        answer: "13"
     },
     {
         question: "The probability of getting a sum of 7 when rolling two six-sided dice is:",
@@ -403,26 +253,6 @@ module.exports = [
         question: "If A and B are independent events with P(A) = 1/4 and P(B) = 1/3, then P(A ∪ B) is:",
         options: ["1/2", "5/12", "7/12", "1/3"],
         answer: "7/12"
-    },
-    {
-        question: "Which unit controls the execution of instructions in a CPU?",
-        options: ["ALU", "Control Unit", "Memory Unit", "Cache"],
-        answer: "Control Unit"
-    },
-    {
-        question: "Which type of memory has the fastest access time?",
-        options: ["Cache", "RAM", "Hard Disk", "ROM"],
-        answer: "Cache"
-    },
-    {
-        question: "Which of these devices is used for data backup?",
-        options: ["CD/DVD", "RAM", "Cache", "Register"],
-        answer: "CD/DVD"
-    },
-    {
-        question: "What does the BIOS do?",
-        options: ["Loads the operating system", "Runs applications", "Manages memory", "Controls the mouse"],
-        answer: "Loads the operating system"
     },
     {
         question: "If x is real, then the minimum value of (x² - x + 1)/(x² + x + 1) is:",
