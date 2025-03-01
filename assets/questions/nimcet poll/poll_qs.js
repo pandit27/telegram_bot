@@ -169,6 +169,38 @@ module.exports = [
     },
     {
         question: "Agar NIMCET ki rank ‘meme format’ me aati toh?",
-        options: ["Expectation: AIR 1, Reality: AIR 25k", "‘Kaha phas gaya re baba’ wala meme", "‘Ek dum se waqt badal diya’ wala scene", "‘All is well’ likh ke dekhunga"]
+        options: ["Expectation: AIR 1, Reality: AIR 25k", "‘Kaha phas gaya re baba’ wala meme", "‘Ek dum se waqt badal diya’ wala scene", "‘All is well’ likh ke dekhenge"]
     },
+    {
+        question: "Kaun si stream se ho aap?",
+        options: ["BSc", "BCA", "BCom", "BA"]
+    },
+    {
+        question: "Agar NIMCET nahi nikla to kya karenge?",
+        options: ["Drop lenge", "CUET, IPU, State CET target karenge", "Private college me admission lenge", "Full confidence hai, nikal lenge"]
+    },
+    {
+        question: "Aapka dream college kya hai?",
+        options: ["NIT Trichy", "NIT Agartala", "MNNIT", "Filhal toh NIMCET nikalna hi dream lag raha"]
+    },
+    {
+        question: "Aapke mocks me kitne marks aa rahe?",
+        options: ["600+", "500+", "400+", "200 bhi nahi ban rahe"]
+    },
+    {
+        question: "Aapka sabse strong part kya hai?",
+        options: ["Math", "Reasoning", "Computer", "General English"]
+    },
+    {
+        question: "Aapki favourite programming language kya hai?",
+        options: ["JAVA", "C++", "Python", "JavaScript"]
+    },
+    {
+        question: "Aapka sabse strong topic kya hai?",
+        options: ["Algebra", "Calculus", "Geometry", "Saare hi weak hain"]
+    },
+    // {
+    //     question: "",
+    //     options: ["", "", "", ""]
+    // },
 ];
