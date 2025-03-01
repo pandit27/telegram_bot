@@ -138,7 +138,7 @@ const sendQuizSummary = (bot, chatId, userId) => {
     const summaryText = `
 ✅ Quiz Summary:
 - Subject: ${category}
-- Questions Attempted: ${attempted}
+- Questions Attempted: ${attempted + 1}
 - Correct Answers: ${correctAnswers}
 - Time Taken: ${totalTime} seconds
 `;
