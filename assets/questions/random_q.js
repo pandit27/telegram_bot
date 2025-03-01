@@ -429,6 +429,41 @@ module.exports = [
         options: ["10", "28", "15", "19"],
         answer: "15"
     },
+    {
+        question: "Find the number of integral solutions of x² + y² = 2(x + y) + xy.",
+        options: ["-6", "6", "-1", "1"],
+        answer: "6"
+    },
+    {
+        question: "If the area enclosed by y = |x-1| and y = 1 is A, find the value of A.",
+        options: ["2", "-2", "0", "1"],
+        answer: "1"
+    },
+    {
+        question: "Determine the number of solutions of the equation sin(x) = x²/π² in the interval [-π, π].",
+        options: ["1", "3", "4", "2"],
+        answer: "3"
+    },
+    {
+        question: "If the vectors a, b, and c are coplanar, then find the value of [a+b b+c c+a].",
+        options: ["1", "2^0", "both a and b", "none of these"],
+        answer: "none of these"
+    },
+    {
+        question: "Find the coefficient of x^50 in (1 + x + x² + x³ + ... + x¹⁰⁰)²",
+        options: ["49", "50", "51", "52"],
+        answer: "51"
+    },
+    {
+        question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",
+        options: ["(p + 1)", "1 / (p + 1)", "(p - 1)", "1 / (p - 1)"],
+        answer: "1 / (p + 1)"
+    },
+    {
+        question: "If y = f(x) satisfies the differential equation dy/dx = (x+y)/x, and f(1) = 1, then find f(e).",
+        options: ["e", "e + 1", "2e", "none of these"],
+        answer: "2e"
+    },
     // {
     //     question: "",
     //     options: ["", "", "", ""],
