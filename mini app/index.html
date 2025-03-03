@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMCET Resources</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NIMCET Prep Resources 💻</h1>
+    </header>
+
+    <section class="container">
+        <h2>📚 Study Resources</h2>
+        <ul>
+            <li> <a href="https://t.me/nimcet_resources/87" target="_blank">Arihant MCA Book (PDF)</a></li>
+            <li> <a href="https://t.me/nimcet_resources/90" target="_blank">Math Handbook</a></li>
+            <li> <a href="https://t.me/nimcet_resources/132" target="_blank">NIMCET PYQS</a></li>
+        </ul>
+
+        <h2>📢 Telegram Groups</h2>
+        <ul>
+            <li> <a href="https://t.me/nimcet2025_group" target="_blank">NIMCET group 2025</a></li>
+            <li> <a href="https://t.me/cuetpg_2025_group" target="_blank">CUET group 2025</a></li>
+        </ul>
+
+        <h2>💻 YouTube Channels</h2>
+        <ul>
+            <li> <a href="https://youtube.com/playlist?list=PL6EdTh7l662ojPaExgWR4-iOvCT1JRt5n&si=EEjQq4HNPzj7frS6" target="_blank">Math</a></li>
+            <li> <a href="https://youtube.com/playlist?list=PL4t_secZTPn59VVBODG4IuLzLZ21IRwCZ&si=3beBAUS7GKwjOvpE" target="_blank">Logical Reasoning</a></li>
+        </ul>
+    </section>
+
+    <button class="btn" onclick="sendMessage()">Share with Bot</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+
+        function sendMessage() {
+            let message = "Message";
+            tg.sendData(message);
+        }
+    </script>
+</body>
+</html>
