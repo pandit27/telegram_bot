@@ -16,10 +16,6 @@ module.exports = [
         options: ["AP-GP strong hai, koi issue nahi", "Summation wale dikhte hi tension", "Nth term nikalte time silly mistake", "Series ka logic aata hai, bas calculation me galti"]
     },
     {
-        question: "Aapke liye tayari ka sabse bada challenge kya hai?",
-        options: ["Time management - Behtar planning chahiye", "Syllabus cover karna - Bahut kuch padhna hai", "Practice ki kami - Zyada questions solve karne hain", "Exam pressure - Tension mein galtiyan ho jaati hain"]
-    },
-    {
         question: "Kaunsa topic aapko sabse zyada practice karni hai?",
         options: ["Quadratic Equations - Basic strong karna hai", "Permutations & Combinations - Counting problems samajhni hai", "Probability - Concepts clear nahi hain", "Conic Sections - Visualize karna mushkil lagta hai"]
     },
@@ -38,10 +34,6 @@ module.exports = [
     {
         question: "Agar ek time machine hoti, toh kis moment pe jaake cheezein sahi karte?",
         options: ["Jab syllabus shuru karna tha", "Pehla mock test dene se pehle", "Jab silly mistakes chhod sakte the", "Jab ‘Kal se padhai pakka’ waala jhooth bola tha"]
-    },
-    {
-        question: "Definite Integration ka toughest part?",
-        options: ["Limit change me galti ho jati hai", "Properties yaad hai, apply nahi hoti", "Parts wale question gamble jaisa lagte hain", "Area under curve"]
     },
     {
         question: "Permutations & Combinations me struggle?",
@@ -160,16 +152,8 @@ module.exports = [
         options: ["K-Map easy lagta hai", "Theorems yaad nahi rehte", "SOP aur POS confuse karta hai", "Boolean dekhte hi dar"]
     },
     {
-        question: "Padhai ke beech distractions kaunse hain?",
-        options: ["YouTube shorts me atak jata hoon", "Ek break lo, fir kabhi wapas na aao", "Telegram notifications ka attack", "Distraction? Padhai hi distraction lagti hai"]
-    },
-    {
         question: "NIMCET ka syllabus kitna complete ho chuka hai?",
         options: ["90%+ bas ek revision bacha hai", "60-80%, ab speed badhani hai", "30-50%, confidence bhi itna hi hai", "Syllabus dekha tha, par cover nahi kiya"]
-    },
-    {
-        question: "Agar NIMCET ki rank ‘meme format’ me aati toh?",
-        options: ["Expectation: AIR 1, Reality: AIR 25k", "‘Kaha phas gaya re baba’ wala meme", "‘Ek dum se waqt badal diya’ wala scene", "‘All is well’ likh ke dekhenge"]
     },
     {
         question: "Kaun si stream se ho aap?",
@@ -189,15 +173,11 @@ module.exports = [
     },
     {
         question: "Aapka sabse strong part kya hai?",
-        options: ["Math", "Reasoning", "Computer", "General English"]
+        options: ["Math", "Reasoning", "Computer", "Saare hi weak hain"]
     },
     {
         question: "Aapki favourite programming language kya hai?",
         options: ["JAVA", "C++", "Python", "JavaScript"]
-    },
-    {
-        question: "Aapka sabse strong topic kya hai?",
-        options: ["Algebra", "Calculus", "Geometry", "Saare hi weak hain"]
     },
     // {
     //     question: "",

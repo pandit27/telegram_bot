@@ -85,11 +85,6 @@ module.exports = [
         answer: "32"
     },
     {
-        question: "The solution to the differential equation dy/dx = y is:",
-        options: ["y = e^x", "y = e^(-x)", "y = Ce^x", "y = Ce^(-x)"],
-        answer: "y = Ce^x"
-    },
-    {
         question: "The number of ways to arrange the letters in the word 'MATHEMATICS' is:",
         options: ["11!", "11! / (2! 2! 2!)", "11! / (2! 2! 2! 3!)", "11! / (2! 2! 2! 2!)"],
         answer: "11! / (2! 2! 2!)"
