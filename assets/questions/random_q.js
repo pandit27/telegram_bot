@@ -15,11 +15,6 @@ module.exports = [
         answer: "1/4"
     },
     {
-        question: "The eccentricity of the hyperbola 9x² - 16y² = 144 is:",
-        options: ["5/4", "4/3", "3/2", "5/3"],
-        answer: "5/4"
-    },
-    {
         question: "The value of the integral ∫(0 to π/2) ln(sin x) dx is:",
         options: ["-π ln 2 / 2", "0", "π ln 2 / 2", "-π/2"],
         answer: "-π ln 2 / 2"
@@ -43,11 +38,6 @@ module.exports = [
         question: "If A, B, and C are angles of a triangle, then the maximum value of cos A + cos B + cos C is:",
         options: ["3/2", "2", "1", "3"],
         answer: "3/2"
-    },
-    {
-        question: "If the system of linear equations x + 2y + 3z = 1, 2x + 3y + 4z = 2, 3x + 4y + λz = 3 has no solution, then the value of λ is:",
-        options: ["5", "6", "7", "8"],
-        answer: "6"
     },
     {
         question: "The value of the integral ∫₀¹ (1 - x)ⁿ dx, where n is a positive integer, is:",
