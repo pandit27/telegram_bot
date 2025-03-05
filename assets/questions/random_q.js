@@ -420,11 +420,6 @@ module.exports = [
         answer: "6"
     },
     {
-        question: "If the area enclosed by y = |x-1| and y = 1 is A, find the value of A.",
-        options: ["2", "-2", "0", "1"],
-        answer: "1"
-    },
-    {
         question: "Determine the number of solutions of the equation sin(x) = x²/π² in the interval [-π, π].",
         options: ["1", "3", "4", "2"],
         answer: "3"
