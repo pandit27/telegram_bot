@@ -52,10 +52,6 @@ module.exports = [
         options: ["Phir se tayari", "Koi aur exam", "Job dhundhna", "Jo hoga dekha jayega"]
     },
     {
-        question: "MCA complete hone ke baad ka plan kya hai?",
-        options: ["Direct placement", "Startup try karenge", "Higher studies", "Government job ka try"]
-    },
-    {
         question: "Probability wale sawal dekhte hi pehla reaction?",
         options: ["P&C strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
