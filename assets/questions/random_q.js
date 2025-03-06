@@ -330,11 +330,6 @@ module.exports = [
         answer: "[-3, 3]"
     },
     {
-        question: "All the values of m for which both roots of the eqn x² - 2mx + m² - 1 = 0 are greater than -2 but less than 4 lie in the interval",
-        options: ["0 < m < 3", "4 < m < -3", "1 < m < 3", "none of these"],
-        answer: "none of these"
-    },
-    {
         question: "If the sides of a right angled triangle are in AP, then the sides are proportional to",
         options: ["1 : 2 : 3", "2 : 3 : 4", "3 : 4 : 5", "4 : 5 : 6"],
         answer: "3 : 4 : 5"

@@ -1,9 +1,5 @@
 module.exports = [
     {
-        question: "Aapki NIMCET ki tayari kaisi chal rahi hai?",
-        options: ["Bahut badiya!", "Theek-thaak chal rahi hai", "Thodi aur mehnat ki zaroorat hai", "Sangharsh kar rahe hain"]
-    },
-    {
         question: "Kaunsa vishay aapko sabse kathin lagta hai?",
         options: ["Math - Kathin concepts", "Reasoning - Samajh se bahar hai", "Computer Basics - Aur practice ki zaroorat", "English - Vocabulary weak hai"]
     },

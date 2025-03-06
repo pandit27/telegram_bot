@@ -58,4 +58,6 @@ module.exports = (bot, CHAT_ID, TEST_ID, OWNER_ID) => {
     const msg_pin = require("./client/group tools/group chat/msg_pin");
     msg_pin(bot, CHAT_ID);
     /* ------------------------------------------------------------------------------------ */
+
+    // bot.sendMessage(CHAT_ID, ``, { parse_mode: "HTML" });
 };
