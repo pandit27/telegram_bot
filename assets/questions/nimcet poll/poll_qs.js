@@ -8,10 +8,6 @@ module.exports = [
         options: ["2 ghante se kam - Aur mehnat karni hogi", "2-4 ghante - Santulit abhyas", "4-6 ghante - Gahri tayyari", "6+ ghante - Pura focus"]
     },
     {
-        question: "Sequences & Series wale sawal ka reaction?",
-        options: ["AP-GP strong hai, koi issue nahi", "Summation wale dikhte hi tension", "Nth term nikalte time silly mistake", "Series ka logic aata hai, bas calculation me galti"]
-    },
-    {
         question: "Kaunsa topic aapko sabse zyada practice karni hai?",
         options: ["Quadratic Equations - Basic strong karna hai", "Permutations & Combinations - Counting problems samajhni hai", "Probability - Concepts clear nahi hain", "Conic Sections - Visualize karna mushkil lagta hai"]
     },
