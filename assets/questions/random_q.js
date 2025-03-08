@@ -65,11 +65,6 @@ module.exports = [
         answer: "A"
     },
     {
-        question: "The value of the determinant of the matrix [[2, 3], [5, 7]] is:",
-        options: ["-1", "1", "2", "3"],
-        answer: "-1"
-    },
-    {
         question: "If the vectors a = i + 2j + 3k and b = 4i + 5j + 6k, then the dot product a · b is:",
         options: ["32", "38", "44", "50"],
         answer: "32"
