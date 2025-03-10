@@ -24,8 +24,12 @@ module.exports = [
         options: ["Jab syllabus shuru karna tha", "Pehla mock test dene se pehle", "Jab silly mistakes chhod sakte the", "Jab ‘Kal se padhai pakka’ waala jhooth bola tha"]
     },
     {
+        question: "Agar rewind kar sakte, toh kya change hota?",
+        options: ["Padhai time pe shuru hoti", "Mocks bina darr diye hote", "Galtiyan pehle sudhar lete", "Procrastination ka regret nahi hota"]
+    },
+    {
         question: "Permutations & Combinations me struggle?",
-        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuch aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai"]
+        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai"]
     },
     {
         question: "Agar top NIT mil gaya toh pehla thought kya hoga?",
