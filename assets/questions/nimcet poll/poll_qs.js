@@ -16,10 +16,6 @@ module.exports = [
         options: ["Self-study - Khud se manage kar rahe hain", "Coaching - Proper guidance le rahe hain", "Online courses - Digital learning kar rahe hain", "Mix of all - Har jagah se seekh rahe hain"]
     },
     {
-        question: "Set Theory ka real struggle?",
-        options: ["Venn Diagram ka orientation samajhna", "n(A U B) wale formula me mistake", "Complement aur subset ka confusion", "Sets easy lagta hai, par marks nahi milte"]
-    },
-    {
         question: "Sabse challenging section kaunsa lagta hai?",
         options: ["Math - Concept aur calculations", "Reasoning - Trick aur patterns", "Computer Basics - Theory yaad rakhni hoti hai", "English - Vocabulary tough lagti hai"]
     },
@@ -34,10 +30,6 @@ module.exports = [
     {
         question: "Agar top NIT mil gaya toh pehla thought kya hoga?",
         options: ["Masti time!", "Ab placement ki tension", "Aur kya chahiye life me?", "Hostel ka sochna padega"]
-    },
-    {
-        question: "Sabse bada distraction kya hai?",
-        options: ["YouTube ‘study’ videos", "Phone ka notification", "10 min ka break jo 2 ghante chala", "Future ke sapne"]
     },
     {
         question: "Agar NIMCET nahi clear hua toh next step kya hoga?",
@@ -64,7 +56,7 @@ module.exports = [
         options: ["Assignments ka load", "Hostel life adjust karna", "Mess ka khana", "Attendance maintain karna"]
     },
     {
-        question: "NIT me sabse pehla coding language kaunsa seekhenge?",
+        question: "NIT me sabse pehli coding language kaunsa seekhenge?",
         options: ["Python", "Java", "C++", "Jo seniors suggest karenge"]
     },
     {
