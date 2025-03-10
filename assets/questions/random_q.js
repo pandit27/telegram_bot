@@ -40,11 +40,6 @@ module.exports = [
         answer: "3/2"
     },
     {
-        question: "The value of the integral ∫₀¹ (1 - x)ⁿ dx, where n is a positive integer, is:",
-        options: ["1/(n+1)", "n/(n+1)", "1/n", "n"],
-        answer: "1/(n+1)"
-    },
-    {
         question: "If the roots of the equation x² - 6x + k = 0 are real and distinct, then the range of k is:",
         options: ["(-∞, 9)", "(9, ∞)", "(-∞, 6)", "(6, ∞)"],
         answer: "(-∞, 9)"
@@ -63,11 +58,6 @@ module.exports = [
         question: "If the matrix A is such that A² = I, where I is the identity matrix, then the inverse of A is:",
         options: ["A", "-A", "A²", "I"],
         answer: "A"
-    },
-    {
-        question: "The value of the determinant of the matrix [[2, 3], [5, 7]] is:",
-        options: ["-1", "1", "2", "3"],
-        answer: "-1"
     },
     {
         question: "If the vectors a = i + 2j + 3k and b = 4i + 5j + 6k, then the dot product a · b is:",
@@ -138,11 +128,6 @@ module.exports = [
         question: "If cos(A) + cos(B) + cos(C) = 0 and sin(A) + sin(B) + sin(C) = 0, then what is the value of tan(A) + tan(B) + tan(C)?",
         options: ["3", "0", "1", "Undefined"],
         answer: "0"
-    },
-    {
-        question: "The number of solutions of tan(5x) = cot(3x) in (0, π) is:",
-        options: ["2", "4", "6", "8"],
-        answer: "4"
     },
     {
         question: "If x + 1/x = 4, then x⁵ + 1/x⁵ is:",
@@ -383,11 +368,6 @@ module.exports = [
         question: "If A and B are events such that P(A|B) = 1/2, P(B|A) = 1/3, and P(A∩B) = 1/6, find P(A∪B).",
         options: ["2 / 3", "1 / 3", "4 / 3", "7 / 3"],
         answer: "2 / 3"
-    },
-    {
-        question: "A problem in mathematics is given to three students whose chances of solving it are 1/2, 1/3, and 1/4. What is the probability that the problem is solved?",
-        options: ["2 / 3", "3 / 2", "4 / 3", "3 / 4"],
-        answer: "3 / 4"
     },
     {
         question: "Two numbers are chosen from {1, 2, 3, ..., 20}. Find the probability that their sum is odd.",
