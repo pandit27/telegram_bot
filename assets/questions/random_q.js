@@ -10,11 +10,6 @@ module.exports = [
         answer: "1"
     },
     {
-        question: "If the sum of an infinite geometric series is 8 and the first term is 2, what is the common ratio?",
-        options: ["1/4", "1/2", "1/3", "2/3"],
-        answer: "1/4"
-    },
-    {
         question: "The value of the integral ∫(0 to π/2) ln(sin x) dx is:",
         options: ["-π ln 2 / 2", "0", "π ln 2 / 2", "-π/2"],
         answer: "-π ln 2 / 2"
@@ -23,11 +18,6 @@ module.exports = [
         question: "If the equation x⁴ - 4x³ + 6x² - 4x + k = 0 has a repeated root, what is the value of k?",
         options: ["1", "2", "3", "4"],
         answer: "1"
-    },
-    {
-        question: "If f(x) = x⁵ - 5x + 7, then f'(x) has:",
-        options: ["Exactly one real root", "Two real roots", "Three real roots", "Four real roots"],
-        answer: "Two real roots"
     },
     {
         question: "If the function f(x) = e^x + e^(-x) is increasing for x > a, then the least value of a is:",
@@ -45,39 +35,14 @@ module.exports = [
         answer: "(-∞, 9)"
     },
     {
-        question: "If the sum of an infinite geometric series is 4 and the first term is 1, then the common ratio is:",
-        options: ["1/2", "1/3", "1/4", "1/5"],
-        answer: "1/3"
-    },
-    {
         question: "The area of the region bounded by the curves y = x² and y = x is:",
         options: ["1/6", "1/4", "1/3", "1/2"],
         answer: "1/6"
     },
     {
-        question: "If the matrix A is such that A² = I, where I is the identity matrix, then the inverse of A is:",
-        options: ["A", "-A", "A²", "I"],
-        answer: "A"
-    },
-    {
-        question: "If the vectors a = i + 2j + 3k and b = 4i + 5j + 6k, then the dot product a · b is:",
-        options: ["32", "38", "44", "50"],
-        answer: "32"
-    },
-    {
         question: "If the probability of an event occurring is 0.2, then the odds in favor of the event are:",
         options: ["1:4", "1:5", "2:5", "4:1"],
         answer: "1:4"
-    },
-    {
-        question: "The value of sin(2π/3) is:",
-        options: ["√3/2", "1/2", "-1/2", "-√3/2"],
-        answer: "√3/2"
-    },
-    {
-        question: "If sinθ + cosθ = 1, then the general value of θ is:",
-        options: ["2nπ", "nπ + (-1)^n (π/4) - (π/4)", "2nπ + π/2", "None of these"],
-        answer: "None of these"
     },
     {
         question: "The number of solutions of sin(3x) = cos(2x) in the interval (π/2, π) is:",
@@ -138,16 +103,6 @@ module.exports = [
         question: "If α, β are the roots of x² - 5x + 6 = 0, then the value of α³ + β³ is:",
         options: ["35", "27", "19", "31"],
         answer: "35"
-    },
-    {
-        question: "The sum of the squares of the roots of the equation x² - 4x + 3 = 0 is:",
-        options: ["4", "5", "6", "7"],
-        answer: "5"
-    },
-    {
-        question: "The sum of the infinite geometric series 2 + 4/3 + 8/9 + ... is:",
-        options: ["6", "3", "5", "None of these"],
-        answer: "6"
     },
     {
         question: "If A, B, C are angles of a triangle, then sin(A) + sin(B) + sin(C) is always:",
