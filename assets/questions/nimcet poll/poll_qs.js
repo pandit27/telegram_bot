@@ -1,9 +1,5 @@
 module.exports = [
     {
-        question: "Kaunsa vishay aapko sabse kathin lagta hai?",
-        options: ["Math - Kathin concepts", "Reasoning - Samajh se bahar hai", "Computer Basics - Aur practice ki zaroorat", "English - Vocabulary weak hai"]
-    },
-    {
         question: "Aap roz NIMCET ki tayari mein kitna samay dete hain?",
         options: ["2 ghante se kam - Aur mehnat karni hogi", "2-4 ghante - Santulit abhyas", "4-6 ghante - Gahri tayyari", "6+ ghante - Pura focus"]
     },
@@ -44,10 +40,6 @@ module.exports = [
         options: ["P&C strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
     {
-        question: "NIT me admission milte hi kya sabse pehle check karenge?",
-        options: ["Hostel rooms", "Mess ka khana", "College ranking", "Professors ka background"]
-    },
-    {
         question: "College me sabse pehla investment kya hoga?",
         options: ["Ek powerful laptop", "Netflix subscription", "Bike ya cycle", "Books aur study material"]
     },
@@ -60,16 +52,8 @@ module.exports = [
         options: ["Assignments ka load", "Hostel life adjust karna", "Mess ka khana", "Attendance maintain karna"]
     },
     {
-        question: "NIT me sabse pehli coding language kaunsa seekhenge?",
-        options: ["Python", "Java", "C++", "Jo seniors suggest karenge"]
-    },
-    {
         question: "Matrices me sabse tricky part?",
         options: ["Determinant ka unexpected zero aana", "Inverse ka shortcut yaad nahi rehta", "Row-column swap confusion", "Properties yaad hai, question nahi bante"]
-    },
-    {
-        question: "NIT me sabse bada aim kya hoga?",
-        options: ["Top placement", "Competitive coding", "Internship jaldi lena", "Bas degree complete karni hai"]
     },
     {
         question: "College me sabse pehla project kis topic pe banayenge?",
@@ -90,10 +74,6 @@ module.exports = [
     {
         question: "NIMCET ke baad coding ka kya plan hai?",
         options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
-    },
-    {
-        question: "Ab tak kitne projects banaye hain?",
-        options: ["Bohot saare, kaafi practice ho gayi", "Kuch chhote projects kiye hain", "Bas ek do projects banaye hain", "Projects? Woh kya hote hain"]
     },
     {
         question: "Math me shortcut tricks use karte hain?",

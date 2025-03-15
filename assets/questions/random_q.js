@@ -65,11 +65,6 @@ module.exports = [
         answer: "32"
     },
     {
-        question: "The number of ways to arrange the letters in the word 'MATHEMATICS' is:",
-        options: ["11!", "11! / (2! 2! 2!)", "11! / (2! 2! 2! 3!)", "11! / (2! 2! 2! 2!)"],
-        answer: "11! / (2! 2! 2!)"
-    },
-    {
         question: "If the probability of an event occurring is 0.2, then the odds in favor of the event are:",
         options: ["1:4", "1:5", "2:5", "4:1"],
         answer: "1:4"
@@ -103,11 +98,6 @@ module.exports = [
         question: "The number of values of x in the interval (π/4, 7π/4) for which 14 csc²(x) - 2 sin²(x) = 21 - 4 cos²(x) holds is:",
         options: ["2", "4", "6", "8"],
         answer: "4"
-    },
-    {
-        question: "If √3 cos²(x) = (√3 - 1) cos(x) + 1, the number of solutions in [0, π/2] is:",
-        options: ["1", "2", "3", "4"],
-        answer: "2"
     },
     {
         question: "The number of solutions of 2θ - cos²(θ) + √2 = 0 in ℝ is:",
@@ -235,16 +225,6 @@ module.exports = [
         answer: "0"
     },
     {
-        question: "If the real number x when added to its inverse gives the minimum value of the sum, then the value of x is equal to",
-        options: ["-2", "2", "-1", "1"],
-        answer: "1"
-    },
-    {
-        question: "The harmonic mean of two numbers is 4. Their arithmetic mean A and the geometric mean G satisfy the relation 2A + G² = 27. Then, the two numbers are",
-        options: ["4 & 2", "6 & 3", "5 & 7", "4 & 1"],
-        answer: "6 & 3"
-    },
-    {
         question: "The mean of first n natural numbers is equal to (n + 7)/3, then n is equal to",
         options: ["12", "13", "14", "none of these"],
         answer: "none of these"
@@ -308,11 +288,6 @@ module.exports = [
         question: "The eqn (x - 19)(x - 97) = p, has real roots r & s, then the maximum real root of the eqn (x - r)(x - s) = -p is",
         options: ["13", "19", "97", "1843"],
         answer: "97"
-    },
-    {
-        question: "If x & y are the roots of t² - 6t + p = 0, and the AM of x & y is greater than or equal to the GM of x² and y², determine the possible range of the values of p.",
-        options: ["(0, 9)", "[-3, 3]", "(-1, 2]", "(-9, inf]"],
-        answer: "[-3, 3]"
     },
     {
         question: "If the sides of a right angled triangle are in AP, then the sides are proportional to",
