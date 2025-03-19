@@ -28,10 +28,6 @@ module.exports = [
         options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai"]
     },
     {
-        question: "Agar top NIT mil gaya toh pehla thought kya hoga?",
-        options: ["Masti time!", "Ab placement ki tension", "Aur kya chahiye life me?", "Hostel ka sochna padega"]
-    },
-    {
         question: "Agar NIMCET nahi clear hua toh next step kya hoga?",
         options: ["Phir se tayari", "Koi aur exam", "Job dhundhna", "Jo hoga dekha jayega"]
     },
@@ -41,31 +37,19 @@ module.exports = [
     },
     {
         question: "College me sabse pehla investment kya hoga?",
-        options: ["Ek powerful laptop", "Netflix subscription", "Bike ya cycle", "Books aur study material"]
+        options: ["Ek powerful laptop", "Netflix ka subscription", "Bike ya cycle", "Tinder ka subscription"]
     },
     {
         question: "Co-ordinate Geometry me challenge?",
         options: ["Distance, slope sab yaad hai, par application weak", "Equation likhne tak aata hai, graph nahi banta", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
     },
     {
-        question: "College me sabse pehli dikkat kya ho sakti hai?",
-        options: ["Assignments ka load", "Hostel life adjust karna", "Mess ka khana", "Attendance maintain karna"]
-    },
-    {
         question: "Matrices me sabse tricky part?",
         options: ["Determinant ka unexpected zero aana", "Inverse ka shortcut yaad nahi rehta", "Row-column swap confusion", "Properties yaad hai, question nahi bante"]
     },
     {
-        question: "College me sabse pehla project kis topic pe banayenge?",
-        options: ["AI ya ML", "Web development", "Blockchain", "Jo bhi professor bole"]
-    },
-    {
         question: "Placement ke liye sabse zaroori skill kya hai?",
         options: ["DSA crack karna", "Good communication", "Referral system samajhna", "Thoda luck bhi chahiye"]
-    },
-    {
-        question: "Competitive programming ka kya status hai?",
-        options: ["Regular practice karte hain", "Kabhi-kabhi contests dete hain", "Basic level pe hain", "Naam suna hai, karna shuru nahi kiya"]
     },
     {
         question: "NIMCET ke baad coding ka kya plan hai?",
@@ -126,6 +110,30 @@ module.exports = [
     {
         question: "Aapki favourite programming language kya hai?",
         options: ["JAVA", "C++", "Python", "JavaScript"]
+    },
+    {
+        question: "Math ke liye kaun si book solve karte ho?",
+        options: ["NCERT", "RD SHARMA", "ARIHANT MCA", "CENGAGE"]
+    },
+    {
+        question: "Ab tak kitne mocks de diye?",
+        options: ["10+", "50+", "100+", "NIMCET ko hi pehle mock ki tarah denge"]
+    },
+    {
+        question: "Kaun sa attempt hai?",
+        options: ["1st", "2nd", "3rd", "Chuppi saadhna pasand karenge"]
+    },
+    {
+        question: "Previous year papers solve karte ho ya nahi?",
+        options: ["Haan, sab solve karte hain", "Sirf recent years ke", "NCERT hi solve nahi ho rahi", "NIMCET hi pehla paper solve karenge"]
+    },
+    {
+        question: "Test series kaun si join ki hai?",
+        options: ["Local coaching ki", "Online test series", "Koi test series nahi", "Free mocks se kaam chal jaata hai"]
+    },
+    {
+        question: "NIMCET ke liye kaun sa coaching institute join kiya hai?",
+        options: ["Local coaching", "Online coaching", "Self-study", "Chuppi saadhna pasand karenge"]
     },
     // {
     //     question: "",

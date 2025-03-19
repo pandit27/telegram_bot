@@ -10,11 +10,6 @@ module.exports = [
         answer: "1"
     },
     {
-        question: "The value of the integral ∫(0 to π/2) ln(sin x) dx is:",
-        options: ["-π ln 2 / 2", "0", "π ln 2 / 2", "-π/2"],
-        answer: "-π ln 2 / 2"
-    },
-    {
         question: "If the equation x⁴ - 4x³ + 6x² - 4x + k = 0 has a repeated root, what is the value of k?",
         options: ["1", "2", "3", "4"],
         answer: "1"
