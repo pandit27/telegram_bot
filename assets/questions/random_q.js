@@ -105,21 +105,6 @@ module.exports = [
         answer: "35"
     },
     {
-        question: "If A, B, C are angles of a triangle, then sin(A) + sin(B) + sin(C) is always:",
-        options: ["Greater than 2", "Less than 2", "Equal to 2", "Undefined"],
-        answer: "Less than 2"
-    },
-    {
-        question: "If tan(A) = m/n and tan(B) = p/q, then tan(A + B) is:",
-        options: ["(mp + nq) / (mq - np)", "(mp - nq) / (mq + np)", "(mp + nq) / (mq + np)", "(mp - nq) / (mq - np)"],
-        answer: "(mp + nq) / (mq - np)"
-    },
-    {
-        question: "If tan(x) + tan(y) + tan(z) = tan(x)tan(y)tan(z), then which of the following is true?",
-        options: ["x + y + z = π", "x + y + z = 2π", "x + y + z = 0", "x + y + z = π/2"],
-        answer: "x + y + z = π"
-    },
-    {
         question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
         options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
         answer: "1 - (5/6)^6"
@@ -245,11 +230,6 @@ module.exports = [
         answer: "97"
     },
     {
-        question: "If the sides of a right angled triangle are in AP, then the sides are proportional to",
-        options: ["1 : 2 : 3", "2 : 3 : 4", "3 : 4 : 5", "4 : 5 : 6"],
-        answer: "3 : 4 : 5"
-    },
-    {
         question: "Number of ways of selecting 2 balls from 5 similar balls is",
         options: ["ln (5C2)", "ln e", "5C2", "5P2"],
         answer: "ln e"
@@ -333,11 +313,6 @@ module.exports = [
         question: "If the vectors a, b, and c are coplanar, then find the value of [a+b b+c c+a].",
         options: ["1", "2^0", "both a and b", "none of these"],
         answer: "none of these"
-    },
-    {
-        question: "Find the coefficient of x^50 in (1 + x + x² + x³ + ... + x¹⁰⁰)²",
-        options: ["49", "50", "51", "52"],
-        answer: "51"
     },
     {
         question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",

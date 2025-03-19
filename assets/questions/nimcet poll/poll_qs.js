@@ -68,10 +68,6 @@ module.exports = [
         options: ["Regular practice karte hain", "Kabhi-kabhi contests dete hain", "Basic level pe hain", "Naam suna hai, karna shuru nahi kiya"]
     },
     {
-        question: "DSA practice ke liye kaunsa platform use kar rahe hain?",
-        options: ["LeetCode", "Codeforces", "GeeksforGeeks", "Pehli baar DSA sun rahe"]
-    },
-    {
         question: "NIMCET ke baad coding ka kya plan hai?",
         options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
     },
@@ -96,10 +92,6 @@ module.exports = [
         options: ["L'Hôpital ka hi sahara hai", "Infinity aur zero ka khel samajh nahi aata", "Direct value put karne ka mann karta hai", "Limits toh samajh se bahar hai"]
     },
     {
-        question: "Conic Sections wale sawal kaise lagte hain?",
-        options: ["Circle aur parabola easy hai", "Ellipse hyperbola ke naam se bhi stress", "Directrix wale question me hamesha doubt", "Pura coordinate geometry tough lagta hai"]
-    },
-    {
         question: "Vectors & 3D Geometry ka kya scene hai?",
         options: ["Dot aur cross product strong hai", "Planes wale sawal samajh nahi aate", "Direction cosines aur ratios confuse karte hain", "2D me hi khush hoon, 3D kathin lagta hai"]
     },
@@ -110,10 +102,6 @@ module.exports = [
     {
         question: "Boolean Algebra wale sawal ka reaction?",
         options: ["K-Map easy lagta hai", "Theorems yaad nahi rehte", "SOP aur POS confuse karta hai", "Boolean dekhte hi dar"]
-    },
-    {
-        question: "NIMCET ka syllabus kitna complete ho chuka hai?",
-        options: ["90%+ bas ek revision bacha hai", "60-80%, ab speed badhani hai", "30-50%, confidence bhi itna hi hai", "Syllabus dekha tha, par cover nahi kiya"]
     },
     {
         question: "Kaun si stream se ho aap?",
