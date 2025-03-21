@@ -4,28 +4,20 @@ module.exports = [
         options: ["2 ghante se kam - Aur mehnat karni hogi", "2-4 ghante - Santulit abhyas", "4-6 ghante - Gahri tayyari", "6+ ghante - Pura focus"]
     },
     {
-        question: "Kaunsa topic aapko sabse zyada practice karni hai?",
-        options: ["Quadratic Equations - Basic strong karna hai", "Permutations & Combinations - Counting problems samajhni hai", "Probability - Concepts clear nahi hain", "Conic Sections - Visualize karna mushkil lagta hai"]
-    },
-    {
         question: "Aap NIMCET ke liye kis tarah se tayari kar rahe hain?",
-        options: ["Self-study - Khud se manage kar rahe hain", "Coaching - Proper guidance le rahe hain", "Online courses - Digital learning kar rahe hain", "Mix of all - Har jagah se seekh rahe hain"]
+        options: ["Self-study - Khud ko hi coaching maan liya hai", "Coaching - Fees di hai toh vasul rahe", "Online courses - Digital learning kar rahe hain", "Mix of all - Har jagah se seekh rahe hain"]
     },
     {
         question: "Sabse challenging section kaunsa lagta hai?",
         options: ["Math - Concept aur calculations", "Reasoning - Trick aur patterns", "Computer Basics - Theory yaad rakhni hoti hai", "English - Vocabulary tough lagti hai"]
     },
     {
-        question: "Agar ek time machine hoti, toh kis moment pe jaake cheezein sahi karte?",
-        options: ["Jab syllabus shuru karna tha", "Pehla mock test dene se pehle", "Jab silly mistakes chhod sakte the", "Jab ‘Kal se padhai pakka’ waala jhooth bola tha"]
-    },
-    {
         question: "Agar rewind kar sakte, toh kya change hota?",
-        options: ["Padhai time pe shuru hoti", "Mocks bina darr diye hote", "Galtiyan pehle sudhar lete", "Procrastination ka regret nahi hota"]
+        options: ["Padhai time pe shuru hoti, still ek sapna hai", "Mocks bina dare diye hote, par score wahi aata tab bhi", "Galtiyan pehle sudhar lete", "Procrastination ka regret nahi hota"]
     },
     {
         question: "Permutations & Combinations me struggle?",
-        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai"]
+        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai, akele me"]
     },
     {
         question: "Agar NIMCET nahi clear hua toh next step kya hoga?",
@@ -36,28 +28,16 @@ module.exports = [
         options: ["P&C strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
     {
-        question: "College me sabse pehla investment kya hoga?",
-        options: ["Ek powerful laptop", "Netflix ka subscription", "Bike ya cycle", "Tinder ka subscription"]
-    },
-    {
         question: "Co-ordinate Geometry me challenge?",
-        options: ["Distance, slope sab yaad hai, par application weak", "Equation likhne tak aata hai, graph nahi banta", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
+        options: ["Sab aata hai bas marks ko chhor kar", "Equation likhna aata hai, graph koi aur bana de bas", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
     },
     {
         question: "Matrices me sabse tricky part?",
         options: ["Determinant ka unexpected zero aana", "Inverse ka shortcut yaad nahi rehta", "Row-column swap confusion", "Properties yaad hai, question nahi bante"]
     },
     {
-        question: "Placement ke liye sabse zaroori skill kya hai?",
-        options: ["DSA crack karna", "Good communication", "Referral system samajhna", "Thoda luck bhi chahiye"]
-    },
-    {
         question: "NIMCET ke baad coding ka kya plan hai?",
         options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
-    },
-    {
-        question: "Math me shortcut tricks use karte hain?",
-        options: ["Haan, har jagah tricks lagate hain", "Kabhi-kabhi kaam aati hain", "Sirf standard methods follow karte hain", "Shortcut? Pehle concepts to samajh aa jaye"]
     },
     {
         question: "Trigonometry me sabse zyada struggle?",
@@ -85,7 +65,7 @@ module.exports = [
     },
     {
         question: "Boolean Algebra wale sawal ka reaction?",
-        options: ["K-Map easy lagta hai", "Theorems yaad nahi rehte", "SOP aur POS confuse karta hai", "Boolean dekhte hi dar"]
+        options: ["K-Map easy lagta hai", "Theorems yaad nahi rehte", "SOP aur POS confuse karta hai", "Boolean dekhte hi darr"]
     },
     {
         question: "Kaun si stream se ho aap?",
@@ -134,6 +114,34 @@ module.exports = [
     {
         question: "NIMCET ke liye kaun sa coaching institute join kiya hai?",
         options: ["Local coaching", "Online coaching", "Self-study", "Chuppi saadhna pasand karenge"]
+    },
+    {
+        question: "Mock ke scores ka kya scene hai?",
+        options: ["Har baar improve ho raha hai", "Kabhi high, kabhi low", "Average chal raha hai", "Score dekh ke aankhon me aansu aa jaate hain"]
+    },
+    {
+        question: "Mock ke analysis karte ho ya bas deke chhod dete ho?",
+        options: ["Har question analyse karte hain", "Mock hi nahi diye ab tak", "Sirf score dekhte hain", "Analysis? Time kahan hai itna?"]
+    },
+    {
+        question: "Exam ke time speed aur accuracy ka kya scene hai?",
+        options: ["Speed bhi sahi, accuracy bhi", "Speed hai, accuracy nahi", "Accuracy hai, speed nahi", "Dono ka balance dhoondh rahe hain"]
+    },
+    {
+        question: "Sabse jyada OP feeling kab aati hai?",
+        options: ["Mock me 500+ score", "Ek question ka shortcut khud dhoondh liya", "Ek hi attempt me answer mil gaya", "Friend ka doubt solve kar diya"]
+    },
+    {
+        question: "Mock ke baad sabse pehla kaam?",
+        options: ["Score check karna", "Leaderboard stalk karna", "Galtiyan dekhne ka natak", "Phone side me rakh ke khud ko kosna"]
+    },
+    {
+        question: "Exam me 'tukka' kis basis pe lagate ho?",
+        options: ["Longest option correct hota hai", "Jo dimag me pehle aaya woh", "A, B, C, D - rotation policy", "Option C zyada baar sahi hota hai"]
+    },
+    {
+        question: "Sabse difficult chapter kaun sa lagta hai?",
+        options: ["Probability", "Indefinite Integration", "Conic Sections", "Solution of Triangles"]
     },
     // {
     //     question: "",

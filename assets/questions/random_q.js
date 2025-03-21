@@ -210,11 +210,6 @@ module.exports = [
         answer: "1"
     },
     {
-        question: "If P(x) & Q(x) are quadratic eqns with the discriminants D1 & D2 respectively, then the eqn P(x)*Q(x) = 0 has at least two real roots when",
-        options: ["D1 + D2 <= 0", "D1 + D2 > 0", "D1 + D2 < 0", "D1 + D2 >= 0"],
-        answer: "D1 + D2 >= 0"
-    },
-    {
         question: "The number of real roots of the eqn (x - 1)² + (x - 2)² + (x - 3)² = 0 is?",
         options: ["1", "2", "3", "none of these"],
         answer: "none of these"
@@ -293,11 +288,6 @@ module.exports = [
         question: " In a group of 100 people, 72 can speak English and 43 can speak French. How many can speak both English and French?",
         options: ["10", "28", "15", "19"],
         answer: "15"
-    },
-    {
-        question: "Find the number of integral solutions of x² + y² = 2(x + y) + xy.",
-        options: ["-6", "6", "-1", "1"],
-        answer: "6"
     },
     {
         question: "Determine the number of solutions of the equation sin(x) = x²/π² in the interval [-π, π].",
