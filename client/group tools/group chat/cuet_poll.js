@@ -10,7 +10,7 @@ module.exports = (bot) => {
         if (!text) return;
 
         if (text.startsWith("-sp")) {
-            if (chatId !== Number(process.env.OWNER_ID)) return;
+            if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
             if (reply && reply.poll) {
                 let targetChatId = DEFAULT_GROUP_ID;
                 const parts = text.split(" ");

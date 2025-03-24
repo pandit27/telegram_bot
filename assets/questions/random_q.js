@@ -5,11 +5,6 @@ module.exports = [
         answer: "b² - 2ac"
     },
     {
-        question: "The number of real solutions of the equation sin(x) + cos(x) = 2x - x² in the interval [0,1] is:",
-        options: ["0", "1", "2", "Infinite"],
-        answer: "1"
-    },
-    {
         question: "If the equation x⁴ - 4x³ + 6x² - 4x + k = 0 has a repeated root, what is the value of k?",
         options: ["1", "2", "3", "4"],
         answer: "1"
@@ -225,11 +220,6 @@ module.exports = [
         answer: "ln e"
     },
     {
-        question: "Smallest positive integer that is divisible by all the numbers from 1 to 10, excluding prime numbers?",
-        options: ["2250", "120", "360", "99"],
-        answer: "360"
-    },
-    {
         question: "How many 4 digit numbers exist such that the digit sum equals 3! - sin² x - cos² x?",
         options: ["15", "20", "35", "40"],
         answer: "35"
@@ -268,11 +258,6 @@ module.exports = [
         question: "If A and B are events such that P(A|B) = 1/2, P(B|A) = 1/3, and P(A∩B) = 1/6, find P(A∪B).",
         options: ["2 / 3", "1 / 3", "4 / 3", "7 / 3"],
         answer: "2 / 3"
-    },
-    {
-        question: "Two numbers are chosen from {1, 2, 3, ..., 20}. Find the probability that their sum is odd.",
-        options: ["7 / 19", "2 / 19", "10 / 19", "1 / 19"],
-        answer: "10 / 19"
     },
     {
         question: "If three vertices of a regular hexagon are chosen at random, what is the probability that the triangle formed is equilateral?",

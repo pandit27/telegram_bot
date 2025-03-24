@@ -3,6 +3,7 @@ require("dotenv").config();
 
 module.exports = (bot) => {
     const OWNER_ID = Number(process.env.OWNER_ID);
+    const OWNER2_ID = Number(process.env.OWNER2_ID);
 
     
 /*------------------------------------------------------------------------------------------
@@ -37,7 +38,8 @@ module.exports = (bot) => {
         const chatId = Number(msg.chat.id);
         const text = msg.text ? msg.text.trim() : "";
 
-        if (chatId !== OWNER_ID) return;
+        if (chatId !== OWNER_ID && chatId !== OWNER2_ID) return;
+
 
         // send message using chat ID
         if (text.startsWith("-send")) {

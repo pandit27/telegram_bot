@@ -13,6 +13,7 @@ const tokenizer = new natural.WordTokenizer();
                                         chat ids
 -------------------------------------------------------------------------------------------*/
 const OWNER_ID = Number(process.env.OWNER_ID);
+const OWNER2_ID = Number(process.env.OWNER2_ID);
 const GROUP_ID = Number(process.env.GROUP_ID);
 
 
@@ -36,27 +37,27 @@ module.exports = (bot) => {
     -------------------------------------------------------------------------------------------*/
     const responseMap = new Map();
     responses.forEach(({ keywords, response }) => {
-    keywords.forEach((word) => {
-        const lowerCaseWord = word.toLowerCase(); // Convert to lowercase
-        trie.add(lowerCaseWord);
-        responseMap.set(lowerCaseWord, response);
-      });
+        keywords.forEach((word) => {
+            const lowerCaseWord = word.toLowerCase(); // Convert to lowercase
+            trie.add(lowerCaseWord);
+            responseMap.set(lowerCaseWord, response);
+        });
     });
 
 
     /*------------------------------------------------------------------------------------------
                         function to send message (with `-sm` command )
-    -------------------------------------------------------------------------------------------*/    
+    -------------------------------------------------------------------------------------------*/
     bot.on("message", async (msg) => {
         const chatId = Number(msg.chat.id);
-        
+
         // ensure the message has text before processing
         if (!msg.text) return;
 
         const text = msg.text.trim();
 
         // send message to the group using "-sm <message>"
-        if (chatId === OWNER_ID && text.startsWith("-sm")) {
+        if ((chatId === OWNER_ID || chatId === OWNER2_ID) && text.startsWith("-sm")) {
             const messageContent = text.replace("-sm", "").trim();
             if (!messageContent.length) {
                 bot.sendMessage(chatId, "❌ You need to enter a message after '-sm'.");

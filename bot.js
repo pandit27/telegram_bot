@@ -6,6 +6,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = process.env.TOKEN;
 const CHAT_ID = process.env.GROUP_ID;
 const OWNER_ID = process.env.OWNER_ID;
+const OWNER2_ID = process.env.OWNER2_ID;
 const CUET_ID = process.env.CUET_ID;
 const TEST_ID = process.env.TEST_ID;
 const EXAM_DATE = new Date("2025-03-27"); // CUET PG (SCQP09) Exam on 27th March, 2025

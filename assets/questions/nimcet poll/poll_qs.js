@@ -48,10 +48,6 @@ module.exports = [
         options: ["Domain-Range clear hai!", "Modulus wale graph tough lagte hain", "One-one, onto me confusion", "Sirf f(x) dekh ke hi panic"]
     },
     {
-        question: "Differentiation wale sawal kaise lagte hain?",
-        options: ["Chain Rule mast lagta hai", "Product rule me f aur g ki ladaai", "Implicit wale question se tension", "Derivatives aur integration ek hi lagte hain"]
-    },
-    {
         question: "Limits wale questions dekhkar pehla reaction?",
         options: ["L'Hôpital ka hi sahara hai", "Infinity aur zero ka khel samajh nahi aata", "Direct value put karne ka mann karta hai", "Limits toh samajh se bahar hai"]
     },
@@ -74,10 +70,6 @@ module.exports = [
     {
         question: "Agar NIMCET nahi nikla to kya karenge?",
         options: ["Drop lenge", "CUET, IPU, State CET target karenge", "Private college me admission lenge", "Full confidence hai, nikal lenge"]
-    },
-    {
-        question: "Aapka dream college kya hai?",
-        options: ["NIT Trichy", "NIT Agartala", "MNNIT", "Filhal toh NIMCET nikalna hi dream lag raha"]
     },
     {
         question: "Aapke mocks me kitne marks aa rahe?",
@@ -114,10 +106,6 @@ module.exports = [
     {
         question: "NIMCET ke liye kaun sa coaching institute join kiya hai?",
         options: ["Local coaching", "Online coaching", "Self-study", "Chuppi saadhna pasand karenge"]
-    },
-    {
-        question: "Mock ke scores ka kya scene hai?",
-        options: ["Har baar improve ho raha hai", "Kabhi high, kabhi low", "Average chal raha hai", "Score dekh ke aankhon me aansu aa jaate hain"]
     },
     {
         question: "Mock ke analysis karte ho ya bas deke chhod dete ho?",
