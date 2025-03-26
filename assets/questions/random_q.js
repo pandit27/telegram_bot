@@ -90,11 +90,6 @@ module.exports = [
         answer: "x + y + z = 0"
     },
     {
-        question: "If α, β are the roots of x² - 5x + 6 = 0, then the value of α³ + β³ is:",
-        options: ["35", "27", "19", "31"],
-        answer: "35"
-    },
-    {
         question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
         options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
         answer: "1 - (5/6)^6"

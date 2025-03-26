@@ -72,10 +72,6 @@ module.exports = [
         options: ["Drop lenge", "CUET, IPU, State CET target karenge", "Private college me admission lenge", "Full confidence hai, nikal lenge"]
     },
     {
-        question: "Aapke mocks me kitne marks aa rahe?",
-        options: ["600+", "500+", "400+", "200 bhi nahi ban rahe"]
-    },
-    {
         question: "Aapka sabse strong part kya hai?",
         options: ["Math", "Reasoning", "Computer", "Saare hi weak hain"]
     },
