@@ -123,35 +123,28 @@ module.exports = (bot) => {
 
     /******************************************/
     bot.on("message", async (msg) => {
-        if (!msg.text) return; // Ignore non-text messages
-    
-        const text = msg.text.trim();
         const chatId = msg.chat.id;
-        const groupId = Number(process.env.GROUP_ID); // Ensure it's a valid number
+        const text = msg.text?.trim();
     
-        console.log(`Received message from chatId: ${chatId}, text: ${text}`);
+        if (Number(chatId) !== Number(process.env.OWNER_ID)) return;
     
-        // Only allow specific owners to use the command
-        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
-    
-        if (text.startsWith("-snd message link")) {
+        if (text?.startsWith("-snd message link")) {
             const message = text.replace("-snd message link", "").trim();
     
-            // Ensure message is not empty
-            if (!message || message.length === 0) {
-                bot.sendMessage(chatId, "❌ Usage: -snd message link <message>");
+            if (!message) {
+                bot.sendMessage(chatId, "❌ Please provide a message!");
                 return;
             }
     
             try {
-                await bot.sendMessage(groupId, message);
+                await bot.sendMessage(process.env.TEST_ID, message);
                 bot.sendMessage(chatId, "✅ Message sent to the group!");
-            } catch (err) {
-                console.error("Error sending message:", err);
-                bot.sendMessage(chatId, `❌ Error: ${err.message}`);
+            } catch (error) {
+                bot.sendMessage(chatId, "❌ Failed to send the message. Make sure the bot has admin rights.");
             }
         }
     });
+    
     
        
 
