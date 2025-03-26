@@ -176,3 +176,39 @@ const endQuiz = (quizId) => {
     quizResponses.delete(quizId);
     quizCorrectAnswers.delete(quizId);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bot.on("message", async (msg) => {
+    const chatId = msg.chat.id;
+    const text = msg.text?.trim();
+
+    if (Number(chatId) !== Number(process.env.OWNER_ID)) return;
+
+    if (text?.startsWith("-snd message link")) {
+        const message = text.replace("-snd message link", "").trim();
+
+        if (!message) {
+            bot.sendMessage(chatId, "❌ Please provide a message!");
+            return;
+        }
+
+        try {
+            await bot.sendMessage(process.env.TEST_ID, message);
+            bot.sendMessage(chatId, "✅ Message sent to the group!");
+        } catch (error) {
+            bot.sendMessage(chatId, "❌ Failed to send the message. Make sure the bot has admin rights.");
+        }
+    }
+});
