@@ -127,15 +127,9 @@ module.exports = (bot) => {
     
         const text = msg.text.trim();
         const chatId = msg.chat.id;
-        const groupId = Number(process.env.TEST_ID);
-    
-        console.log(`Received message from chatId: ${chatId}, text: ${text}`);
-    
-        // Only allow specific owners to use the command
-        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) {
-            console.log("Unauthorized user attempted to use the command.");
-            return;
-        }
+        const groupId = Number(process.env.GROUP_ID);
+
+        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
     
         if (text.startsWith("-snd message link")) {
             const message = text.replace("-snd message link", "").trim();
