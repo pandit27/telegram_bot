@@ -123,23 +123,31 @@ module.exports = (bot) => {
 
     /******************************************/
     bot.on("message", async (msg) => {
-        if (!msg.text) return;
+        if (!msg.text) return; // Ignore non-text messages
     
         const text = msg.text.trim();
         const chatId = msg.chat.id;
-        const groupId = Number(process.env.GROUP_ID);
-
-        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
+        const groupId = Number(process.env.GROUP_ID); // Ensure it's a valid number
+    
+        console.log(`Received message from chatId: ${chatId}, text: ${text}`);
+    
+        // Only allow specific owners to use the command
+        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) {
+            console.log("Unauthorized user attempted to use the command.");
+            return;
+        }
     
         if (text.startsWith("-snd message link")) {
             const message = text.replace("-snd message link", "").trim();
-            if (!message) {
+    
+            // Ensure message is not empty
+            if (!message || message.length === 0) {
                 bot.sendMessage(chatId, "❌ Usage: -snd message link <message>");
                 return;
             }
     
             try {
-                const sentMsg = await bot.sendMessage(groupId, message);
+                await bot.sendMessage(groupId, message);
                 bot.sendMessage(chatId, "✅ Message sent to the group!");
             } catch (err) {
                 console.error("Error sending message:", err);
@@ -147,6 +155,7 @@ module.exports = (bot) => {
             }
         }
     });
+    
        
 
 };
