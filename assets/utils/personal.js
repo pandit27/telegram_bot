@@ -122,25 +122,37 @@ module.exports = (bot) => {
     });
 
     /******************************************/
-    bot.on("message", (msg) => {
-        const text = msg.text;
+    bot.on("message", async (msg) => {
+        if (!msg.text) return;
+    
+        const text = msg.text.trim();
         const chatId = msg.chat.id;
         const groupId = Number(process.env.TEST_ID);
-
-        // if (chatId !== OWNER_ID && chatId !== OWNER2_ID) return;
+    
+        console.log(`Received message from chatId: ${chatId}, text: ${text}`);
+    
+        // Only allow specific owners to use the command
+        if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) {
+            console.log("Unauthorized user attempted to use the command.");
+            return;
+        }
     
         if (text.startsWith("-snd message link")) {
-            console.log("sent message");
             const message = text.replace("-snd message link", "").trim();
             if (!message) {
                 bot.sendMessage(chatId, "❌ Usage: -snd message link <message>");
                 return;
             }
     
-            bot.sendMessage(groupId, message, { reply_to_message_id: msg.message_id })
-                .then(() => bot.sendMessage(chatId, "✅ Message sent to the group!"))
-                .catch((err) => bot.sendMessage(chatId, `❌ Error: ${err.message}`));
+            try {
+                const sentMsg = await bot.sendMessage(groupId, message);
+                bot.sendMessage(chatId, "✅ Message sent to the group!");
+            } catch (err) {
+                console.error("Error sending message:", err);
+                bot.sendMessage(chatId, `❌ Error: ${err.message}`);
+            }
         }
-    });   
+    });
+       
 
 };
