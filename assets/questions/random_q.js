@@ -35,11 +35,6 @@ module.exports = [
         answer: "1:4"
     },
     {
-        question: "The number of solutions of sin(3x) = cos(2x) in the interval (π/2, π) is:",
-        options: ["0", "1", "2", "3"],
-        answer: "1"
-    },
-    {
         question: "The number of solutions of sin(x) = cos²(x) in the interval (0,10) is:",
         options: ["4", "5", "6", "7"],
         answer: "5"
@@ -80,11 +75,6 @@ module.exports = [
         answer: "276"
     },
     {
-        question: "The number of real solutions of the equation x³ - 3x + 2 = 0 is:",
-        options: ["0", "1", "2", "3"],
-        answer: "3"
-    },
-    {
         question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
         options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
         answer: "x + y + z = 0"
@@ -93,11 +83,6 @@ module.exports = [
         question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
         options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
         answer: "1 - (5/6)^6"
-    },
-    {
-        question: "The probability of getting a sum of 7 when rolling two six-sided dice is:",
-        options: ["1/6", "1/12", "1/36", "1/18"],
-        answer: "1/6"
     },
     {
         question: "The value of sin(75°) is:",
@@ -180,11 +165,6 @@ module.exports = [
         answer: "zero"
     },
     {
-        question: "Words with or without meaning are to be formed using all the letters of the word EXAMINATION. The probability that the letter M appears at the fourth position in any such word is:",
-        options: ["1/66", "1/11", "1/9", "2/11"],
-        answer: "1/11"
-    },
-    {
         question: " Number of digits in 2¹⁰⁰ ?",
         options: ["100", "100 - 69", "100 + 69", "69"],
         answer: "100 - 69"
@@ -258,11 +238,6 @@ module.exports = [
         question: "If three vertices of a regular hexagon are chosen at random, what is the probability that the triangle formed is equilateral?",
         options: ["2 / 10", "4 / 10", "6 / 10", "none of these"],
         answer: "none of these"
-    },
-    {
-        question: " In triangle ABC, if a/sin(A) = b/sin(B) = c/sin(C) = k, and a = 2, A = 30°, find k.",
-        options: ["1", "2", "3", "4"],
-        answer: "4"
     },
     {
         question: " In a group of 100 people, 72 can speak English and 43 can speak French. How many can speak both English and French?",

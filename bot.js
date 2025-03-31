@@ -56,7 +56,7 @@ const sendReminder = () => {
 };
 
 // to send reminder
-sendReminder();
+// sendReminder();
 
 
 
@@ -64,10 +64,10 @@ sendReminder();
 /*-------------------------------------------------------------------------------------------------
                             function to schedule remider
 -------------------------------------------------------------------------------------------------*/
-setInterval(() => {
-    const now = new Date();
-    if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
-}, 60 * 1000);
+// setInterval(() => {
+//     const now = new Date();
+//     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
+// }, 60 * 1000);
 
 
 
