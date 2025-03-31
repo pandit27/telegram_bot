@@ -264,6 +264,21 @@ module.exports = [
         options: ["e", "e + 1", "2e", "none of these"],
         answer: "2e"
     },
+    {
+        question: "Find the minimum value of (x + 1/x)⁶ + (x⁶ + 1/x⁶) - 2, for x > 0.",
+        options: ["0", "4", "60", "64"],
+        answer: "64"
+    },
+    {
+        question: "The area enclosed within the curve |x| + |y| = 2 is",
+        options: ["16 sq. units", "24 sq. units", "32 sq. units", "8 sq. units"],
+        answer: "8 sq. units"
+    },
+    {
+        question: "The number of common tangents to the circles x² + y² - 4x - 6y - 12 = 0 and x² + y² + 6x + 18y + 26 = 0 is",
+        options: ["1", "2", "3", "4"],
+        answer: "3"
+    },
     // {
     //     question: "",
     //     options: ["", "", "", ""],
