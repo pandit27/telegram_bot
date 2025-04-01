@@ -77,8 +77,8 @@ module.exports = (bot) => {
             const message = `⌛ <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left until the NIMCET 2025 exam! \n Keep grinding.`;
             bot.sendMessage(msg.chat.id, message, { parse_mode: "HTML" });
         } 
-        else if (timeDiff === 0) bot.sendMessage(msg.chat.id, "🚨 Today is the NIMCET 2025 exam! Best of luck!");
-        else bot.sendMessage(msg.chat.id, "The NIMCET 2025 exam has passed!");
+        // else if (timeDiff === 0) bot.sendMessage(msg.chat.id, "🚨 Today is the NIMCET 2025 exam! Best of luck!");
+        // else bot.sendMessage(msg.chat.id, "The NIMCET 2025 exam has passed!");
 
         console.log(`Current date: ${now}, Exam date: ${EXAM_DATE}, Time difference: ${timeDiff}`);
     });
@@ -93,12 +93,5 @@ module.exports = (bot) => {
         }
 
         bot.sendMessage(msg.chat.id, "/start : to start the bot. \n/days : to get CUET PG exam countdown. \n/nimcet : to get NIMCET exam countdown. \n/quiz : to get a random NIMCET quiz \n/resources : to get NIMCET 2025 resources. \n\nFor any query contact : @PV_027");
-    });
-
-    /*
-        4. /nimcet_date command
-    */
-    bot.onText(/\/nimcet_date/, (msg) => {
-        bot.sendMessage(msg.chat.id, "NIMCET exam is on 8th June, 2025.");
     });
 }
