@@ -60,11 +60,6 @@ module.exports = [
         answer: "8"
     },
     {
-        question: "If a, b, c are in A.P., then the value of tan(a)tan(c) is:",
-        options: ["tan²(b)", "1", "0", "-tan²(b)"],
-        answer: "1"
-    },
-    {
         question: "If cos(A) + cos(B) + cos(C) = 0 and sin(A) + sin(B) + sin(C) = 0, then what is the value of tan(A) + tan(B) + tan(C)?",
         options: ["3", "0", "1", "Undefined"],
         answer: "0"

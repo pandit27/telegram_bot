@@ -59,7 +59,7 @@ module.exports = (bot) => {
     /*
         2. /days command
     */
-    bot.onText(/\/days/, (msg) => {
+    bot.onText(/\/nimcet_date/, (msg) => {
         // to make sure that /days command is to be used only in private chats
         // if (msg.chat.type !== "private") {
         //     bot.sendMessage(msg.chat.id, "This command is available only in private chat. Use it via @pvnimcet2025_bot.");
@@ -74,11 +74,11 @@ module.exports = (bot) => {
             const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 
-            const message = `⌛ <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left until the CUET PG exam! \n Keep grinding.`;
+            const message = `⌛ <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left until the NIMCET 2025 exam! \n Keep grinding.`;
             bot.sendMessage(msg.chat.id, message, { parse_mode: "HTML" });
         } 
-        else if (timeDiff === 0) bot.sendMessage(msg.chat.id, "🚨 Today is the CUET PG exam! Best of luck!");
-        else bot.sendMessage(msg.chat.id, "The CUET PG exam has passed!");
+        else if (timeDiff === 0) bot.sendMessage(msg.chat.id, "🚨 Today is the NIMCET 2025 exam! Best of luck!");
+        else bot.sendMessage(msg.chat.id, "The NIMCET 2025 exam has passed!");
 
         console.log(`Current date: ${now}, Exam date: ${EXAM_DATE}, Time difference: ${timeDiff}`);
     });
@@ -99,6 +99,6 @@ module.exports = (bot) => {
         4. /nimcet_date command
     */
     bot.onText(/\/nimcet_date/, (msg) => {
-        bot.sendMessage(msg.chat.id, "NIMCET exam date is yet to be announced.");
+        bot.sendMessage(msg.chat.id, "NIMCET exam is on 8th June, 2025.");
     });
 }

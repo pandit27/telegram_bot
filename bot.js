@@ -9,7 +9,7 @@ const OWNER_ID = process.env.OWNER_ID;
 const OWNER2_ID = process.env.OWNER2_ID;
 const CUET_ID = process.env.CUET_ID;
 const TEST_ID = process.env.TEST_ID;
-const EXAM_DATE = new Date("2025-03-27"); // CUET PG (SCQP09) Exam on 27th March, 2025
+const EXAM_DATE = new Date("2025-06-08"); // CUET PG (SCQP09) Exam on 27th March, 2025
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 
@@ -48,7 +48,7 @@ const sendReminder = () => {
         const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutesLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         
-        const message = `📢 <b>CUET PG 2025 Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
+        const message = `📢 <b>NIMCET 2025 Reminder!</b>\n\n⏳ Only <b>${daysLeft} days, ${hoursLeft} hours, and ${minutesLeft} minutes</b> left! \n\nStay focused and keep grinding.`;
         bot.sendMessage(CHAT_ID, message, { parse_mode: "HTML" });
     } 
     else if (timeDiff === 0) bot.sendMessage(CHAT_ID, `<b>Today is the Exam!</b> 🎯\n\nBest of luck to you all!`, { parse_mode: "HTML" });
@@ -56,7 +56,7 @@ const sendReminder = () => {
 };
 
 // to send reminder
-// sendReminder();
+sendReminder();
 
 
 
@@ -64,10 +64,10 @@ const sendReminder = () => {
 /*-------------------------------------------------------------------------------------------------
                             function to schedule remider
 -------------------------------------------------------------------------------------------------*/
-// setInterval(() => {
-//     const now = new Date();
-//     if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
-// }, 60 * 1000);
+setInterval(() => {
+    const now = new Date();
+    if (now.getHours() === 0 && now.getMinutes() === 0) sendReminder();
+}, 60 * 1000);
 
 
 

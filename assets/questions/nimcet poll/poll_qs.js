@@ -144,10 +144,6 @@ module.exports = [
         options: ["Jo bahut lengthy hai", "Jo ek step pe atak jata hai", "Jo options se solve nahi ho raha", "Jo khud ko solve hone ka illusion de raha hai"]
     },
     {
-        question: "Jab answer options me nahi milta, toh?",
-        options: ["Dubara check karna", "Alag approach try karna", "Ek baar aur galtiyan dhundhna", "Mann banake koi ek option mark kar dena"]
-    },
-    {
         question: "Mock test dene ka sabse bada reason?",
         options: ["Speed aur accuracy check karna", "Exam ka feel lena", "Leaderboards me naam dhoondhna", "Reason? Kyunki sab keh rahe hain mock do"]
     },
