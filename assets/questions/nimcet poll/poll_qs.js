@@ -52,10 +52,6 @@ module.exports = [
         options: ["Mean-Variance theek hai", "Bayes Theorem samajh nahi aati", "Permutation aur Probability ek hi lagta hai", "Probability strong hai, Statistics nahi padha"]
     },
     {
-        question: "Kaun si stream se ho aap?",
-        options: ["BSc", "BCA", "BCom", "BA"]
-    },
-    {
         question: "Agar NIMCET nahi nikla to kya karenge?",
         options: ["Drop lenge", "CUET, IPU, State CET target karenge", "Private college me admission lenge", "Full confidence hai, nikal lenge"]
     },
@@ -82,10 +78,6 @@ module.exports = [
     {
         question: "Kaun saa attempt hai?",
         options: ["1st", "2nd", "3rd", "Chuppi saadhna pasand karenge"]
-    },
-    {
-        question: "Previous year papers solve karte ho ya nahi?",
-        options: ["Haan, sab solve karte hain", "Sirf recent years ke", "NCERT hi solve nahi ho rahi", "NIMCET hi pehla paper solve karenge"]
     },
     {
         question: "Test series kaun si join ki hai?",
@@ -134,10 +126,6 @@ module.exports = [
     {
         question: "Naya concept samajh nahi aa raha, toh?",
         options: ["Ek aur source dekhte hain", "Book se samajhne ki koshish", "Usko skip karne ka valid reason dhoondhna", "Bas accept karna ki ye exam me aayega hi nahi"]
-    },
-    {
-        question: "Sabse acchi strategy kya lagti hai?",
-        options: ["PYQs pe focus", "Concept clarity", "Speed + accuracy", "Strategy? Bas galtiyan repeat na ho itna kaafi hai"]
     },
     {
         question: "Maths me kaunsa question sabse jyada irritating lagta hai?",

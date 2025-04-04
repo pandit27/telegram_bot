@@ -5,11 +5,6 @@ module.exports = [
         answer: "b² - 2ac"
     },
     {
-        question: "If the equation x⁴ - 4x³ + 6x² - 4x + k = 0 has a repeated root, what is the value of k?",
-        options: ["1", "2", "3", "4"],
-        answer: "1"
-    },
-    {
         question: "If the function f(x) = e^x + e^(-x) is increasing for x > a, then the least value of a is:",
         options: ["0", "1", "-1", "None"],
         answer: "0"
@@ -58,11 +53,6 @@ module.exports = [
         question: "The number of elements in the set S = {θ ∈ [-4π,4π] : 3cos²(2θ) + 6cos(2θ) - 10cos²(θ) + 5 = 0} is:",
         options: ["4", "6", "8", "10"],
         answer: "8"
-    },
-    {
-        question: "If cos(A) + cos(B) + cos(C) = 0 and sin(A) + sin(B) + sin(C) = 0, then what is the value of tan(A) + tan(B) + tan(C)?",
-        options: ["3", "0", "1", "Undefined"],
-        answer: "0"
     },
     {
         question: "If x + 1/x = 4, then x⁵ + 1/x⁵ is:",
@@ -220,11 +210,6 @@ module.exports = [
         answer: "(b² - a²)/2"
     },
     {
-        question: "A bag contains 5 red and 3 blue balls. If 3 balls are drawn at random without replacement, find the probability that exactly 2 are red.",
-        options: ["15 / 28", "15 / 56", "30 / 28", "30 / 56"],
-        answer: "15 / 28"
-    },
-    {
         question: "If A and B are events such that P(A|B) = 1/2, P(B|A) = 1/3, and P(A∩B) = 1/6, find P(A∪B).",
         options: ["2 / 3", "1 / 3", "4 / 3", "7 / 3"],
         answer: "2 / 3"
@@ -233,11 +218,6 @@ module.exports = [
         question: "If three vertices of a regular hexagon are chosen at random, what is the probability that the triangle formed is equilateral?",
         options: ["2 / 10", "4 / 10", "6 / 10", "none of these"],
         answer: "none of these"
-    },
-    {
-        question: " In a group of 100 people, 72 can speak English and 43 can speak French. How many can speak both English and French?",
-        options: ["10", "28", "15", "19"],
-        answer: "15"
     },
     {
         question: "Determine the number of solutions of the equation sin(x) = x²/π² in the interval [-π, π].",
@@ -253,11 +233,6 @@ module.exports = [
         question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",
         options: ["(p + 1)", "1 / (p + 1)", "(p - 1)", "1 / (p - 1)"],
         answer: "1 / (p + 1)"
-    },
-    {
-        question: "If y = f(x) satisfies the differential equation dy/dx = (x+y)/x, and f(1) = 1, then find f(e).",
-        options: ["e", "e + 1", "2e", "none of these"],
-        answer: "2e"
     },
     {
         question: "Find the minimum value of (x + 1/x)⁶ + (x⁶ + 1/x⁶) - 2, for x > 0.",
