@@ -9,7 +9,7 @@ const OWNER_ID = process.env.OWNER_ID;
 const OWNER2_ID = process.env.OWNER2_ID;
 const CUET_ID = process.env.CUET_ID;
 const TEST_ID = process.env.TEST_ID;
-const EXAM_DATE = new Date("2025-06-08"); // CUET PG (SCQP09) Exam on 27th March, 2025
+const EXAM_DATE = new Date("2025-06-08");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 
