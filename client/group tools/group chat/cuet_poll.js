@@ -120,6 +120,43 @@ module.exports = (bot) => {
         }
     });
 
+    // to send image to the group
+    bot.on("message", async (msg) => {
+        const chatId = msg.chat.id;
+        const text = msg.text;
+        const reply = msg.reply_to_message;
+    
+        if (!text) return;
+    
+        // Send Photo
+        if (text.startsWith("-sphoto")) {
+            if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
+            if (reply && reply.photo) {
+                let targetChatId = DEFAULT_GROUP_ID;
+                const parts = text.split(" ");
+    
+                if (parts.length === 2) {
+                    targetChatId = Number(parts[1]);
+                }
+    
+                const photoArray = reply.photo;
+                const fileId = photoArray[photoArray.length - 1].file_id;
+    
+                try {
+                    await bot.sendPhoto(targetChatId, fileId, {
+                        caption: reply.caption || ''
+                    });
+                    bot.sendMessage(chatId, `✅ Photo sent to ${targetChatId}!`);
+                } catch (error) {
+                    bot.sendMessage(chatId, `❌ Error: ${error.message}`);
+                }
+                return;
+            }
+    
+            bot.sendMessage(chatId, "❌ Reply to a photo with `-sphoto` to send it.");
+        }
+    });
+    
 
 };
 
