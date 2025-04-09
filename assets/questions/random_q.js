@@ -1,10 +1,5 @@
 module.exports = [
     {
-        question: "If the sum of the roots of the quadratic equation ax² + bx + c = 0 is equal to the sum of the squares of their reciprocals, then what is the value of a²?",
-        options: ["b² - c²", "b² + c²", "b² - 2ac", "b² + 2ac"],
-        answer: "b² - 2ac"
-    },
-    {
         question: "If the function f(x) = e^x + e^(-x) is increasing for x > a, then the least value of a is:",
         options: ["0", "1", "-1", "None"],
         answer: "0"
@@ -160,11 +155,6 @@ module.exports = [
         answer: "9"
     },
     {
-        question: "e*ln(x) = x, no. of real solutions?",
-        options: ["infinite", "1", "2", "none of these"],
-        answer: "1"
-    },
-    {
         question: "The number of real roots of the eqn (x - 1)² + (x - 2)² + (x - 3)² = 0 is?",
         options: ["1", "2", "3", "none of these"],
         answer: "none of these"
@@ -225,11 +215,6 @@ module.exports = [
         answer: "3"
     },
     {
-        question: "If the vectors a, b, and c are coplanar, then find the value of [a+b b+c c+a].",
-        options: ["1", "2^0", "both a and b", "none of these"],
-        answer: "none of these"
-    },
-    {
         question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",
         options: ["(p + 1)", "1 / (p + 1)", "(p - 1)", "1 / (p - 1)"],
         answer: "1 / (p + 1)"
@@ -243,11 +228,6 @@ module.exports = [
         question: "The area enclosed within the curve |x| + |y| = 2 is",
         options: ["16 sq. units", "24 sq. units", "32 sq. units", "8 sq. units"],
         answer: "8 sq. units"
-    },
-    {
-        question: "The number of common tangents to the circles x² + y² - 4x - 6y - 12 = 0 and x² + y² + 6x + 18y + 26 = 0 is",
-        options: ["1", "2", "3", "4"],
-        answer: "3"
     },
     // {
     //     question: "",

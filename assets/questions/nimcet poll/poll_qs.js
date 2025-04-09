@@ -12,10 +12,6 @@ module.exports = [
         options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai, akele me"]
     },
     {
-        question: "Agar NIMCET nahi clear hua toh next step kya hoga?",
-        options: ["Phir se tayari", "Koi aur exam", "Job dhundhna", "Jo hoga dekha jayega"]
-    },
-    {
         question: "Probability wale sawal dekhte hi pehla reaction?",
         options: ["P&C strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
@@ -24,16 +20,8 @@ module.exports = [
         options: ["Sab aata hai bas marks ko chhor kar", "Equation likhna aata hai, graph koi aur bana de bas", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
     },
     {
-        question: "Matrices me sabse tricky part?",
-        options: ["Determinant ka unexpected zero aana", "Inverse ka shortcut yaad nahi rehta", "Row-column swap confusion", "Properties yaad hai, question nahi bante"]
-    },
-    {
         question: "NIMCET ke baad coding ka kya plan hai?",
         options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
-    },
-    {
-        question: "Trigonometry me sabse zyada struggle?",
-        options: ["Identity yaad hai, apply nahi hoti", "Angle conversion me fasa rehta hu", "Sine-Cosine formula hi kaafi lagta hai", "2π ke baad sab wapas shuru ho jata hai"]
     },
     {
         question: "Function wale sawal ka kya haal hai?",
@@ -50,10 +38,6 @@ module.exports = [
     {
         question: "Statistics aur Probability me struggle?",
         options: ["Mean-Variance theek hai", "Bayes Theorem samajh nahi aati", "Permutation aur Probability ek hi lagta hai", "Probability strong hai, Statistics nahi padha"]
-    },
-    {
-        question: "Agar NIMCET nahi nikla to kya karenge?",
-        options: ["Drop lenge", "CUET, IPU, State CET target karenge", "Private college me admission lenge", "Full confidence hai, nikal lenge"]
     },
     {
         question: "Aapka sabse strong part kya hai?",
@@ -104,10 +88,6 @@ module.exports = [
         options: ["Probability", "Indefinite Integration", "Conic Sections", "Solution of Triangles"]
     },
     {
-        question: "DPPs kiski solve karte ho?",
-        options: ["PW", "Apni coaching ki", "Resonance", "NCERT toh solve ho jaaye pehle"]
-    },
-    {
         question: "MATH me kitne aa rahe avg mocks me?",
         options: ["200+", "300+", "400+", "500+"]
     },
@@ -122,10 +102,6 @@ module.exports = [
     {
         question: "Doubt aane par kya karte ho?",
         options: ["Khud try karte hain", "Google pe search", "Friend se puchhte hain", "Chhod dete hain, aage badho"]
-    },
-    {
-        question: "Naya concept samajh nahi aa raha, toh?",
-        options: ["Ek aur source dekhte hain", "Book se samajhne ki koshish", "Usko skip karne ka valid reason dhoondhna", "Bas accept karna ki ye exam me aayega hi nahi"]
     },
     {
         question: "Maths me kaunsa question sabse jyada irritating lagta hai?",
