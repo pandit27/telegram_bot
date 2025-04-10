@@ -9,19 +9,15 @@ module.exports = [
     },
     {
         question: "Permutations & Combinations me struggle?",
-        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Yeh chapter likhne wale se baat karni hai, akele me"]
+        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Ye chapter likhne wale se baat karni hai, akele me"]
     },
     {
         question: "Probability wale sawal dekhte hi pehla reaction?",
-        options: ["P&C strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
+        options: ["Probability strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
     {
         question: "Co-ordinate Geometry me challenge?",
         options: ["Sab aata hai bas marks ko chhor kar", "Equation likhna aata hai, graph koi aur bana de bas", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
-    },
-    {
-        question: "NIMCET ke baad coding ka kya plan hai?",
-        options: ["DSA grind karenge", "Dev ke maharathi banenge", "Freelancing try karenge", "UPSC ki tayyari me lag jayenge"]
     },
     {
         question: "Function wale sawal ka kya haal hai?",
@@ -33,7 +29,7 @@ module.exports = [
     },
     {
         question: "Vectors & 3D Geometry ka kya scene hai?",
-        options: ["Dot aur cross product strong hai", "Planes wale sawal samajh nahi aate", "Direction cosines aur ratios confuse karte hain", "2D me hi khush hoon, 3D kathin lagta hai"]
+        options: ["Dot aur cross product strong hai", "Planes wale sawal samajh nahi aate", "Direction cosines aur ratios confuse karte hain", "2D me hi khush hain, 3D kathin lagta hai"]
     },
     {
         question: "Statistics aur Probability me struggle?",
@@ -42,10 +38,6 @@ module.exports = [
     {
         question: "Aapka sabse strong part kya hai?",
         options: ["Math", "Reasoning", "Computer", "Saare hi weak hain"]
-    },
-    {
-        question: "Aapki favourite programming language kya hai?",
-        options: ["JAVA", "C++", "Python", "JavaScript"]
     },
     {
         question: "Math ke liye kaun si book solve karte ho?",
@@ -69,15 +61,11 @@ module.exports = [
     },
     {
         question: "NIMCET ke liye kaun si coaching institute join ki hai?",
-        options: ["Local coaching", "Online coaching", "Self-study", "Chuppi saadhna pasand karenge"]
+        options: ["Local coaching", "Online coaching", "Self-study", "Join karne ke paise hi nahi hai"]
     },
     {
         question: "Exam ke time speed aur accuracy ka kya scene hai?",
         options: ["Speed bhi sahi, accuracy bhi", "Speed hai, accuracy nahi", "Accuracy hai, speed nahi", "Dono ka balance dhoondh rahe hain"]
-    },
-    {
-        question: "Sabse jyada OP feeling kab aati hai?",
-        options: ["Mock me 500+ score", "Ek question ka shortcut khud dhoondh liya", "Ek hi attempt me answer mil gaya", "Friend ka doubt solve kar diya"]
     },
     {
         question: "Mock ke baad sabse pehla kaam?",
@@ -88,7 +76,7 @@ module.exports = [
         options: ["Probability", "Indefinite Integration", "Conic Sections", "Solution of Triangles"]
     },
     {
-        question: "MATH me kitne aa rahe avg mocks me?",
+        question: "MATH me kitne aa rahe average mocks me?",
         options: ["200+", "300+", "400+", "500+"]
     },
     {
@@ -97,7 +85,7 @@ module.exports = [
     },
     {
         question: "Sabse common silly mistake?",
-        options: ["Sign change bhool jana", "Formula galat apply karna", "2 + 2 = 5 kar dena", "Question galat dekh lena"]
+        options: ["Sign change bhool jana", "Formula galat apply karna", "2 + 2 = 5 kar dena pressure me", "Question galat dekh lena"]
     },
     {
         question: "Doubt aane par kya karte ho?",
@@ -112,8 +100,8 @@ module.exports = [
         options: ["Speed aur accuracy check karna", "Exam ka feel lena", "Leaderboards me naam dhoondhna", "Reason? Kyunki sab keh rahe hain mock do"]
     },
     {
-        question: "Sabse jyada productive time?",
-        options: ["Subah uthte hi fresh mind se padhai", "Shaam ko jab thoda pressure feel ho", "Raat me jab sab so rahe hote hain", "Productive? Jab exam pass aa raha ho tabhi hota hai"]
+        question: "Sabse zyada productive time?",
+        options: ["Subah uthte hi fresh mind se padhai", "Shaam ko jab thoda pressure feel ho", "Raat me jab sab so rahe hote hain", "Productive? Jab exam pass ho tabhi padhai shuru hoti hai"]
     },
     // {
     //     question: "",

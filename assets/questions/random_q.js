@@ -205,11 +205,6 @@ module.exports = [
         answer: "2 / 3"
     },
     {
-        question: "If three vertices of a regular hexagon are chosen at random, what is the probability that the triangle formed is equilateral?",
-        options: ["2 / 10", "4 / 10", "6 / 10", "none of these"],
-        answer: "none of these"
-    },
-    {
         question: "Determine the number of solutions of the equation sin(x) = x²/π² in the interval [-π, π].",
         options: ["1", "3", "4", "2"],
         answer: "3"
