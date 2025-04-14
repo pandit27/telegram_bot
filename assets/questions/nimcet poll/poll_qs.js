@@ -16,10 +16,6 @@ module.exports = [
         options: ["Probability strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
     {
-        question: "Co-ordinate Geometry me challenge?",
-        options: ["Sab aata hai bas marks ko chhor kar", "Equation likhna aata hai, graph koi aur bana de bas", "Parabola, Ellipse me confusion", "Shortcut yaad nahi, brute-force chalta hai"]
-    },
-    {
         question: "Function wale sawal ka kya haal hai?",
         options: ["Domain-Range clear hai!", "Modulus wale graph tough lagte hain", "One-one, onto me confusion", "Sirf f(x) dekh ke hi panic"]
     },
@@ -36,10 +32,6 @@ module.exports = [
         options: ["Mean-Variance theek hai", "Bayes Theorem samajh nahi aati", "Permutation aur Probability ek hi lagta hai", "Probability strong hai, Statistics nahi padha"]
     },
     {
-        question: "Aapka sabse strong part kya hai?",
-        options: ["Math", "Reasoning", "Computer", "Saare hi weak hain"]
-    },
-    {
         question: "Math ke liye kaun si book solve karte ho?",
         options: ["NCERT", "RD SHARMA", "ARIHANT MCA", "CENGAGE"]
     },
@@ -54,14 +46,6 @@ module.exports = [
     {
         question: "Kaun saa attempt hai?",
         options: ["1st", "2nd", "3rd", "Chuppi saadhna pasand karenge"]
-    },
-    {
-        question: "Test series kaun si join ki hai?",
-        options: ["Local coaching ki", "Online test series", "Koi test series nahi", "Free mocks se kaam chal jaata hai"]
-    },
-    {
-        question: "NIMCET ke liye kaun si coaching institute join ki hai?",
-        options: ["Local coaching", "Online coaching", "Self-study", "Join karne ke paise hi nahi hai"]
     },
     {
         question: "Exam ke time speed aur accuracy ka kya scene hai?",
