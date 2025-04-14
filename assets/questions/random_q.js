@@ -20,16 +20,6 @@ module.exports = [
         answer: "1/6"
     },
     {
-        question: "If the probability of an event occurring is 0.2, then the odds in favor of the event are:",
-        options: ["1:4", "1:5", "2:5", "4:1"],
-        answer: "1:4"
-    },
-    {
-        question: "The number of solutions of sin(x) = cos²(x) in the interval (0,10) is:",
-        options: ["4", "5", "6", "7"],
-        answer: "5"
-    },
-    {
         question: "The number of solutions of cos(x) + cos(2x) + cos(3x) + cos(4x) = 0 in [0,2π] is:",
         options: ["2", "4", "6", "8"],
         answer: "4"
@@ -58,16 +48,6 @@ module.exports = [
         question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
         options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
         answer: "x + y + z = 0"
-    },
-    {
-        question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
-        options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
-        answer: "1 - (5/6)^6"
-    },
-    {
-        question: "The value of sin(75°) is:",
-        options: ["(√6 + √2)/4", "(√3 + 1)/2√2", "(√3 - 1)/2√2", "(√6 - √2)/4"],
-        answer: "(√6 + √2)/4"
     },
     {
         question: "The sum of all four-digit numbers that can be formed using the digits 1, 2, 3, 4 without repetition is:",
@@ -213,11 +193,6 @@ module.exports = [
         question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",
         options: ["(p + 1)", "1 / (p + 1)", "(p - 1)", "1 / (p - 1)"],
         answer: "1 / (p + 1)"
-    },
-    {
-        question: "Find the minimum value of (x + 1/x)⁶ + (x⁶ + 1/x⁶) - 2, for x > 0.",
-        options: ["0", "4", "60", "64"],
-        answer: "64"
     },
     {
         question: "The area enclosed within the curve |x| + |y| = 2 is",
