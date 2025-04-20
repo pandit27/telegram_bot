@@ -16,10 +16,6 @@ module.exports = [
         options: ["Probability strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
     {
-        question: "Function wale sawal ka kya haal hai?",
-        options: ["Domain-Range clear hai!", "Modulus wale graph tough lagte hain", "One-one, onto me confusion", "Sirf f(x) dekh ke hi panic"]
-    },
-    {
         question: "Limits wale questions dekhkar pehla reaction?",
         options: ["L'Hôpital ka hi sahara hai", "Infinity aur zero ka khel samajh nahi aata", "Direct value put karne ka mann karta hai", "Limits toh samajh se bahar hai"]
     },
@@ -40,10 +36,6 @@ module.exports = [
         options: ["RS Agarwal", "BS Sijwali", "ARIHANT MCA", "Basic questions tak solve nahi hote"]
     },
     {
-        question: "Ab tak kitne mocks de diye?",
-        options: ["10+", "50+", "100+", "NIMCET ko hi pehle mock ki tarah denge"]
-    },
-    {
         question: "Kaun saa attempt hai?",
         options: ["1st", "2nd", "3rd", "Chuppi saadhna pasand karenge"]
     },
@@ -60,16 +52,8 @@ module.exports = [
         options: ["Probability", "Indefinite Integration", "Conic Sections", "Solution of Triangles"]
     },
     {
-        question: "MATH me kitne aa rahe average mocks me?",
-        options: ["200+", "300+", "400+", "500+"]
-    },
-    {
         question: "Mock test ka analysis kaise karte ho?",
-        options: ["Mistakes note down", "Sirf score dekh ke khush", "Galtiyan ignore karke aage badho", "Analysis? Matlab ye bhi karna padta hai?"]
-    },
-    {
-        question: "Sabse common silly mistake?",
-        options: ["Sign change bhool jana", "Formula galat apply karna", "2 + 2 = 5 kar dena pressure me", "Question galat dekh lena"]
+        options: ["Mistakes note down", "Sirf score dekh ke khush", "Galtiyan ignore karke aage badho", "Analysis? Matlab ye bhi karna padta hai kyaa?"]
     },
     {
         question: "Doubt aane par kya karte ho?",
@@ -108,14 +92,6 @@ module.exports = [
         options: ["Daily revise karte hain", "Jab zarurat padti hai", "Ek notebook bana rakhi hai", "Formulae bhi revise karne hote hain kya?"]
     },
     {
-        question: "Kya lagta hai cut-off kitni jaayegi?",
-        options: ["600+", "500+", "400+", "Meri aukaat ke bahar"]
-    },
-    {
-        question: "Option guessing strategy kya hai?",
-        options: ["Eliminate then guess", "Only if 50-50", "Guess nahi karte", "Heart says B, Mind says D"]
-    },
-    {
         question: "Mock dene ke liye best time?",
         options: ["Subah 9 AM sharp", "Dopahar 2-4 jis time exam hona hai", "Raat me shanti se", "Jab bhi guilt zyada ho"]
     },
@@ -130,10 +106,6 @@ module.exports = [
     {
         question: "Kaunsa chapter ab tak confuse karta hai?",
         options: ["Probability", "Functions", "Permutations & Combinations", "Har din naye loop me faste jaa rahe"]
-    },
-    {
-        question: "Timer dekhne ka frequency during mock?",
-        options: ["Every 10 min", "Every new question", "Dekhte hi nahi", "Itna dekhte hain ki timer bhi sharma jaata hai"]
     },
     {
         question: "Kabhi aisa laga ki syllabus khatam hone ka illusion tha?",
