@@ -50,6 +50,11 @@ module.exports = [
         answer: "(√6 + √2)/4"
     },
     {
+        question: "The sum of all four-digit numbers that can be formed using the digits 1, 2, 3, 4 without repetition is:",
+        options: ["66660", "666600", "66606", "666000"],
+        answer: "66660"
+    },
+    {
         question: "If the roots of the equation x² - 6x + k = 0 are real and equal, then the value of k is:",
         options: ["9", "12", "36", "18"],
         answer: "9"
