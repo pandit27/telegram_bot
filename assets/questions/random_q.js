@@ -20,16 +20,6 @@ module.exports = [
         answer: "1/6"
     },
     {
-        question: "If the probability of an event occurring is 0.2, then the odds in favor of the event are:",
-        options: ["1:4", "1:5", "2:5", "4:1"],
-        answer: "1:4"
-    },
-    {
-        question: "The number of solutions of sin(x) = cos²(x) in the interval (0,10) is:",
-        options: ["4", "5", "6", "7"],
-        answer: "5"
-    },
-    {
         question: "The number of solutions of cos(x) + cos(2x) + cos(3x) + cos(4x) = 0 in [0,2π] is:",
         options: ["2", "4", "6", "8"],
         answer: "4"
@@ -50,29 +40,14 @@ module.exports = [
         answer: "8"
     },
     {
-        question: "If x + 1/x = 4, then x⁵ + 1/x⁵ is:",
-        options: ["256", "260", "276", "280"],
-        answer: "276"
-    },
-    {
         question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
         options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
         answer: "x + y + z = 0"
     },
     {
-        question: "If a fair die is rolled 6 times, the probability of getting at least one six is:",
-        options: ["1 - (5/6)^6", "(5/6)^6", "1 - (1/6)^6", "1/6"],
-        answer: "1 - (5/6)^6"
-    },
-    {
         question: "The value of sin(75°) is:",
         options: ["(√6 + √2)/4", "(√3 + 1)/2√2", "(√3 - 1)/2√2", "(√6 - √2)/4"],
         answer: "(√6 + √2)/4"
-    },
-    {
-        question: "The sum of all four-digit numbers that can be formed using the digits 1, 2, 3, 4 without repetition is:",
-        options: ["66660", "666600", "66606", "666000"],
-        answer: "66660"
     },
     {
         question: "If the roots of the equation x² - 6x + k = 0 are real and equal, then the value of k is:",
@@ -115,11 +90,6 @@ module.exports = [
         answer: "0"
     },
     {
-        question: "The mean of first n natural numbers is equal to (n + 7)/3, then n is equal to",
-        options: ["12", "13", "14", "none of these"],
-        answer: "none of these"
-    },
-    {
         question: "If 2ᵃ = 3ᵇ = 6⁻ᶜ, then ab + bc + ca is equal to",
         options: ["0", "1", "2", "none of these"],
         answer: "0"
@@ -150,11 +120,6 @@ module.exports = [
         answer: "100 - 69"
     },
     {
-        question: "log x² - log 2x = 3log 3 - log 6 then x = ?",
-        options: ["3", "9", "4", "5"],
-        answer: "9"
-    },
-    {
         question: "The number of real roots of the eqn (x - 1)² + (x - 2)² + (x - 3)² = 0 is?",
         options: ["1", "2", "3", "none of these"],
         answer: "none of these"
@@ -173,21 +138,6 @@ module.exports = [
         question: "How many 4 digit numbers exist such that the digit sum equals 3! - sin² x - cos² x?",
         options: ["15", "20", "35", "40"],
         answer: "35"
-    },
-    {
-        question: "f(3x+2) + f(3x+29) = 0, then period of f(x) is",
-        options: ["7", "8", "10", "none of these"],
-        answer: "none of these"
-    },
-    {
-        question: "If the roots of the equation x² - ax + b = 0 are twice the roots of the equation x² - bx + a = 0, then find b/a.",
-        options: ["2", "4", "6", "8"],
-        answer: "2"
-    },
-    {
-        question: "If a + b + c = 0, then find the value of (a³ + b³ + c³)/(abc)",
-        options: ["abc", "2abc", "3abc", "none of these"],
-        answer: "none of these"
     },
     {
         question: "Find the number of real solutions of |x|² - 3|x| + 2 = 0.",
@@ -213,11 +163,6 @@ module.exports = [
         question: "Find the value of lim(n→∞) [(1^p + 2^p + ... + n^p)/n^(p+1)], where p > 0.",
         options: ["(p + 1)", "1 / (p + 1)", "(p - 1)", "1 / (p - 1)"],
         answer: "1 / (p + 1)"
-    },
-    {
-        question: "Find the minimum value of (x + 1/x)⁶ + (x⁶ + 1/x⁶) - 2, for x > 0.",
-        options: ["0", "4", "60", "64"],
-        answer: "64"
     },
     {
         question: "The area enclosed within the curve |x| + |y| = 2 is",
