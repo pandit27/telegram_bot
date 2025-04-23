@@ -3,7 +3,7 @@ module.exports = (bot, GROUP_ID) => {
         const chatId = msg.chat.id;
         const text = msg.text?.trim();
 
-        if (Number(chatId) !== Number(process.env.OWNER_ID)) return;
+                    if (chatId !== Number(process.env.OWNER_ID) && chatId !== Number(process.env.OWNER2_ID)) return;
 
         if (text?.startsWith("-pin")) {
             const parts = text.split(" ");
