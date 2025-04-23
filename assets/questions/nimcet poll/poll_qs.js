@@ -8,10 +8,6 @@ module.exports = [
         options: ["Self-study - Khud ko hi coaching maan liya hai", "Coaching - Fees di hai toh vasul rahe", "Online courses - Digital learning kar rahe hain", "Mix of all - Har jagah se seekh rahe hain"]
     },
     {
-        question: "Permutations & Combinations me struggle?",
-        options: ["Cases likhne ka patience nahi", "Formula apply kiya, answer kuchh aur aaya", "Repetition allowed ya nahi?", "Ye chapter likhne wale se baat karni hai, akele me"]
-    },
-    {
         question: "Probability wale sawal dekhte hi pehla reaction?",
         options: ["Probability strong hai, koi tension nahi!", "Denominator kahan se aaya?", "Independent aur dependent ka dukh", "Ek coin ka bhi answer nahi nikalta"]
     },
@@ -64,10 +60,6 @@ module.exports = [
         options: ["Jo bahut lengthy hai", "Jo ek step pe atak jata hai", "Jo options se solve nahi ho raha", "Jo khud ko solve hone ka illusion de raha hai"]
     },
     {
-        question: "Mock test dene ka sabse bada reason?",
-        options: ["Speed aur accuracy check karna", "Exam ka feel lena", "Leaderboards me naam dhoondhna", "Reason? Kyunki sab keh rahe hain mock do"]
-    },
-    {
         question: "Sabse zyada productive time?",
         options: ["Subah uthte hi fresh mind se padhai", "Shaam ko jab thoda pressure feel ho", "Raat me jab sab so rahe hote hain", "Productive? Jab exam pass ho tabhi padhai shuru hoti hai"]
     },
@@ -78,10 +70,6 @@ module.exports = [
     {
         question: "Mock ke scores dekh ke kya feel hota hai?",
         options: ["Improve karna hai abhi", "Confidence badh raha", "Demotivation ka dose", "Lagta nahi iss saal exam clear hoga"]
-    },
-    {
-        question: "Daily study hours ab kitne ho gaye?",
-        options: ["10+", "6-8", "4-5", "Clock dekh ke guilt lena hi kaafi hai"]
     },
     {
         question: "Motivation ka source kya hai?",
