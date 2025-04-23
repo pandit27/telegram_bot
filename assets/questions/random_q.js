@@ -15,11 +15,6 @@ module.exports = [
         answer: "(-∞, 9)"
     },
     {
-        question: "The area of the region bounded by the curves y = x² and y = x is:",
-        options: ["1/6", "1/4", "1/3", "1/2"],
-        answer: "1/6"
-    },
-    {
         question: "The number of solutions of cos(x) + cos(2x) + cos(3x) + cos(4x) = 0 in [0,2π] is:",
         options: ["2", "4", "6", "8"],
         answer: "4"
@@ -43,16 +38,6 @@ module.exports = [
         question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
         options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
         answer: "x + y + z = 0"
-    },
-    {
-        question: "The value of sin(75°) is:",
-        options: ["(√6 + √2)/4", "(√3 + 1)/2√2", "(√3 - 1)/2√2", "(√6 - √2)/4"],
-        answer: "(√6 + √2)/4"
-    },
-    {
-        question: "The sum of all four-digit numbers that can be formed using the digits 1, 2, 3, 4 without repetition is:",
-        options: ["66660", "666600", "66606", "666000"],
-        answer: "66660"
     },
     {
         question: "If the roots of the equation x² - 6x + k = 0 are real and equal, then the value of k is:",
