@@ -70,11 +70,6 @@ module.exports = [
         answer: "7/12"
     },
     {
-        question: "If x is real, then the minimum value of (x² - x + 1)/(x² + x + 1) is:",
-        options: ["1/2", "2", "3", "1/3"],
-        answer: "1/3"
-    },
-    {
         question: "Number of real solutions of the eqn sin(eˣ) = 5ˣ + 5⁻ˣ is:",
         options: ["0", "2", "1", "infinitely many"],
         answer: "0"
@@ -88,11 +83,6 @@ module.exports = [
         question: "If logₓ y = 100 and log₂ x = 10, then the value of y is",
         options: ["2¹⁰", "2¹⁰⁰", "2¹⁰⁰⁰", "2¹⁰⁰⁰⁰"],
         answer: "2¹⁰⁰⁰"
-    },
-    {
-        question: "If n is an integer between 0 to 21, then find a value of n for which the value of n!(21-n)! is minimum.",
-        options: ["9+1", "10+1", "11+1", "12+1"],
-        answer: "9+1"
     },
     {
         question: "If A and B are square matrices such that B = -A⁻¹ BA, then (A + B)² is",
