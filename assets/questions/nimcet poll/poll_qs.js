@@ -48,10 +48,6 @@ module.exports = [
         options: ["Probability", "Indefinite Integration", "Conic Sections", "Solution of Triangles"]
     },
     {
-        question: "Mock test ka analysis kaise karte ho?",
-        options: ["Mistakes note down", "Sirf score dekh ke khush", "Galtiyan ignore karke aage badho", "Analysis? Matlab ye bhi karna padta hai kyaa?"]
-    },
-    {
         question: "Doubt aane par kya karte ho?",
         options: ["Khud try karte hain", "Google pe search", "Friend se puchhte hain", "Chhod dete hain, aage badho"]
     },
@@ -86,10 +82,6 @@ module.exports = [
     {
         question: "PYQs ko kis approach se solve karte ho?",
         options: ["Timer laga ke", "Concept clarity ke liye", "Topic-wise solve karte hain", "End mein ek hi baar crash karenge sab"]
-    },
-    {
-        question: "Short tricks ya basic method?",
-        options: ["Short trick when damn sure", "Basic always", "Depends on timer", "Jo pehle click ho jaaye"]
     },
     {
         question: "Kaunsa chapter ab tak confuse karta hai?",
