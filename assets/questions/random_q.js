@@ -35,11 +35,6 @@ module.exports = [
         answer: "8"
     },
     {
-        question: "If x³ + y³ + z³ - 3xyz = 0, then which of the following is true?",
-        options: ["x + y + z = 0", "xyz = 0", "x² + y² + z² = 0", "x = y = z"],
-        answer: "x + y + z = 0"
-    },
-    {
         question: "If the roots of the equation x² - 6x + k = 0 are real and equal, then the value of k is:",
         options: ["9", "12", "36", "18"],
         answer: "9"
@@ -75,11 +70,6 @@ module.exports = [
         answer: "0"
     },
     {
-        question: "If 2ᵃ = 3ᵇ = 6⁻ᶜ, then ab + bc + ca is equal to",
-        options: ["0", "1", "2", "none of these"],
-        answer: "0"
-    },
-    {
         question: "If logₓ y = 100 and log₂ x = 10, then the value of y is",
         options: ["2¹⁰", "2¹⁰⁰", "2¹⁰⁰⁰", "2¹⁰⁰⁰⁰"],
         answer: "2¹⁰⁰⁰"
@@ -88,11 +78,6 @@ module.exports = [
         question: "If A and B are square matrices such that B = -A⁻¹ BA, then (A + B)² is",
         options: ["0", "A² + B²", "A² + 2AB + B²", "A + B"],
         answer: "A² + B²"
-    },
-    {
-        question: "In a skew symmetric matrix, the diagonal elements are all",
-        options: ["different from each other", "zero", "one", "none of these"],
-        answer: "zero"
     },
     {
         question: " Number of digits in 2¹⁰⁰ ?",
