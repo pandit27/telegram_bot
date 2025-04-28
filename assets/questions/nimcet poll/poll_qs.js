@@ -60,14 +60,6 @@ module.exports = [
         options: ["Subah uthte hi fresh mind se padhai", "Shaam ko jab thoda pressure feel ho", "Raat me jab sab so rahe hote hain", "Productive? Jab exam pass ho tabhi padhai shuru hoti hai"]
     },
     {
-        question: "Last 1 month me preparation ka kya plan hai?",
-        options: ["Revision + mocks", "Only high weightage chapters", "Jo aata hai bas wahi strong karenge", "Plan? Ab toh Bhagwan bharose"]
-    },
-    {
-        question: "Mock ke scores dekh ke kya feel hota hai?",
-        options: ["Improve karna hai abhi", "Confidence badh raha", "Demotivation ka dose", "Lagta nahi iss saal exam clear hoga"]
-    },
-    {
         question: "Motivation ka source kya hai?",
         options: ["Rank improve karna", "Dream college", "Peer pressure", "Ghar waalo ke taane free me milte hain"]
     },
@@ -86,10 +78,6 @@ module.exports = [
     {
         question: "Kaunsa chapter ab tak confuse karta hai?",
         options: ["Probability", "Functions", "Permutations & Combinations", "Har din naye loop me faste jaa rahe"]
-    },
-    {
-        question: "Kabhi aisa laga ki syllabus khatam hone ka illusion tha?",
-        options: ["Haan", "Nahi", "Abhi bhi confusion hai", "Har mock me ek naya topic nikalta hai"]
     },
     // {
     //     question: "",
