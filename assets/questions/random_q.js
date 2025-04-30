@@ -1,10 +1,5 @@
 module.exports = [
     {
-        question: "If the function f(x) = e^x + e^(-x) is increasing for x > a, then the least value of a is:",
-        options: ["0", "1", "-1", "None"],
-        answer: "0"
-    },
-    {
         question: "If A, B, and C are angles of a triangle, then the maximum value of cos A + cos B + cos C is:",
         options: ["3/2", "2", "1", "3"],
         answer: "3/2"
@@ -13,11 +8,6 @@ module.exports = [
         question: "If the roots of the equation x² - 6x + k = 0 are real and distinct, then the range of k is:",
         options: ["(-∞, 9)", "(9, ∞)", "(-∞, 6)", "(6, ∞)"],
         answer: "(-∞, 9)"
-    },
-    {
-        question: "The number of solutions of cos(x) + cos(2x) + cos(3x) + cos(4x) = 0 in [0,2π] is:",
-        options: ["2", "4", "6", "8"],
-        answer: "4"
     },
     {
         question: "The number of values of x in the interval (π/4, 7π/4) for which 14 csc²(x) - 2 sin²(x) = 21 - 4 cos²(x) holds is:",
