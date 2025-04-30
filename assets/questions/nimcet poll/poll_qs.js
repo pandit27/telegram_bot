@@ -24,10 +24,6 @@ module.exports = [
         options: ["Mean-Variance theek hai", "Bayes Theorem samajh nahi aati", "Permutation aur Probability ek hi lagta hai", "Probability strong hai, Statistics nahi padha"]
     },
     {
-        question: "Math ke liye kaun si book solve karte ho?",
-        options: ["NCERT", "RD SHARMA", "ARIHANT MCA", "CENGAGE"]
-    },
-    {
         question: "Logical Reasoning ke liye kaun si book solve karte ho?",
         options: ["RS Agarwal", "BS Sijwali", "ARIHANT MCA", "Basic questions tak solve nahi hote"]
     },
@@ -74,10 +70,6 @@ module.exports = [
     {
         question: "PYQs ko kis approach se solve karte ho?",
         options: ["Timer laga ke", "Concept clarity ke liye", "Topic-wise solve karte hain", "End mein ek hi baar crash karenge sab"]
-    },
-    {
-        question: "Kaunsa chapter ab tak confuse karta hai?",
-        options: ["Probability", "Functions", "Permutations & Combinations", "Har din naye loop me faste jaa rahe"]
     },
     // {
     //     question: "",
